@@ -1,8 +1,119 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, body, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* /CSS reset */
+* {
+  font-size: 16px;
+}
 * a {
   text-decoration: none;
   color: #226fff;
 }
 
+.main {
+  margin-left: 160px;
+  width: 85.15vw;
+  background: #226fff;
+}
+
+.small-nav {
+  float: left;
+  width: 50px;
+  height: 50px;
+  background: #226fff;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  border-radius: 3px;
+}
+
+.menu-line {
+  display: block;
+  width: 30px;
+  border-top: #ffffff 3px solid;
+  content: "";
+  margin: 5px 10px;
+  text-align: center;
+}
+
 .big-nav {
   display: none;
+  height: 100%;
+  width: 160px;
+  position: fixed;
+  overflow-x: hidden;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  flex-direction: column;
+  text-align: center;
+}
+
+.big-nav a {
+  padding: 6px 8px 6px 16px;
+  font-size: 18px;
+}
+
+.block-letter {
+  font-size: 30px;
+}
+
+@media screen and (min-width: 576px) {
+  .small-nav {
+    display: none;
+  }
+
+  .big-nav {
+    display: flex;
+  }
 }/*# sourceMappingURL=style.css.map */

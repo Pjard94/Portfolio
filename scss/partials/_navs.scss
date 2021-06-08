@@ -1,7 +1,53 @@
 @use '../abstracts/index' as *;
 
+.small-nav {
+    float: left;
+    width: 50px;
+    height: 50px;
+    background: $primary-color;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    border-radius: 3px;
+}
 
+.menu-line {
+    display: block;
+    width: 30px;
+    border-top: $fill-color 3px solid;
+    content: '';
+    margin: 5px 10px;
+    text-align: center;
+}
 
 .big-nav {
     display: none;
+    height: 100%;
+    width: 160px;
+    position: fixed;
+    overflow-x: hidden;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    flex-direction: column;
+    text-align: center;
+}
+
+.big-nav a {
+    padding: 6px 8px 6px 16px;
+    font-size: 18px;
+}
+
+.block-letter {
+    font-size: 30px;
+}
+
+@media screen and (min-width:$breakpoint-small) {
+    .small-nav {
+        display: none;
+    }
+
+    .big-nav {
+        display: flex;
+    }
 }
