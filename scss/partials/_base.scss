@@ -2,14 +2,18 @@
 
 *{
     font-size: 16px;
+    color: $fill-color;
     a{
         text-decoration: none;
-        color: $primary-color;
     }
 }
 
 .main {
-    margin-left: 160px;
-    width: 85.15vw;
+    width: 100vw;
     background: $primary-color;
+    font-family: 'Roboto Slab', serif;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    background-size: contain;
 }

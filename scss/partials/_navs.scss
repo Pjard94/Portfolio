@@ -1,7 +1,6 @@
 @use '../abstracts/index' as *;
 
 .small-nav {
-    float: left;
     width: 50px;
     height: 50px;
     background: $primary-color;
@@ -9,6 +8,11 @@
     align-items: center;
     text-align: center;
     border-radius: 3px;
+    font-family: 'Roboto', sans-serif;
+    z-index: 1;
+    padding: 5px;
+    position: fixed;
+    margin: 20px 0 0 20px;
 }
 
 .menu-line {
@@ -31,16 +35,43 @@
     left: 0;
     flex-direction: column;
     text-align: center;
+    background-color: $primary-color;
+    border-right: $fill-color 2px solid;
+    font-family: 'Roboto', sans-serif;
 }
 
 .big-nav a {
-    padding: 6px 8px 6px 16px;
-    font-size: 18px;
+    color: $fill-color;
+}
+
+.big-nav a:hover {
+    color: $secondary-color;
 }
 
 .block-letter {
-    font-size: 30px;
+    padding: 20px 0px 20px;
+    border-bottom: $fill-color 2px solid;
+    width: 160px;
+    font-size: 60px;
 }
+
+.big-nav-list {
+    padding: 30px 0 20px;
+    font-size: 18px;
+
+    li {
+        padding: 10px 0;
+    }
+}
+
+.social-media {
+    margin: 0px 20px;
+}
+
+.fa-linkedin:hover {
+    color:$secondary-color;
+}
+
 
 @media screen and (min-width:$breakpoint-small) {
     .small-nav {
