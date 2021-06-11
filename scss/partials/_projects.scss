@@ -8,14 +8,20 @@
 }
 
 .project {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     background-image: url(assets/coding-placeholder.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
     height: 200px;
-    margin: 10px 0;
+    margin: 20px 0 0 0;
     border: $fill-color 2px solid;
-    padding-top: 170px;
+    padding-top: 140px;
+    padding-bottom: 10px;
+    padding-left: 4px;
+    text-align: left;
 }
 
 .project-button {
@@ -26,9 +32,6 @@
     background-color: $primary-color;
     font-size: 16px;
     padding: 3px;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
 }
 
 .project-button:hover {
@@ -36,28 +39,17 @@
     border-color: $secondary-color;
 }
 
-#project-one,
-#project-two,
-#project-three,
-#project-four,
-#project-five,
-#project-six {
-    margin-left: -50px;
-}
-
-#read-more-one,
-#read-more-two,
-#read-more-three,
-#read-more-four,
-#read-more-five,
-#read-more-six {
-    margin-left: 60px;
-    margin-right: -40px;
+.project-title {
+    font-family: 'Roboto', sans-serif;
 }
 
 @media screen and (min-width:$breakpoint-small) {
     .projects {
         width: calc(99% - 163px);
         margin-left: 160px;
+    }
+
+    .project {
+        margin-left: 5px;
     }
   }

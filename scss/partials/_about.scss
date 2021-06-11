@@ -1,0 +1,48 @@
+@use '../abstracts/index' as *;
+
+#about-page {
+    width: 100vw;
+    height: 100vh;
+}
+
+#about-title {
+    display: flex;
+    font-size: 35px;
+    height: 200px;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (min-width:$breakpoint-small) {
+    #about-page {
+        width: calc(100% - 163px);
+        margin-left: 160px;
+    }
+
+    #about-container{
+        width: 300px;
+        margin: auto;
+      }
+  }
+
+  @media screen and (min-width:$breakpoint-medium) {
+    #about-container{
+        width: 500px;
+        margin: auto;
+      }
+  }
+
+  @media screen and (min-width:$breakpoint-large) {
+    #about-container{
+        width: 700px;
+        margin: auto;
+      }
+  }
+
+  @media screen and (min-width:$breakpoint-xl) {
+      #about-container{
+        width: 1000px;
+        margin: auto;
+      }
+      
+  }
