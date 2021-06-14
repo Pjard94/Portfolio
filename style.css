@@ -198,15 +198,6 @@ header {
   padding: 50px 0 0;
 }
 
-#scroll-call-arrow {
-  border: solid #ffffff;
-  border-width: 0 3px 3px 0;
-  display: inline-block;
-  padding: 3px;
-  transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
-}
-
 @media screen and (min-width: 576px) {
   header {
     width: calc(100% - 160px);
@@ -277,6 +268,10 @@ header {
 }
 #contact-area h4 {
   font-size: 20px;
+  color: #ff7e22;
+}
+#contact-area h4:hover {
+  text-decoration: underline;
 }
 #contact-area p {
   font-size: 13px;

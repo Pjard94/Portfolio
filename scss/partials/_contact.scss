@@ -12,6 +12,11 @@
 
     h4 {
         font-size: 20px;
+        color: $secondary-color;
+    }
+
+    h4:hover {
+        text-decoration: underline;
     }
 
     p {
