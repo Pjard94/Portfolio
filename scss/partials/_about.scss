@@ -1,8 +1,15 @@
 @use '../abstracts/index' as *;
 
 #about-page {
-    width: 100vw;
     height: 100vh;
+}
+
+#about-me-paragraph {
+    background-color: $tertiary-color;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 5px 10px rgba(0,0,0,0.5);
+    margin: 0 5%;
 }
 
 #about-title {
@@ -21,28 +28,25 @@
 
     #about-container{
         width: 300px;
-        margin: auto;
+        margin: 160px;
       }
   }
 
   @media screen and (min-width:$breakpoint-medium) {
     #about-container{
         width: 500px;
-        margin: auto;
       }
   }
 
   @media screen and (min-width:$breakpoint-large) {
     #about-container{
         width: 700px;
-        margin: auto;
       }
   }
 
   @media screen and (min-width:$breakpoint-xl) {
       #about-container{
         width: 1000px;
-        margin: auto;
       }
       
   }

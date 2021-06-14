@@ -1,14 +1,5 @@
 @use '../abstracts/index' as *;
 
-*{
-    box-sizing: border-box;
-    font-size: 16px;
-    color: $fill-color;
-    a{
-        text-decoration: none;
-    }
-}
-
 body {
     background: $primary-color;
     font-family: 'Roboto Slab', serif;
@@ -17,6 +8,16 @@ body {
     text-align: center;
     background-size: contain;
     margin: 0 auto;
+}
+
+*{
+    box-sizing: border-box;
+    font-size: 16px;
+    color: $fill-color;
+    a{
+        text-decoration: none;
+        font-family: 'Roboto', sans-serif;
+    }
 }
 
 h1,

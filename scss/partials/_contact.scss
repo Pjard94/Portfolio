@@ -28,12 +28,42 @@
         margin: 20px 0 0;
     }
 
+    textarea {
+        resize: none;
+        overflow: auto;
+        height: 140px;
+    }
+
     input,
     textarea {
         margin: 15px 0 0;
+        width: 80%;
     }
 }
 
 #contact-methods {
     margin: 10px 0;
+}
+
+#scroll-up {
+    margin-top: 20px;
+}
+
+@media screen and (min-width:$breakpoint-small) {
+    #contact-area {
+        width: calc(100% - 163px);
+        margin-left: 160px;
+    }
+
+    #scroll-up {
+        width: calc(100% - 163px);
+        margin-left: 160px;
+    }
+}
+
+
+@media screen and (min-width:$breakpoint-large) {
+    #contact-area {
+        flex-direction: row;
+    }
 }

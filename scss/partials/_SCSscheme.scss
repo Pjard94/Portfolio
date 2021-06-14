@@ -1,0 +1,55 @@
+@use '../abstracts/index' as *;
+
+#SCSscheme-title {
+    padding: 100px 0;
+    font-size: 35px;
+}
+
+#SCSscheme {
+    display: flex;
+    flex-direction: column;
+}
+
+.SCSscheme--card {
+    width: 80%;
+    margin: 20px 0 20px 10%;
+    background-color: $tertiary-color;
+    padding: 30px;
+    border-radius: 13px;
+    box-shadow: 10px 10px rgba(0,0,0,0.5);
+
+    h4 {
+        font-size: 19px;
+        margin: 10px 0;
+    }
+}
+
+.SCSscheme--card--title {
+    font-size: 22px;
+    margin: 0 0 15px;
+}
+
+.treehouse_profile {
+    color: $primary-color;
+}
+
+.treehouse_profile:hover {
+    color: $secondary-color;
+    text-decoration: underline;
+}
+
+@media screen and (min-width:$breakpoint-small) {
+    #SCSscheme,
+    #SCSscheme-title {
+        width: calc(100% - 160px);
+        margin-left: 160px;
+    }
+  }
+
+  @media screen and (min-width:$breakpoint-large) {
+      #SCSscheme {
+          flex-direction: row;
+          padding-left: 160px;
+          margin: 20px 0 20px 0;
+      }
+  }

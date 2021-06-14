@@ -52,15 +52,6 @@ table {
 }
 
 /* /CSS reset */
-* {
-  box-sizing: border-box;
-  font-size: 16px;
-  color: #ffffff;
-}
-* a {
-  text-decoration: none;
-}
-
 body {
   background: #226fff;
   font-family: "Roboto Slab", serif;
@@ -69,6 +60,16 @@ body {
   text-align: center;
   background-size: contain;
   margin: 0 auto;
+}
+
+* {
+  box-sizing: border-box;
+  font-size: 16px;
+  color: #ffffff;
+}
+* a {
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
 }
 
 h1,
@@ -280,18 +281,51 @@ header {
 #contact-area form {
   margin: 20px 0 0;
 }
+#contact-area textarea {
+  resize: none;
+  overflow: auto;
+  height: 140px;
+}
 #contact-area input,
 #contact-area textarea {
   margin: 15px 0 0;
+  width: 80%;
 }
 
 #contact-methods {
   margin: 10px 0;
 }
 
+#scroll-up {
+  margin-top: 20px;
+}
+
+@media screen and (min-width: 576px) {
+  #contact-area {
+    width: calc(100% - 163px);
+    margin-left: 160px;
+  }
+
+  #scroll-up {
+    width: calc(100% - 163px);
+    margin-left: 160px;
+  }
+}
+@media screen and (min-width: 992px) {
+  #contact-area {
+    flex-direction: row;
+  }
+}
 #about-page {
-  width: 100vw;
   height: 100vh;
+}
+
+#about-me-paragraph {
+  background-color: #11CCED;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 5px 10px rgba(0, 0, 0, 0.5);
+  margin: 0 5%;
 }
 
 #about-title {
@@ -310,24 +344,72 @@ header {
 
   #about-container {
     width: 300px;
-    margin: auto;
+    margin: 160px;
   }
 }
 @media screen and (min-width: 768px) {
   #about-container {
     width: 500px;
-    margin: auto;
   }
 }
 @media screen and (min-width: 992px) {
   #about-container {
     width: 700px;
-    margin: auto;
   }
 }
 @media screen and (min-width: 1200px) {
   #about-container {
     width: 1000px;
-    margin: auto;
+  }
+}
+#SCSscheme-title {
+  padding: 100px 0;
+  font-size: 35px;
+}
+
+#SCSscheme {
+  display: flex;
+  flex-direction: column;
+}
+
+.SCSscheme--card {
+  width: 80%;
+  margin: 20px 0 20px 10%;
+  background-color: #11CCED;
+  padding: 30px;
+  border-radius: 13px;
+  box-shadow: 10px 10px rgba(0, 0, 0, 0.5);
+}
+.SCSscheme--card h4 {
+  font-size: 19px;
+  margin: 10px 0;
+}
+
+.SCSscheme--card--title {
+  font-size: 22px;
+  margin: 0 0 15px;
+}
+
+.treehouse_profile {
+  color: #226fff;
+}
+
+.treehouse_profile:hover {
+  color: #ff7e22;
+  text-decoration: underline;
+}
+
+@media screen and (min-width: 576px) {
+  #SCSscheme,
+#SCSscheme-title {
+    width: calc(100% - 160px);
+    margin-left: 160px;
+  }
+}
+@media screen and (min-width: 992px) {
+  #SCSscheme {
+    flex-direction: row;
+    padding-left: 160px;
+    margin: 20px 0 20px 0;
   }
 }/*# sourceMappingURL=style.css.map */
