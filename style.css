@@ -141,16 +141,44 @@ h6 {
   font-size: 18px;
 }
 .big-nav-list li {
-  padding: 10px 0;
+  padding: 15px 0;
+}
+
+.contact-me-link {
+  border-top: 3px #ffffff solid;
+  border-bottom: 3px #ffffff solid;
+  font-size: 18px;
+  padding: 10px;
+  margin: 0 0 15px;
 }
 
 .social-media {
   margin: 0px 20px;
+  font-size: 24px;
 }
 
-.fa-linkedin:hover {
-  color: #226fff;
-  background-color: #ffffff;
+.fa-linkedin-in {
+  color: #ff7e22;
+  background: #ffffff;
+  padding: 5px;
+  border-radius: 3px;
+}
+
+.fa-linkedin-in:hover {
+  color: #ffffff;
+  background-color: #0E76A8;
+}
+
+.fa-github {
+  color: #ff7e22;
+  background: #ffffff;
+  padding: 5px;
+  border-radius: 3px;
+}
+
+.fa-github:hover {
+  color: #ffffff;
+  background-color: #24292E;
 }
 
 @media screen and (min-width: 576px) {
@@ -258,6 +286,24 @@ header {
     margin-left: 5px;
   }
 }
+@media screen and (min-width: 768px) {
+  #projects {
+    display: flex;
+    -moz-columns: 2;
+         columns: 2;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .project-mainpage {
+    flex-basis: 250px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .project-mainpage {
+    flex-basis: 450px;
+  }
+}
 #contact-area {
   display: flex;
   flex-direction: column;
@@ -298,6 +344,7 @@ header {
 
 #scroll-up {
   margin-top: 20px;
+  padding-top: 20px;
 }
 
 @media screen and (min-width: 576px) {
@@ -309,6 +356,11 @@ header {
   #scroll-up {
     width: calc(100% - 163px);
     margin-left: 160px;
+  }
+}
+@media screen and (min-width: 768px) {
+  #contact-area p {
+    font-size: 16px;
   }
 }
 @media screen and (min-width: 992px) {
@@ -411,5 +463,46 @@ header {
     flex-direction: row;
     padding-left: 160px;
     margin: 20px 0 20px 0;
+  }
+
+  .SCSscheme--card {
+    margin: 20px 0 20px 8%;
+  }
+}
+#coding-title {
+  padding: 100px 0 50px;
+  font-size: 30px;
+}
+
+@media screen and (min-width: 576px) {
+  #coding-title {
+    width: calc(100% - 160px);
+    margin-left: 160px;
+    padding: 50px 0;
+    font-size: 45px;
+  }
+}
+@media screen and (min-width: 768px) {
+  #coding-projects {
+    display: flex;
+    -moz-columns: 2;
+         columns: 2;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .coding-project {
+    flex-basis: 300px;
+    margin: 50px 0 0;
+  }
+}
+@media screen and (min-width: 992px) {
+  .coding-project {
+    flex-basis: 450px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .coding-project {
+    flex-basis: 580px;
   }
 }/*# sourceMappingURL=style.css.map */

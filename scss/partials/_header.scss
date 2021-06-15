@@ -37,9 +37,9 @@ header {
     padding: 50px 0 0;
 }
 
-  @media screen and (min-width:$breakpoint-small) {
+@media screen and (min-width:$breakpoint-small) {
     header {
         width: calc(100% - 160px);
         margin-left: 160px;
     }
-  }
+}

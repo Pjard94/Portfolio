@@ -53,3 +53,22 @@
         margin-left: 5px;
     }
   }
+
+  @media screen and (min-width:$breakpoint-medium) {
+    #projects {
+        display: flex;
+        columns: 2;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .project-mainpage {
+        flex-basis: 250px;
+    }
+}
+
+@media screen and (min-width:$breakpoint-xl) {
+    .project-mainpage {
+        flex-basis: 450px;
+    }
+}

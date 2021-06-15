@@ -1,1 +1,41 @@
 @use '../abstracts/index' as *;
+
+#coding-title {
+    padding: 100px 0 50px;
+    font-size: 30px;
+    }
+
+@media screen and (min-width:$breakpoint-small) {
+    #coding-title {
+        width: calc(100% - 160px);
+        margin-left: 160px;
+        padding: 50px 0;
+        font-size: 45px;
+    }
+    }
+
+@media screen and (min-width:$breakpoint-medium) {
+    #coding-projects {
+        display: flex;
+        columns: 2;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .coding-project {
+        flex-basis: 300px;
+        margin: 50px 0 0;
+    }
+}
+
+@media screen and (min-width:$breakpoint-large) {
+    .coding-project {
+        flex-basis: 450px;
+    }
+}
+
+@media screen and (min-width:$breakpoint-xl) {
+    .coding-project {
+        flex-basis: 580px;
+    }
+}
