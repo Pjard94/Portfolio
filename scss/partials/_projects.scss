@@ -17,11 +17,18 @@
     width: 100%;
     height: 200px;
     margin: 20px 0 0 0;
-    border: $fill-color 2px solid;
+    border: $tertiary-color 2px solid;
+    border-radius: 13px;
     padding-top: 140px;
-    padding-bottom: 10px;
-    padding-left: 4px;
+    padding-bottom: 15px;
+    padding-left: 8px;
     text-align: left;
+    transition: transform .5s;
+}
+
+.project:hover {
+    transform: scale(1.1);
+    overflow: hidden;
 }
 
 .project-button {
@@ -41,6 +48,24 @@
 
 .project-title {
     font-family: 'Roboto', sans-serif;
+}
+
+#project-one {
+    background: url(assets/netmattersfake.png);
+}
+
+#project-two {
+    background: url(assets/Axureproject.png);
+}
+
+#project-one,
+#project-two,
+#project-three,
+#project-four,
+#project-five,
+#project-six {
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 @media screen and (min-width:$breakpoint-small) {

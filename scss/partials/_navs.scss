@@ -38,6 +38,7 @@
     background-color: $secondary-color;
     border-right: $fill-color 2px solid;
     font-family: 'Roboto', sans-serif;
+    font-weight: 500;
 }
 
 .big-nav a {
@@ -45,7 +46,7 @@
 }
 
 .big-nav a:hover {
-    color: $primary-color;
+    color: $tertiary-color;
 }
 
 .block-letter {

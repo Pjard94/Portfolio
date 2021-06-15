@@ -2,13 +2,15 @@
 
 #about-page {
     height: 100vh;
+    display: flex;
+    justify-content: center;
 }
 
 #about-me-paragraph {
     background-color: $tertiary-color;
     border-radius: 15px;
     padding: 30px;
-    box-shadow: 5px 10px rgba(0,0,0,0.5);
+    box-shadow: 10px 10px rgba(0,0,0,0.5);
     margin: 0 5%;
 }
 
@@ -28,7 +30,6 @@
 
     #about-container{
         width: 300px;
-        margin: 160px;
       }
   }
 
