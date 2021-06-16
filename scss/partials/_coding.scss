@@ -5,6 +5,28 @@
     font-size: 30px;
     }
 
+#coding-projects {
+    justify-content: space-around;
+}
+    
+#coding-project-one {
+    background: url(assets/netmattersfake.png);
+}
+
+#coding-project-two {
+    background: url(assets/Axureproject.png);
+}
+
+#coding-project-one,
+#coding-project-two,
+#coding-project-three,
+#coding-project-four,
+#coding-project-five,
+#coding-project-six {
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 @media screen and (min-width:$breakpoint-small) {
     #coding-title {
         width: calc(100% - 160px);
@@ -36,6 +58,6 @@
 
 @media screen and (min-width:$breakpoint-xl) {
     .coding-project {
-        flex-basis: 580px;
+        flex-basis: 530px;
     }
 }

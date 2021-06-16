@@ -33,12 +33,16 @@
         overflow: auto;
         height: 140px;
     }
+}
 
-    input,
-    textarea {
-        margin: 15px 0 0;
-        width: 80%;
-    }
+.contact-form-input {
+    margin: 15px 0 0;
+    width: 80%;
+    font-family: 'Roboto Slab', serif;
+}
+
+.contact-form-input::placeholder {
+    color: $secondary-color;
 }
 
 #contact-methods {
@@ -48,6 +52,7 @@
 #scroll-up {
     margin-top: 20px;
     padding-top: 20px;
+    font-size: 20px;
 }
 
 @media screen and (min-width:$breakpoint-small) {
