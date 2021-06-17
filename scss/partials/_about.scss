@@ -1,36 +1,45 @@
 @use '../abstracts/index' as *;
 
 #about-page {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+#about-container {
+  padding-bottom:50px;
+  margin-bottom: 50px;
 }
 
 #about-me-paragraph {
-    background-color: $tertiary-color;
-    border-radius: 15px;
-    padding: 30px;
-    box-shadow: 10px 10px rgba(0,0,0,0.5);
-    margin: 0 5%;
+  background-color: $tertiary-color;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 10px 10px rgba(0,0,0,0.5);
+  margin: 0 5% 50px;
+  p{
+    color: $alt-fill-color;  
+  }  
 }
 
 #about-title {
-    display: flex;
-    font-size: 35px;
-    height: 200px;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  font-size: 35px;
+  height: 200px;
+  align-items: center;
+  justify-content: center;
 }
 
 @media screen and (min-width:$breakpoint-small) {
-    #about-page {
-        width: calc(100% - 163px);
-        margin-left: 160px;
-    }
+  #about-page {
+      width: calc(100% - 163px);
+      margin-left: 160px;
+  }
 
-    #about-container{
-        width: 300px;
-      }
+  #about-container{
+      width: 300px;
+    }
   }
 
   @media screen and (min-width:$breakpoint-medium) {

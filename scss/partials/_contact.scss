@@ -4,15 +4,18 @@
     display: flex;
     flex-direction: column;
     margin: 50px 0 0;
+    padding: 0 0 0 50px;
     justify-content: space-between;
+    text-align: left;
 
     h2{
         font-size: 40px;
     }
 
     h4 {
-        font-size: 20px;
+        font-size: 16px;
         color: $tertiary-color;
+        margin: 15px 0;
     }
 
     h4:hover {
@@ -20,8 +23,8 @@
     }
 
     p {
-        font-size: 13px;
-        margin: 10px 0;
+        font-size: 16px;
+        margin: 15px 0;
     }
 
     form {
@@ -31,22 +34,58 @@
     textarea {
         resize: none;
         overflow: auto;
-        height: 140px;
+        height: 100px;
+        display: block;
     }
+}
+
+#contact-area-container {
+    padding-right: 5px;
+
 }
 
 .contact-form-input {
     margin: 15px 0 0;
-    width: 80%;
+    width: 90%;
     font-family: 'Roboto Slab', serif;
+    color: $secondary-color;
 }
 
 .contact-form-input::placeholder {
     color: $secondary-color;
 }
 
+.contact--name {
+    width: 100%;
+    margin: 15px 0 0;
+    font-family: 'Roboto Slab', serif;
+    color: $secondary-color;
+}
+
+.contact-name {
+    width: 40%;
+}
+
+#contact-form-first {
+    width: 48%; 
+}
+
 #contact-methods {
     margin: 10px 0;
+}
+
+#contact-form-submit {
+    width: 100px;
+    background: $secondary-color;
+    color: $fill-color;
+    margin-top: 15px;
+    border-radius: 6px;
+    border: none;
+}
+
+#contact-form-submit:hover {
+    background: $tertiary-color;
+    color: $alt-fill-color;
 }
 
 #scroll-up {
@@ -59,6 +98,18 @@
     #contact-area {
         width: calc(100% - 163px);
         margin-left: 160px;
+
+        form {
+            padding-left: 30px;
+        }
+
+        h4 {
+            font-size: 20px;
+        }
+    }
+
+    .contact-area-container {
+        padding-left: 30px;
     }
 
     #scroll-up {
@@ -79,5 +130,21 @@
 @media screen and (min-width:$breakpoint-large) {
     #contact-area {
         flex-direction: row;
+    }
+    .contact-form-input {
+        width: 80%;
+    }
+    
+
+    .contact--name {
+        width: 80%;
+    }
+
+    .contact-name {
+        width: 40%;
+    }
+    
+    #contact-form-first {
+        width: 39.5%; 
     }
 }

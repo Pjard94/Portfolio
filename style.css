@@ -196,10 +196,29 @@ header {
   width: 100%;
   height: 100vh;
   text-align: center;
+}
+
+.hero-image {
   background: url(assets/hero-image.JPG);
   background-repeat: no-repeat;
   background-size: cover;
   justify-content: center;
+  background-position: center;
+  content: "";
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  position: absolute;
+}
+
+.hero-image::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
 }
 
 #introduction {
@@ -267,6 +286,10 @@ header {
   transition: transform 0.5s;
 }
 
+.projects-mainpage {
+  padding: 0 15px;
+}
+
 .project:hover {
   transform: scale(1.1);
   overflow: hidden;
@@ -328,6 +351,10 @@ header {
     flex-wrap: wrap;
   }
 
+  .projects-mainpage {
+    padding: 0 0;
+  }
+
   .project-mainpage {
     flex-basis: 250px;
   }
@@ -341,21 +368,24 @@ header {
   display: flex;
   flex-direction: column;
   margin: 50px 0 0;
+  padding: 0 0 0 50px;
   justify-content: space-between;
+  text-align: left;
 }
 #contact-area h2 {
   font-size: 40px;
 }
 #contact-area h4 {
-  font-size: 20px;
+  font-size: 16px;
   color: #11CCED;
+  margin: 15px 0;
 }
 #contact-area h4:hover {
   text-decoration: underline;
 }
 #contact-area p {
-  font-size: 13px;
-  margin: 10px 0;
+  font-size: 16px;
+  margin: 15px 0;
 }
 #contact-area form {
   margin: 20px 0 0;
@@ -363,13 +393,19 @@ header {
 #contact-area textarea {
   resize: none;
   overflow: auto;
-  height: 140px;
+  height: 100px;
+  display: block;
+}
+
+#contact-area-container {
+  padding-right: 5px;
 }
 
 .contact-form-input {
   margin: 15px 0 0;
-  width: 80%;
+  width: 90%;
   font-family: "Roboto Slab", serif;
+  color: #ff7e22;
 }
 
 .contact-form-input::-moz-placeholder {
@@ -384,8 +420,37 @@ header {
   color: #ff7e22;
 }
 
+.contact--name {
+  width: 100%;
+  margin: 15px 0 0;
+  font-family: "Roboto Slab", serif;
+  color: #ff7e22;
+}
+
+.contact-name {
+  width: 40%;
+}
+
+#contact-form-first {
+  width: 48%;
+}
+
 #contact-methods {
   margin: 10px 0;
+}
+
+#contact-form-submit {
+  width: 100px;
+  background: #ff7e22;
+  color: #ffffff;
+  margin-top: 15px;
+  border-radius: 6px;
+  border: none;
+}
+
+#contact-form-submit:hover {
+  background: #11CCED;
+  color: #000000;
 }
 
 #scroll-up {
@@ -398,6 +463,16 @@ header {
   #contact-area {
     width: calc(100% - 163px);
     margin-left: 160px;
+  }
+  #contact-area form {
+    padding-left: 30px;
+  }
+  #contact-area h4 {
+    font-size: 20px;
+  }
+
+  .contact-area-container {
+    padding-left: 30px;
   }
 
   #scroll-up {
@@ -414,11 +489,33 @@ header {
   #contact-area {
     flex-direction: row;
   }
+
+  .contact-form-input {
+    width: 80%;
+  }
+
+  .contact--name {
+    width: 80%;
+  }
+
+  .contact-name {
+    width: 40%;
+  }
+
+  #contact-form-first {
+    width: 39.5%;
+  }
 }
 #about-page {
-  height: 100vh;
+  height: 100%;
   display: flex;
   justify-content: center;
+  margin-bottom: 50px;
+}
+
+#about-container {
+  padding-bottom: 50px;
+  margin-bottom: 50px;
 }
 
 #about-me-paragraph {
@@ -426,7 +523,10 @@ header {
   border-radius: 15px;
   padding: 30px;
   box-shadow: 10px 10px rgba(0, 0, 0, 0.5);
-  margin: 0 5%;
+  margin: 0 5% 50px;
+}
+#about-me-paragraph p {
+  color: #000000;
 }
 
 #about-title {
@@ -470,6 +570,7 @@ header {
 #SCSscheme {
   display: flex;
   flex-direction: column;
+  margin-bottom: 50px;
 }
 
 .SCSscheme--card {
@@ -488,6 +589,11 @@ header {
 .SCSscheme--card--title {
   font-size: 22px;
   margin: 0 0 15px;
+  color: #000000;
+}
+
+.SCSscheme--card--filler {
+  color: #000000;
 }
 
 .treehouse_profile {
@@ -524,6 +630,8 @@ header {
 
 #coding-projects {
   justify-content: space-around;
+  margin-bottom: 50px;
+  padding: 0 15px;
 }
 
 #coding-project-one {
@@ -562,17 +670,17 @@ header {
   }
 
   .coding-project {
-    flex-basis: 300px;
+    flex-basis: 260px;
     margin: 50px 0 0;
   }
 }
 @media screen and (min-width: 992px) {
   .coding-project {
-    flex-basis: 450px;
+    flex-basis: 380px;
   }
 }
 @media screen and (min-width: 1200px) {
   .coding-project {
-    flex-basis: 530px;
+    flex-basis: 460px;
   }
 }/*# sourceMappingURL=style.css.map */

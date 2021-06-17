@@ -4,10 +4,29 @@ header {
     width: 100%;
     height: 100vh;
     text-align: center;
+}
+
+.hero-image {
     background: url(assets/hero-image.JPG);
     background-repeat: no-repeat;
     background-size: cover;
     justify-content: center;
+    background-position: center;
+    content: "";
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    position: absolute;
+}
+
+.hero-image::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(0,0,0,.3);
 }
 
 #introduction {

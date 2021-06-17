@@ -26,6 +26,10 @@
     transition: transform .5s;
 }
 
+.projects-mainpage {
+    padding: 0 15px;
+}
+
 .project:hover {
     transform: scale(1.1);
     overflow: hidden;
@@ -85,6 +89,10 @@
         columns: 2;
         flex-direction: row;
         flex-wrap: wrap;
+    }
+
+    .projects-mainpage {
+        padding: 0 0;
     }
 
     .project-mainpage {
