@@ -41,10 +41,6 @@
     font-weight: 500;
 }
 
-.big-nav a {
-    color: $fill-color;
-}
-
 .big-nav a:hover {
     color: $tertiary-color;
 }
@@ -100,6 +96,10 @@
 .fa-github:hover {
     color:$fill-color;
     background-color: $github-color;
+}
+
+.currentPage {
+    color: $tertiary-color;
 }
 
 @media screen and (min-width:$breakpoint-small) {
