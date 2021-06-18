@@ -193,7 +193,6 @@ h6 {
   }
 }
 header {
-  width: 100%;
   height: 100vh;
   text-align: center;
 }
@@ -206,7 +205,7 @@ header {
   background-position: center;
   content: "";
   width: 100%;
-  height: 100%;
+  height: 100vh;
   z-index: -1;
   position: absolute;
 }
@@ -251,9 +250,15 @@ header {
 }
 
 @media screen and (min-width: 576px) {
-  header {
-    width: calc(100% - 160px);
-    margin-left: 160px;
+  .hero-image {
+    width: calc(100% - 163px);
+    margin-left: 161px;
+  }
+
+  #introduction,
+#scroll-area {
+    width: calc(100% - 163px);
+    margin-left: 161px;
   }
 
   #me {
@@ -358,18 +363,22 @@ header {
   .project-mainpage {
     flex-basis: 250px;
   }
-
-  #project-two,
-#project-five {
-    margin-left: 15px;
-    margin-right: 15px;
+}
+@media screen and (min-width: 955px) {
+  #project-one,
+#project-two,
+#project-three,
+#project-four,
+#project-five,
+#project-six {
+    margin-left: 10px;
   }
 }
 @media screen and (min-width: 992px) {
   #project-two,
 #project-five {
     margin-left: 5px;
-    margin-right: 0px;
+    margin-right: 0;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -377,11 +386,21 @@ header {
     flex-basis: 450px;
   }
 }
+@media screen and (min-width: 1571px) {
+  #project-one,
+#project-two,
+#project-three,
+#project-four,
+#project-five,
+#project-six {
+    margin-left: 10px;
+  }
+}
 #contact-area {
   display: flex;
   flex-direction: column;
   margin: 50px 0 0;
-  padding: 0 0 0 50px;
+  padding: 0 0 0 8%;
   justify-content: space-between;
   text-align: left;
 }
@@ -477,9 +496,6 @@ header {
     width: calc(100% - 163px);
     margin-left: 160px;
   }
-  #contact-area form {
-    padding-left: 30px;
-  }
   #contact-area h4 {
     font-size: 20px;
   }
@@ -496,6 +512,9 @@ header {
 @media screen and (min-width: 768px) {
   #contact-area p {
     font-size: 16px;
+  }
+  #contact-area form {
+    padding-left: 30px;
   }
 }
 @media screen and (min-width: 992px) {

@@ -4,7 +4,7 @@
     display: flex;
     flex-direction: column;
     margin: 50px 0 0;
-    padding: 0 0 0 50px;
+    padding: 0 0 0 8%;
     justify-content: space-between;
     text-align: left;
 
@@ -99,10 +99,6 @@
         width: calc(100% - 163px);
         margin-left: 160px;
 
-        form {
-            padding-left: 30px;
-        }
-
         h4 {
             font-size: 20px;
         }
@@ -122,6 +118,10 @@
     #contact-area {
         p {
             font-size: 16px;
+        }
+
+        form {
+            padding-left: 30px;
         }
     }
 }

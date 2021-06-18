@@ -98,11 +98,16 @@
     .project-mainpage {
         flex-basis: 250px;
     }
+}
 
+@media screen and (min-width:955px) {
+    #project-one,
     #project-two,
-    #project-five {
-        margin-left: 15px;
-        margin-right: 15px;
+    #project-three,
+    #project-four,
+    #project-five,
+    #project-six {
+        margin-left: 10px;
     }
 }
 
@@ -110,12 +115,23 @@
     #project-two,
     #project-five {
         margin-left: 5px;
-        margin-right: 0px;
+        margin-right: 0;
     }
 }
 
 @media screen and (min-width:$breakpoint-xl) {
     .project-mainpage {
         flex-basis: 450px;
+    }
+}
+
+@media screen and (min-width:1571px) {
+    #project-one,
+    #project-two,
+    #project-three,
+    #project-four,
+    #project-five,
+    #project-six {
+        margin-left: 10px;
     }
 }
