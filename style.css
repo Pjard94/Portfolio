@@ -483,21 +483,24 @@ header {
 
 #contact-form-submit {
   width: 100px;
+  height: 35px;
   background: #ff7e22;
   color: #ffffff;
   margin-top: 15px;
   border-radius: 6px;
-  border: none;
+  border: #ffffff 2px solid;
 }
 
 #contact-form-submit:hover {
   background: #11CCED;
   color: #000000;
+  border: #000000 2px solid;
 }
 
 #scroll-up {
-  margin-top: 20px;
+  margin-top: 40px;
   padding-top: 20px;
+  padding-bottom: 50px;
   font-size: 20px;
 }
 
@@ -667,7 +670,7 @@ header {
     font-size: 45px;
   }
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1400px) {
   #SCSscheme {
     flex-direction: row;
     padding-left: 160px;

@@ -83,21 +83,24 @@
 
 #contact-form-submit {
     width: 100px;
+    height: 35px;
     background: $secondary-color;
     color: $fill-color;
     margin-top: 15px;
     border-radius: 6px;
-    border: none;
+    border: $fill-color 2px solid;
 }
 
 #contact-form-submit:hover {
     background: $tertiary-color;
     color: $alt-fill-color;
+    border: $alt-fill-color 2px solid;
 }
 
 #scroll-up {
-    margin-top: 20px;
+    margin-top: 40px;
     padding-top: 20px;
+    padding-bottom: 50px;
     font-size: 20px;
 }
 
