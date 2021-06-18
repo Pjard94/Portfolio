@@ -2,7 +2,7 @@
 
 #SCSscheme-title {
     padding: 100px 0;
-    font-size: 35px;
+    font-size: 30px;
 }
 
 #SCSscheme {
@@ -50,6 +50,11 @@
         width: calc(100% - 160px);
         margin-left: 160px;
     }
+
+    #SCSscheme-title {
+        padding: 50px 0;
+        font-size: 45px;
+    }
   }
 
   @media screen and (min-width:$breakpoint-large) {
@@ -63,3 +68,6 @@
           margin: 20px 0 20px 8%;
       }
   }
+
+
+  //Maybe add a scale to the cards to make them bigger and more central for easier reading.

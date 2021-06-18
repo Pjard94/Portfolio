@@ -3,23 +3,13 @@
 #contact-area {
     display: flex;
     flex-direction: column;
-    margin: 50px 0 0;
+    margin: 100px 0 0;
     padding: 0 0 0 8%;
     justify-content: space-between;
     text-align: left;
 
     h2{
         font-size: 40px;
-    }
-
-    h4 {
-        font-size: 16px;
-        color: $tertiary-color;
-        margin: 15px 0;
-    }
-
-    h4:hover {
-        text-decoration: underline;
     }
 
     p {
@@ -37,6 +27,23 @@
         height: 100px;
         display: block;
     }
+}
+
+#contact-email-link,
+#contact-telephone-link {
+    font-size: 16px;
+    color: $tertiary-color;
+    display: block;
+}
+
+#contact-email-link:hover,
+#contact-telephone-link:hover {
+    text-decoration: underline;
+}
+
+#contact-email-link {
+    margin: 10px 0 0;
+    font-family: 'Roboto', sans-serif;
 }
 
 #contact-area-container {
@@ -57,21 +64,21 @@
 
 .contact--name {
     width: 100%;
-    margin: 15px 0 0;
+    margin: 0;
     font-family: 'Roboto Slab', serif;
     color: $secondary-color;
-}
-
-.contact-name {
-    width: 40%;
 }
 
 #contact-form-first {
     width: 48%; 
 }
 
+#contact-form-last {
+    width: 40%;
+}
+
 #contact-methods {
-    margin: 10px 0;
+    margin: 40px 0;
 }
 
 #contact-form-submit {
@@ -98,11 +105,12 @@
     #contact-area {
         width: calc(100% - 163px);
         margin-left: 160px;
-
-        h4 {
-            font-size: 20px;
-        }
     }
+
+    #contact-email-link,
+    #contact-telephone-link {
+    font-size: 20px;
+}
 
     .contact-area-container {
         padding-left: 30px;
@@ -119,10 +127,6 @@
         p {
             font-size: 16px;
         }
-
-        form {
-            padding-left: 30px;
-        }
     }
 }
 
@@ -130,6 +134,10 @@
 @media screen and (min-width:$breakpoint-large) {
     #contact-area {
         flex-direction: row;
+
+        form {
+            padding-left: 30px;
+        }
     }
     .contact-form-input {
         width: 80%;
@@ -140,7 +148,7 @@
         width: 80%;
     }
 
-    .contact-name {
+    #contact-form-last {
         width: 40%;
     }
     

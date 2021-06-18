@@ -270,6 +270,11 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  padding: 0 25px;
+}
+
+.projects-mainpage {
+  margin: 75px 0 0;
 }
 
 .project {
@@ -289,10 +294,6 @@ header {
   padding-left: 8px;
   text-align: left;
   transition: transform 0.5s;
-}
-
-.projects-mainpage {
-  padding: 0 15px;
 }
 
 .project:hover {
@@ -399,21 +400,13 @@ header {
 #contact-area {
   display: flex;
   flex-direction: column;
-  margin: 50px 0 0;
+  margin: 100px 0 0;
   padding: 0 0 0 8%;
   justify-content: space-between;
   text-align: left;
 }
 #contact-area h2 {
   font-size: 40px;
-}
-#contact-area h4 {
-  font-size: 16px;
-  color: #11CCED;
-  margin: 15px 0;
-}
-#contact-area h4:hover {
-  text-decoration: underline;
 }
 #contact-area p {
   font-size: 16px;
@@ -427,6 +420,23 @@ header {
   overflow: auto;
   height: 100px;
   display: block;
+}
+
+#contact-email-link,
+#contact-telephone-link {
+  font-size: 16px;
+  color: #11CCED;
+  display: block;
+}
+
+#contact-email-link:hover,
+#contact-telephone-link:hover {
+  text-decoration: underline;
+}
+
+#contact-email-link {
+  margin: 10px 0 0;
+  font-family: "Roboto", sans-serif;
 }
 
 #contact-area-container {
@@ -454,21 +464,21 @@ header {
 
 .contact--name {
   width: 100%;
-  margin: 15px 0 0;
+  margin: 0;
   font-family: "Roboto Slab", serif;
   color: #ff7e22;
-}
-
-.contact-name {
-  width: 40%;
 }
 
 #contact-form-first {
   width: 48%;
 }
 
+#contact-form-last {
+  width: 40%;
+}
+
 #contact-methods {
-  margin: 10px 0;
+  margin: 40px 0;
 }
 
 #contact-form-submit {
@@ -496,7 +506,9 @@ header {
     width: calc(100% - 163px);
     margin-left: 160px;
   }
-  #contact-area h4 {
+
+  #contact-email-link,
+#contact-telephone-link {
     font-size: 20px;
   }
 
@@ -513,13 +525,13 @@ header {
   #contact-area p {
     font-size: 16px;
   }
-  #contact-area form {
-    padding-left: 30px;
-  }
 }
 @media screen and (min-width: 992px) {
   #contact-area {
     flex-direction: row;
+  }
+  #contact-area form {
+    padding-left: 30px;
   }
 
   .contact-form-input {
@@ -530,7 +542,7 @@ header {
     width: 80%;
   }
 
-  .contact-name {
+  #contact-form-last {
     width: 40%;
   }
 
@@ -563,8 +575,9 @@ header {
 
 #about-title {
   display: flex;
-  font-size: 35px;
-  height: 200px;
+  font-size: 30px;
+  padding-top: 100px;
+  padding-bottom: 100px;
   align-items: center;
   justify-content: center;
 }
@@ -573,6 +586,11 @@ header {
   #about-page {
     width: calc(100% - 163px);
     margin-left: 160px;
+  }
+
+  #about-title {
+    font-size: 45px;
+    padding-top: 50px;
   }
 
   #about-container {
@@ -596,7 +614,7 @@ header {
 }
 #SCSscheme-title {
   padding: 100px 0;
-  font-size: 35px;
+  font-size: 30px;
 }
 
 #SCSscheme {
@@ -643,6 +661,11 @@ header {
     width: calc(100% - 160px);
     margin-left: 160px;
   }
+
+  #SCSscheme-title {
+    padding: 50px 0;
+    font-size: 45px;
+  }
 }
 @media screen and (min-width: 992px) {
   #SCSscheme {
@@ -663,7 +686,6 @@ header {
 #coding-projects {
   justify-content: space-around;
   margin-bottom: 50px;
-  padding: 0 15px;
 }
 
 #coding-project-one {
