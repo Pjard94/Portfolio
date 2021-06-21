@@ -19,21 +19,25 @@
     margin: 20px 0 0 0;
     border: $tertiary-color 2px solid;
     border-radius: 13px;
-    padding-left: 8px;
     text-align: left;
     padding-bottom: 15px;
+    overflow: hidden;
+    height: 300px;
+    position: relative;
 }
 
 .project-background {
     content: "";
-    background: url(assets/coding-placeholder.jpg);
+    background: url(assets/coding-placeholder-bigger.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    z-index: -1;
+    background-position: center;
+    z-index: -2;
     width: 100%;
     height: 300px;
     border-radius: 13px;
-    position: relative;
+    position: absolute;
+    overflow: hidden;
 }
 
 .project-background::before {
@@ -48,10 +52,9 @@
 
 .project:hover {
     .project-title {
-      transform: translateY(-120px) ;
+      transform: translateY(-100px) ;
       text-align: center;
     }
-    
 }
 
 .project-button {
@@ -62,6 +65,9 @@
     background-color: $primary-color;
     font-size: 16px;
     padding: 3px;
+    margin-left: 8px;
+    z-index: 2;
+    position: relative;
 }
 
 .project-button:hover {
@@ -71,15 +77,25 @@
 
 .project-title {
     font-family: 'Roboto', sans-serif;
+    margin-top: 240px;
     margin-bottom: 10px;
+    margin-left: 8px;
+    z-index: 2;
+    position: relative;
 }
 
 #project-one {
-    background: url(assets/netmattersfake.png);
+    .project-background{
+    background-image: url(assets/netmattersfake.png);    
+    }
+    
 }
 
 #project-two {
-    background: url(assets/Axureproject.png);
+    .project-background {
+    background-image: url(assets/Axureproject.png);
+    }
+    
 }
 
 #project-one,

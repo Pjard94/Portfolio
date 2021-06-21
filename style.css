@@ -91,7 +91,7 @@ h6 {
   text-align: center;
   border-radius: 3px;
   font-family: "Roboto", sans-serif;
-  z-index: 1;
+  z-index: 5;
   padding: 5px 5px 5px 5px;
   position: fixed;
   margin: 20px 0 0 20px;
@@ -284,21 +284,25 @@ header {
   margin: 20px 0 0 0;
   border: #11CCED 2px solid;
   border-radius: 13px;
-  padding-left: 8px;
   text-align: left;
   padding-bottom: 15px;
+  overflow: hidden;
+  height: 300px;
+  position: relative;
 }
 
 .project-background {
   content: "";
-  background: url(assets/coding-placeholder.jpg);
+  background: url(assets/coding-placeholder-bigger.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  z-index: -1;
+  background-position: center;
+  z-index: -2;
   width: 100%;
   height: 300px;
   border-radius: 13px;
-  position: relative;
+  position: absolute;
+  overflow: hidden;
 }
 
 .project-background::before {
@@ -312,7 +316,7 @@ header {
 }
 
 .project:hover .project-title {
-  transform: translateY(-120px);
+  transform: translateY(-100px);
   text-align: center;
 }
 
@@ -324,6 +328,9 @@ header {
   background-color: #455680;
   font-size: 16px;
   padding: 3px;
+  margin-left: 8px;
+  z-index: 2;
+  position: relative;
 }
 
 .project-button:hover {
@@ -333,15 +340,19 @@ header {
 
 .project-title {
   font-family: "Roboto", sans-serif;
+  margin-top: 240px;
   margin-bottom: 10px;
+  margin-left: 8px;
+  z-index: 2;
+  position: relative;
 }
 
-#project-one {
-  background: url(assets/netmattersfake.png);
+#project-one .project-background {
+  background-image: url(assets/netmattersfake.png);
 }
 
-#project-two {
-  background: url(assets/Axureproject.png);
+#project-two .project-background {
+  background-image: url(assets/Axureproject.png);
 }
 
 #project-one,
@@ -405,28 +416,39 @@ header {
   }
 }
 #contact-area {
+  padding: 100px 0 0 0;
+}
+
+#contact--area {
   display: flex;
   flex-direction: column;
-  margin: 100px 0 0;
-  padding: 0 0 0 8%;
+  padding: 0 20px 0 20px;
   justify-content: space-between;
   text-align: left;
+  max-width: 1200px;
+  align-self: center;
 }
-#contact-area h2 {
+#contact--area h2 {
   font-size: 40px;
 }
-#contact-area p {
+#contact--area p {
   font-size: 16px;
   margin: 15px 0;
 }
-#contact-area form {
-  margin: 20px 0 0;
-}
-#contact-area textarea {
+#contact--area textarea {
   resize: none;
   overflow: auto;
   height: 100px;
   display: block;
+}
+
+#contact-area-container {
+  width: 100%;
+}
+
+#contact-form {
+  margin: 20px 0 0;
+  width: 100%;
 }
 
 #contact-email-link,
@@ -446,13 +468,9 @@ header {
   font-family: "Roboto", sans-serif;
 }
 
-#contact-area-container {
-  padding-right: 5px;
-}
-
 .contact-form-input {
   margin: 15px 0 0;
-  width: 90%;
+  width: 100%;
   font-family: "Roboto Slab", serif;
   color: #ff7e22;
 }
@@ -469,19 +487,13 @@ header {
   color: #ff7e22;
 }
 
-.contact--name {
-  width: 100%;
-  margin: 0;
-  font-family: "Roboto Slab", serif;
-  color: #ff7e22;
-}
-
 #contact-form-first {
-  width: 48%;
+  width: 50%;
 }
 
 #contact-form-last {
-  width: 40%;
+  width: 50%;
+  margin-left: -5px;
 }
 
 #contact-methods {
@@ -512,11 +524,6 @@ header {
 }
 
 @media screen and (min-width: 576px) {
-  #contact-area {
-    width: calc(100% - 163px);
-    margin-left: 160px;
-  }
-
   #contact-email-link,
 #contact-telephone-link {
     font-size: 20px;
@@ -538,26 +545,21 @@ header {
 }
 @media screen and (min-width: 992px) {
   #contact-area {
+    width: 100%;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+  }
+
+  #contact--area {
     flex-direction: row;
   }
-  #contact-area form {
+  #contact--area form {
     padding-left: 30px;
   }
-
-  .contact-form-input {
-    width: 80%;
-  }
-
-  .contact--name {
-    width: 80%;
-  }
-
-  #contact-form-last {
-    width: 40%;
-  }
-
-  #contact-form-first {
-    width: 39.5%;
+  #contact--area #contact-area-container,
+#contact--area #contact-form {
+    width: 50%;
   }
 }
 #about-page {
@@ -625,12 +627,15 @@ header {
 #SCSscheme-title {
   padding: 100px 0;
   font-size: 30px;
+  align-self: center;
 }
 
 #SCSscheme {
   display: flex;
   flex-direction: column;
   margin-bottom: 50px;
+  align-self: center;
+  align-items: center;
 }
 
 .SCSscheme--card {
@@ -679,7 +684,6 @@ header {
 }
 @media screen and (min-width: 1400px) {
   #SCSscheme {
-    flex-direction: row;
     padding-left: 160px;
     margin: 20px 0 20px 0;
   }
@@ -688,16 +692,63 @@ header {
     margin: 20px 0 20px 8%;
   }
 }
+#coding-container {
+  padding: 0 10px 0 3px;
+}
+
 #coding-title {
   padding: 100px 0 50px;
   font-size: 30px;
 }
 
+#coding-example {
+  background: #11CCED;
+  height: 500px;
+  margin: 50px 5% 0;
+  flex-basis: 260px;
+  max-width: 900px;
+  border-radius: 13px;
+  box-shadow: 7px 7px rgba(0, 0, 0, 0.5);
+  padding: 0 8px;
+}
+#coding-example * {
+  color: #000000;
+}
+
+#coding-example-title {
+  font-family: "Roboto", sans-serif;
+  font-size: 25px;
+  margin: 0 0 20px;
+}
+
+#coding-example-code {
+  content: "";
+  max-width: 880px;
+  flex-basis: 240px;
+  height: 250px;
+  margin: 0 0 20px;
+}
+
 @media screen and (min-width: 576px) {
-  #coding-title {
+  #coding-container {
     width: calc(100% - 160px);
     margin-left: 160px;
+    padding: 0 20px 0 10px;
+  }
+
+  #coding-title {
     padding: 50px 0;
     font-size: 45px;
+  }
+
+  #coding-example {
+    padding: 50px 0;
+    margin: 50px auto 0;
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.5);
+  }
+}
+@media screen and (min-width(1105px)) {
+  #coding-container {
+    padding: 0 15px;
   }
 }/*# sourceMappingURL=style.css.map */

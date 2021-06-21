@@ -1,13 +1,18 @@
 @use '../abstracts/index' as *;
 
 #contact-area {
+    padding: 100px 0 0 0;
+}
+
+#contact--area {
     display: flex;
     flex-direction: column;
-    margin: 100px 0 0;
-    padding: 0 0 0 8%;
+    padding: 0 20px 0 20px;
     justify-content: space-between;
     text-align: left;
-
+    max-width: 1200px;
+    align-self: center;
+    
     h2{
         font-size: 40px;
     }
@@ -17,16 +22,21 @@
         margin: 15px 0;
     }
 
-    form {
-        margin: 20px 0 0;
-    }
-
     textarea {
         resize: none;
         overflow: auto;
         height: 100px;
         display: block;
     }
+}
+
+#contact-area-container {
+    width: 100%;
+}
+
+#contact-form {
+    margin: 20px 0 0;
+    width: 100%;
 }
 
 #contact-email-link,
@@ -46,14 +56,9 @@
     font-family: 'Roboto', sans-serif;
 }
 
-#contact-area-container {
-    padding-right: 5px;
-
-}
-
 .contact-form-input {
     margin: 15px 0 0;
-    width: 90%;
+    width: 100%;
     font-family: 'Roboto Slab', serif;
     color: $secondary-color;
 }
@@ -62,19 +67,13 @@
     color: $secondary-color;
 }
 
-.contact--name {
-    width: 100%;
-    margin: 0;
-    font-family: 'Roboto Slab', serif;
-    color: $secondary-color;
-}
-
 #contact-form-first {
-    width: 48%; 
+    width: 50%;
 }
 
 #contact-form-last {
-    width: 40%;
+    width: 50%;
+    margin-left: -5px;
 }
 
 #contact-methods {
@@ -105,10 +104,6 @@
 }
 
 @media screen and (min-width:$breakpoint-small) {
-    #contact-area {
-        width: calc(100% - 163px);
-        margin-left: 160px;
-    }
 
     #contact-email-link,
     #contact-telephone-link {
@@ -135,27 +130,25 @@
 
 
 @media screen and (min-width:$breakpoint-large) {
+
     #contact-area {
+        width: 100%;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+    }
+
+    #contact--area {
         flex-direction: row;
 
         form {
             padding-left: 30px;
         }
-    }
-    .contact-form-input {
-        width: 80%;
-    }
-    
 
-    .contact--name {
-        width: 80%;
+        #contact-area-container,
+        #contact-form {
+            width: 50%;
+        }
     }
-
-    #contact-form-last {
-        width: 40%;
-    }
-    
-    #contact-form-first {
-        width: 39.5%; 
-    }
+ 
 }

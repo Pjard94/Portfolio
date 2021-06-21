@@ -1,15 +1,67 @@
 @use '../abstracts/index' as *;
 
+#coding-container {
+    padding: 0 10px 0 3px;
+}
+
 #coding-title {
     padding: 100px 0 50px;
     font-size: 30px;
     }
 
+
+#coding-example {
+    background: $tertiary-color;
+    height: 500px;
+    margin: 50px 5% 0;
+    flex-basis: 260px;
+    max-width: 900px;
+    border-radius: 13px;
+    box-shadow: 7px 7px rgba(0,0,0,0.5);
+    padding: 0 8px;
+
+    *{
+        color: $alt-fill-color;   
+    }
+    
+}
+
+#coding-example-title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 25px;
+    margin: 0 0 20px;
+}
+
+#coding-example-code {
+    content: "";
+    max-width: 880px;
+    flex-basis: 240px;
+    height: 250px;
+    margin: 0 0 20px;
+}
+
 @media screen and (min-width:$breakpoint-small) {
-    #coding-title {
+
+    #coding-container {
         width: calc(100% - 160px);
         margin-left: 160px;
+        padding: 0 20px 0 10px;
+    }
+
+    #coding-title {
         padding: 50px 0;
         font-size: 45px;
     }
+
+    #coding-example {
+        padding: 50px 0;
+        margin: 50px auto 0;
+        box-shadow: 10px 10px rgba(0,0,0,0.5);
+    }
+    }
+
+    @media screen and (min-width(1105px)) {
+        #coding-container {
+            padding: 0 15px;
+        }
     }
