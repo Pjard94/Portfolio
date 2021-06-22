@@ -2,16 +2,20 @@
 
 #contact-area {
     padding: 100px 0 0 0;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+    display: flex;
 }
 
 #contact--area {
     display: flex;
     flex-direction: column;
-    padding: 0 20px 0 20px;
     justify-content: space-between;
     text-align: left;
-    max-width: 1200px;
     align-self: center;
+    max-width: 1400px;
+    margin: 0 10px;
     
     h2{
         font-size: 40px;
@@ -108,10 +112,23 @@
     #contact-email-link,
     #contact-telephone-link {
     font-size: 20px;
-}
+    }
+
+    #contact-area {
+        width: calc(99% - 163px);
+        margin-left: 160px;
+        margin-right: auto;
+    }
 
     .contact-area-container {
         padding-left: 30px;
+        flex-basis: 700px;
+        flex-grow: 1;
+    }
+
+    #contact-form {
+        flex-basis: 700px;
+        flex-grow: 1;
     }
 
     #scroll-up {
@@ -131,13 +148,6 @@
 
 @media screen and (min-width:$breakpoint-large) {
 
-    #contact-area {
-        width: 100%;
-        justify-content: center;
-        align-content: center;
-        align-items: center;
-    }
-
     #contact--area {
         flex-direction: row;
 
@@ -151,4 +161,10 @@
         }
     }
  
+}
+
+@media screen and (min-width:$breakpoint-xl) {
+    #contact--area {
+        padding: 0 10px;
+    }
 }

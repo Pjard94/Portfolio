@@ -3,13 +3,16 @@
 .projects {
     width: 100%;
     display: flex;
-    flex-direction: column;
     justify-content: space-around;
-    padding: 0 25px;
+    padding: 75px 0 0;
 }
 
-.projects-mainpage {
-    margin: 75px 0 0;
+.projects-container {
+    width: 1400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 0 10px;
 }
 
 .project {
@@ -113,51 +116,18 @@
         width: calc(99% - 163px);
         margin-left: 160px;
     }
-
-    .project {
-        margin-left: 5px;
-    }
   }
 
-@media screen and (min-width:955px) {
-    #project-one,
-    #project-two,
-    #project-three,
-    #project-four,
-    #project-five,
-    #project-six {
-        margin-left: 10px;
-    }
+@media screen and (min-width:$breakpoint-xl) {
 
     #projects {
-        display: flex;
-        columns: 2;
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
-}
+            display: flex;
+            columns: 2;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
 
-@media screen and (min-width:$breakpoint-large) {
-    #project-two,
-    #project-five {
-        margin-left: 5px;
-        margin-right: 0;
-    }
-}
-
-@media screen and (min-width:$breakpoint-xl) {
-    .project-mainpage {
+    .project {
         flex-basis: 450px;
-    }
-}
-
-@media screen and (min-width:1571px) {
-    #project-one,
-    #project-two,
-    #project-three,
-    #project-four,
-    #project-five,
-    #project-six {
-        margin-left: 10px;
     }
 }
