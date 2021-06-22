@@ -5,7 +5,6 @@
     justify-content: space-around;
     align-content: center;
     align-items: center;
-    display: flex;
 }
 
 #contact--area {
@@ -63,7 +62,7 @@
 .contact-form-input {
     margin: 15px 0 0;
     width: 100%;
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Roboto', sans-serif;
     color: $secondary-color;
 }
 
@@ -147,6 +146,10 @@
 
 
 @media screen and (min-width:$breakpoint-large) {
+
+    #contact-area {
+        display: flex;
+    }
 
     #contact--area {
         flex-direction: row;

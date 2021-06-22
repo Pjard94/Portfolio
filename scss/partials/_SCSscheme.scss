@@ -1,21 +1,30 @@
 @use '../abstracts/index' as *;
 
+#SCSscheme-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+}
+
 #SCSscheme-title {
+    display: flex;
     padding: 100px 0;
     font-size: 30px;
-    align-self: center;
+    text-align: center;
 }
 
 #SCSscheme {
     display: flex;
     flex-direction: column;
     margin-bottom: 50px;
-    align-self: center;
+    justify-content: center;
+    align-items: center;
 }
 
 .SCSscheme--card {
     width: 80%;
-    margin: 20px 0 20px 10%;
+    margin: 20px 0 20px;
     background-color: $tertiary-color;
     padding: 30px;
     border-radius: 13px;
@@ -47,9 +56,9 @@
 }
 
 @media screen and (min-width:$breakpoint-small) {
-    #SCSscheme,
-    #SCSscheme-title {
-        width: calc(100% - 160px);
+
+    #SCSscheme-page {
+        width: calc(99% - 163px);
         margin-left: 160px;
     }
 
@@ -60,12 +69,13 @@
   }
 
 @media screen and (min-width:1400px) {
-    #SCSscheme {
-        padding-left: 160px;
-        margin: 20px 0 20px 0;
-    }
 
     .SCSscheme--card {
-        margin: 20px 0 20px 8%;
+        margin: 20px 0 20px;
+        width: 900px;
+    }
+
+    .SCSscheme-title {
+        width: 900px;
     }
 }

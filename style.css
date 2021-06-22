@@ -276,8 +276,8 @@ header {
   width: 1400px;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
   margin: 0 10px;
+  justify-content: space-around;
 }
 
 .project {
@@ -392,7 +392,6 @@ header {
   justify-content: space-around;
   align-content: center;
   align-items: center;
-  display: flex;
 }
 
 #contact--area {
@@ -447,7 +446,7 @@ header {
 .contact-form-input {
   margin: 15px 0 0;
   width: 100%;
-  font-family: "Roboto Slab", serif;
+  font-family: "Roboto", sans-serif;
   color: #ff7e22;
 }
 
@@ -533,6 +532,10 @@ header {
   }
 }
 @media screen and (min-width: 992px) {
+  #contact-area {
+    display: flex;
+  }
+
   #contact--area {
     flex-direction: row;
   }
@@ -611,22 +614,31 @@ header {
     width: 1000px;
   }
 }
+#SCSscheme-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 #SCSscheme-title {
+  display: flex;
   padding: 100px 0;
   font-size: 30px;
-  align-self: center;
+  text-align: center;
 }
 
 #SCSscheme {
   display: flex;
   flex-direction: column;
   margin-bottom: 50px;
-  align-self: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .SCSscheme--card {
   width: 80%;
-  margin: 20px 0 20px 10%;
+  margin: 20px 0 20px;
   background-color: #11CCED;
   padding: 30px;
   border-radius: 13px;
@@ -657,9 +669,8 @@ header {
 }
 
 @media screen and (min-width: 576px) {
-  #SCSscheme,
-#SCSscheme-title {
-    width: calc(100% - 160px);
+  #SCSscheme-page {
+    width: calc(99% - 163px);
     margin-left: 160px;
   }
 
@@ -669,13 +680,13 @@ header {
   }
 }
 @media screen and (min-width: 1400px) {
-  #SCSscheme {
-    padding-left: 160px;
-    margin: 20px 0 20px 0;
+  .SCSscheme--card {
+    margin: 20px 0 20px;
+    width: 900px;
   }
 
-  .SCSscheme--card {
-    margin: 20px 0 20px 8%;
+  .SCSscheme-title {
+    width: 900px;
   }
 }
 #coding-container {
