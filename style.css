@@ -632,13 +632,14 @@ header {
   display: flex;
   flex-direction: column;
   margin-bottom: 50px;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
+  width: 100%;
 }
 
 .SCSscheme--card {
-  width: 80vw;
-  margin: 20px 0 20px;
+  flex-basis: 260px;
+  margin: 20px 50px 20px;
   background-color: #11CCED;
   padding: 30px;
   border-radius: 13px;
@@ -677,6 +678,11 @@ header {
   #SCSscheme-title {
     padding: 50px 0;
     font-size: 45px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .SCSscheme--card {
+    width: 80%;
   }
 }
 @media screen and (min-width: 1400px) {
