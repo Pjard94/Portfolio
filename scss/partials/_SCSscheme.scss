@@ -15,7 +15,6 @@
 }
 
 #SCSscheme {
-    display: flex;
     flex-direction: column;
     margin-bottom: 50px;
     justify-content: space-around;
@@ -24,8 +23,7 @@
 }
 
 .SCSscheme--card {
-    flex-basis: 260px;
-    margin: 20px 50px 20px;
+    margin: 30px 15px 20px;
     background-color: $tertiary-color;
     padding: 30px;
     border-radius: 13px;
@@ -67,13 +65,30 @@
         padding: 50px 0;
         font-size: 45px;
     }
-  }
+}
 
-  @media screen and (min-width:$breakpoint-medium) {
-      .SCSscheme--card {
-          width: 80%;
-      }
-  }
+@media  screen and (min-width:734px) {
+    .SCSscheme--card {
+        width: 550px;
+    }   
+}
+
+@media screen and (min-width:751px) {
+    
+    #SCSscheme {
+        display: flex;
+    }
+
+    .SCSscheme--card {
+            width: 90%;
+        }
+}
+
+@media screen and (min-width:$breakpoint-medium) {
+    .SCSscheme--card {
+        width: 80%;
+    }
+}
   
 @media screen and (min-width:1400px) {
 

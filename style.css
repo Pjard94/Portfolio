@@ -512,12 +512,10 @@ header {
 
   .contact-area-container {
     padding-left: 30px;
-    flex-basis: 700px;
     flex-grow: 1;
   }
 
   #contact-form {
-    flex-basis: 700px;
     flex-grow: 1;
   }
 
@@ -629,7 +627,6 @@ header {
 }
 
 #SCSscheme {
-  display: flex;
   flex-direction: column;
   margin-bottom: 50px;
   justify-content: space-around;
@@ -638,8 +635,7 @@ header {
 }
 
 .SCSscheme--card {
-  flex-basis: 260px;
-  margin: 20px 50px 20px;
+  margin: 30px 15px 20px;
   background-color: #11CCED;
   padding: 30px;
   border-radius: 13px;
@@ -678,6 +674,20 @@ header {
   #SCSscheme-title {
     padding: 50px 0;
     font-size: 45px;
+  }
+}
+@media screen and (min-width: 734px) {
+  .SCSscheme--card {
+    width: 550px;
+  }
+}
+@media screen and (min-width: 751px) {
+  #SCSscheme {
+    display: flex;
+  }
+
+  .SCSscheme--card {
+    width: 90%;
   }
 }
 @media screen and (min-width: 768px) {
