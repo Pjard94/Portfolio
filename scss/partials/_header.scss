@@ -57,6 +57,31 @@ header {
     padding: 50px 0 0;
 }
 
+.typewriter--text {
+    display: none;
+}
+
+.text-typewriter-output::after {
+    content :"\0020";
+    animation: pulse 1s infinite;
+    color:transparent;
+    border-right:3px solid $fill-color;
+    margin-left:4px;
+}
+    
+@keyframes pulse {
+    0% {
+        border-right:3px solid  $fill-color;
+    }
+    50% {
+        border-right:3px solid  transparent;
+    }
+    100% {
+        border-right:3px solid  $fill-color;
+    }
+}
+
+
 @media screen and (min-width:$breakpoint-small) {
     .hero-image {
         width: calc(100% - 163px);

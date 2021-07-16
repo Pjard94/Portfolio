@@ -249,6 +249,42 @@ header {
   padding: 50px 0 0;
 }
 
+.typewriter--text {
+  display: none;
+}
+
+.text-typewriter-output::after {
+  content: " ";
+  -webkit-animation: pulse 1s infinite;
+          animation: pulse 1s infinite;
+  color: transparent;
+  border-right: 3px solid #ffffff;
+  margin-left: 4px;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    border-right: 3px solid #ffffff;
+  }
+  50% {
+    border-right: 3px solid transparent;
+  }
+  100% {
+    border-right: 3px solid #ffffff;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    border-right: 3px solid #ffffff;
+  }
+  50% {
+    border-right: 3px solid transparent;
+  }
+  100% {
+    border-right: 3px solid #ffffff;
+  }
+}
 @media screen and (min-width: 576px) {
   .hero-image {
     width: calc(100% - 163px);
