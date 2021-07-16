@@ -53,13 +53,6 @@
     background: rgba(0,0,0,.3);
 }
 
-.project:hover {
-    .project-title {
-      transform: translateY(-100px) ;
-      text-align: center;
-    }
-}
-
 .project-button {
     width: 100px;
     height: 40px;
@@ -80,11 +73,20 @@
 
 .project-title {
     font-family: 'Roboto', sans-serif;
-    margin-top: 240px;
+    font-size: 20px;
+    margin-top: 180px;
     margin-bottom: 10px;
     margin-left: 8px;
     z-index: 2;
     position: relative;
+}
+
+.project-description{
+    display: flex;
+    font-size: 16px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+    max-width: 400px;
 }
 
 #project-one {
@@ -110,6 +112,21 @@
     background-size: cover;
     background-repeat: no-repeat;
 }
+
+// .project:hover {
+//     .project-title {
+//       transform: translatey(-20px);
+//       margin-bottom: 0px;
+//       margin-top: 180px;
+//       transition: transform 2s ease-in-out;
+//     }
+
+//     .project-description{
+//         display: block;
+//         animation: fadeIn linear 3s;
+//     }
+// }
+
 
 @media screen and (min-width:$breakpoint-small) {
     .projects {

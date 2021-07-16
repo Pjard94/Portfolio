@@ -354,11 +354,6 @@ header {
   background: rgba(0, 0, 0, 0.3);
 }
 
-.project:hover .project-title {
-  transform: translateY(-100px);
-  text-align: center;
-}
-
 .project-button {
   width: 100px;
   height: 40px;
@@ -379,11 +374,20 @@ header {
 
 .project-title {
   font-family: "Roboto", sans-serif;
-  margin-top: 240px;
+  font-size: 20px;
+  margin-top: 180px;
   margin-bottom: 10px;
   margin-left: 8px;
   z-index: 2;
   position: relative;
+}
+
+.project-description {
+  display: flex;
+  font-size: 16px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+  max-width: 400px;
 }
 
 #project-one .project-background {
