@@ -19,17 +19,13 @@
     border-radius: 13px;
     box-shadow: 7px 7px rgba(0,0,0,0.5);
     padding: 0 8px;
-
-    *{
-        color: $alt-fill-color;   
-    }
-    
 }
 
 #coding-example-title {
     font-family: 'Roboto', sans-serif;
     font-size: 25px;
     margin: 0 0 20px;
+    color: $alt-fill-color; 
 }
 
 #coding-example-code {
@@ -38,6 +34,57 @@
     flex-basis: 240px;
     height: 250px;
     margin: 0 0 20px;
+}
+
+#coding-example-code-window {
+    height: 300px;
+    width: 100%;
+}
+
+.language-js {
+    background-color: $coding-background;
+    overflow: scroll;
+    text-align: left;
+
+    span {
+        font-size: 16px;
+        line-height: 22px;
+    }
+}
+.coding-example-description-container{
+    margin: 80px 0 0;
+}
+
+.coding-example-description {
+    color: $alt-fill-color; 
+}
+
+.token-action {
+    color: rgb(71, 111, 241);
+}
+
+.token-variable-container{
+    color: yellow;
+}
+
+.token-string {
+    color: rgb(175, 127, 81);
+}
+
+.token-while {
+    color: mediumorchid;
+}
+
+.token-variable-name {
+    color: $tertiary-color;
+}
+
+.token-character{
+    color: lightblue;
+}
+
+.token-selector{
+    color: burlywood;
 }
 
 @media screen and (min-width:$breakpoint-small) {
@@ -54,7 +101,7 @@
     }
 
     #coding-example {
-        padding: 50px 0;
+        padding: 50px 30px;
         margin: 50px auto 0;
         box-shadow: 10px 10px rgba(0,0,0,0.5);
     }

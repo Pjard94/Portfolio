@@ -765,14 +765,12 @@ header {
   box-shadow: 7px 7px rgba(0, 0, 0, 0.5);
   padding: 0 8px;
 }
-#coding-example * {
-  color: #000000;
-}
 
 #coding-example-title {
   font-family: "Roboto", sans-serif;
   font-size: 25px;
   margin: 0 0 20px;
+  color: #000000;
 }
 
 #coding-example-code {
@@ -781,6 +779,57 @@ header {
   flex-basis: 240px;
   height: 250px;
   margin: 0 0 20px;
+}
+
+#coding-example-code-window {
+  height: 300px;
+  width: 100%;
+}
+
+.language-js {
+  background-color: #272822;
+  overflow: scroll;
+  text-align: left;
+}
+.language-js span {
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.coding-example-description-container {
+  margin: 80px 0 0;
+}
+
+.coding-example-description {
+  color: #000000;
+}
+
+.token-action {
+  color: #476ff1;
+}
+
+.token-variable-container {
+  color: yellow;
+}
+
+.token-string {
+  color: #af7f51;
+}
+
+.token-while {
+  color: mediumorchid;
+}
+
+.token-variable-name {
+  color: #11CCED;
+}
+
+.token-character {
+  color: lightblue;
+}
+
+.token-selector {
+  color: burlywood;
 }
 
 @media screen and (min-width: 576px) {
@@ -796,7 +845,7 @@ header {
   }
 
   #coding-example {
-    padding: 50px 0;
+    padding: 50px 30px;
     margin: 50px auto 0;
     box-shadow: 10px 10px rgba(0, 0, 0, 0.5);
   }
