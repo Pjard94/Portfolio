@@ -42,7 +42,7 @@
 }
 
 .big-nav a:hover {
-    color: $tertiary-color;
+    color: $alt-fill-color;
 }
 
 .block-letter {
@@ -99,7 +99,9 @@
 }
 
 .currentPage {
-    color: $tertiary-color;
+    text-decoration: underline;
+    text-decoration-color: $alt-fill-color;
+    text-decoration-thickness: 3px;
 }
 
 @media screen and (min-width:$breakpoint-small) {

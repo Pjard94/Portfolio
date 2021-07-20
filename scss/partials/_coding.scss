@@ -12,7 +12,7 @@
 
 #coding-example {
     background: $tertiary-color;
-    height: 500px;
+    max-height: 900px;
     margin: 50px 5% 0;
     flex-basis: 260px;
     max-width: 900px;
@@ -53,6 +53,7 @@
 }
 .coding-example-description-container{
     margin: 80px 0 0;
+    padding-bottom: 30px;
 }
 
 .coding-example-description {
@@ -87,6 +88,12 @@
     color: burlywood;
 }
 
+.coding-examples-links{
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: center;
+}
+
 @media screen and (min-width:$breakpoint-small) {
 
     #coding-container {
@@ -104,6 +111,10 @@
         padding: 50px 30px;
         margin: 50px auto 0;
         box-shadow: 10px 10px rgba(0,0,0,0.5);
+    }
+
+    .coding-examples-links{
+        padding-bottom: 0;
     }
     }
 

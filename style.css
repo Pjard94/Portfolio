@@ -124,7 +124,7 @@ h6 {
 }
 
 .big-nav a:hover {
-  color: #11CCED;
+  color: #000000;
 }
 
 .block-letter {
@@ -180,7 +180,10 @@ h6 {
 }
 
 .currentPage {
-  color: #11CCED;
+  text-decoration: underline;
+  -webkit-text-decoration-color: #000000;
+          text-decoration-color: #000000;
+  text-decoration-thickness: 3px;
 }
 
 @media screen and (min-width: 576px) {
@@ -757,7 +760,7 @@ header {
 
 #coding-example {
   background: #11CCED;
-  height: 500px;
+  max-height: 900px;
   margin: 50px 5% 0;
   flex-basis: 260px;
   max-width: 900px;
@@ -798,6 +801,7 @@ header {
 
 .coding-example-description-container {
   margin: 80px 0 0;
+  padding-bottom: 30px;
 }
 
 .coding-example-description {
@@ -832,6 +836,12 @@ header {
   color: burlywood;
 }
 
+.coding-examples-links {
+  padding-bottom: 50px;
+  display: flex;
+  justify-content: center;
+}
+
 @media screen and (min-width: 576px) {
   #coding-container {
     width: calc(100% - 160px);
@@ -848,6 +858,10 @@ header {
     padding: 50px 30px;
     margin: 50px auto 0;
     box-shadow: 10px 10px rgba(0, 0, 0, 0.5);
+  }
+
+  .coding-examples-links {
+    padding-bottom: 0;
   }
 }
 @media screen and (min-width(1105px)) {
