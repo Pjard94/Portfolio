@@ -751,6 +751,7 @@ header {
 }
 #coding-container {
   padding: 0 10px 0 3px;
+  margin-bottom: 100px;
 }
 
 #coding-title {
