@@ -74,6 +74,10 @@
     font-size: 24px;
 }
 
+.social-media-links{
+    padding: 0 10px;
+}
+
 .fa-linkedin-in {
     color: $secondary-color;
     background: $fill-color;
@@ -100,8 +104,7 @@
 
 .currentPage {
     text-decoration: underline;
-    text-decoration-color: $alt-fill-color;
-    text-decoration-thickness: 3px;
+    color: $alt-fill-color;
 }
 
 @media screen and (min-width:$breakpoint-small) {

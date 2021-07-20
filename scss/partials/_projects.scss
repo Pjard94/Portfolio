@@ -79,6 +79,8 @@
     margin-left: 8px;
     z-index: 2;
     position: relative;
+    color: $fill-color;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 .project-description{
@@ -87,6 +89,8 @@
     margin-top: 10px;
     flex-wrap: wrap;
     max-width: 400px;
+    color: $fill-color;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 #project-one {

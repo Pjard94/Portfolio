@@ -155,6 +155,10 @@ h6 {
   font-size: 24px;
 }
 
+.social-media-links {
+  padding: 0 10px;
+}
+
 .fa-linkedin-in {
   color: #ff7e22;
   background: #ffffff;
@@ -181,9 +185,7 @@ h6 {
 
 .currentPage {
   text-decoration: underline;
-  -webkit-text-decoration-color: #000000;
-          text-decoration-color: #000000;
-  text-decoration-thickness: 3px;
+  color: #000000;
 }
 
 @media screen and (min-width: 576px) {
@@ -383,6 +385,8 @@ header {
   margin-left: 8px;
   z-index: 2;
   position: relative;
+  color: #ffffff;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 .project-description {
@@ -391,6 +395,8 @@ header {
   margin-top: 10px;
   flex-wrap: wrap;
   max-width: 400px;
+  color: #ffffff;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 #project-one .project-background {
@@ -515,8 +521,8 @@ header {
 }
 
 #contact-form-last {
-  width: 50%;
-  margin-left: -5px;
+  width: 49%;
+  margin-left: 2px;
 }
 
 #contact-methods {
@@ -841,6 +847,15 @@ header {
   padding-bottom: 50px;
   display: flex;
   justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.coding-example-button {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
 }
 
 @media screen and (min-width: 576px) {

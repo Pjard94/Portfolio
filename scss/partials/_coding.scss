@@ -93,6 +93,15 @@
     padding-bottom: 50px;
     display: flex;
     justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.coding-example-button{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
 }
 
 @media screen and (min-width:$breakpoint-small) {
