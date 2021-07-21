@@ -156,7 +156,7 @@ h6 {
 }
 
 .social-media-links {
-  padding: 0 10px;
+  padding: 0 10px 20px;
 }
 
 .fa-linkedin-in {
@@ -256,15 +256,6 @@ header {
 
 .typewriter--text {
   display: none;
-}
-
-.text-typewriter-output::after {
-  content: " ";
-  -webkit-animation: pulse 1s infinite;
-          animation: pulse 1s infinite;
-  color: transparent;
-  border-right: 3px solid #ffffff;
-  margin-left: 4px;
 }
 
 @-webkit-keyframes pulse {
@@ -748,10 +739,6 @@ header {
   font-size: 22px;
   margin: 0 0 15px;
   color: #000000;
-}
-
-.scs-left-align {
-  text-align: left;
 }
 
 .SCSscheme--card--filler {

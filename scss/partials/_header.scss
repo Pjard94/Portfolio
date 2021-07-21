@@ -61,13 +61,13 @@ header {
     display: none;
 }
 
-.text-typewriter-output::after {
-    content :"\0020";
-    animation: pulse 1s infinite;
-    color:transparent;
-    border-right:3px solid $fill-color;
-    margin-left:4px;
-}
+// .text-typewriter-output::after {
+//     content :"\0020";
+//     animation: pulse 1s infinite;
+//     color:transparent;
+//     border-right:3px solid $fill-color;
+//     margin-left:4px;
+// }
     
 @keyframes pulse {
     0% {
