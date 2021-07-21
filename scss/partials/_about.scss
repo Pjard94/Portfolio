@@ -32,6 +32,14 @@
   justify-content: center;
 }
 
+#about-scheme-link{
+  text-decoration: underline;
+}
+
+#about-scheme-link:hover{
+  color: $alt-fill-color;
+}
+
 @media screen and (min-width:$breakpoint-small) {
   #about-page {
       width: calc(100% - 163px);

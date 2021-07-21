@@ -71,12 +71,11 @@
 }
 
 #contact-form-first {
-    width: 50%;
+    width: 49%;
 }
 
 #contact-form-last {
     width: 49%;
-    margin-left: 2px;
 }
 
 #contact-methods {
@@ -106,6 +105,12 @@
     font-size: 20px;
 }
 
+@media screen and (min-width:430px) {
+    #contact-form-last {
+        margin-left: 1%;
+    }
+}
+
 @media screen and (min-width:$breakpoint-small) {
 
     #contact-email-link,
@@ -127,6 +132,16 @@
     #scroll-up {
         width: calc(100% - 163px);
         margin-left: 160px;
+    }
+
+    #contact-form-last {
+        margin-left: 0;
+    }
+}
+
+@media screen and (min-width:599px) {
+    #contact-form-last {
+        margin-left: 1%;
     }
 }
 
@@ -157,7 +172,16 @@
             width: 50%;
         }
     }
- 
+    
+    #contact-form-last {
+        margin-left: 0;
+    }
+}
+
+@media screen and (min-width:1057px) {
+    #contact-form-last {
+        margin-left: 1%;
+    }
 }
 
 @media screen and (min-width:$breakpoint-xl) {

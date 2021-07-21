@@ -441,6 +441,16 @@ header {
     flex-basis: 450px;
   }
 }
+@media screen and (min-width: 1300px) {
+  .project {
+    flex-basis: 350px;
+  }
+}
+@media screen and (min-width: 1560px) {
+  .project {
+    flex-basis: 450px;
+  }
+}
 #contact-area {
   padding: 100px 0 0 0;
   justify-content: space-around;
@@ -517,12 +527,11 @@ header {
 }
 
 #contact-form-first {
-  width: 50%;
+  width: 49%;
 }
 
 #contact-form-last {
   width: 49%;
-  margin-left: 2px;
 }
 
 #contact-methods {
@@ -552,6 +561,11 @@ header {
   font-size: 20px;
 }
 
+@media screen and (min-width: 430px) {
+  #contact-form-last {
+    margin-left: 1%;
+  }
+}
 @media screen and (min-width: 576px) {
   #contact-email-link,
 #contact-telephone-link {
@@ -573,6 +587,15 @@ header {
     width: calc(100% - 163px);
     margin-left: 160px;
   }
+
+  #contact-form-last {
+    margin-left: 0;
+  }
+}
+@media screen and (min-width: 599px) {
+  #contact-form-last {
+    margin-left: 1%;
+  }
 }
 @media screen and (min-width: 768px) {
   #contact-area p {
@@ -593,6 +616,15 @@ header {
   #contact--area #contact-area-container,
 #contact--area #contact-form {
     width: 50%;
+  }
+
+  #contact-form-last {
+    margin-left: 0;
+  }
+}
+@media screen and (min-width: 1057px) {
+  #contact-form-last {
+    margin-left: 1%;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -630,6 +662,14 @@ header {
   padding-bottom: 100px;
   align-items: center;
   justify-content: center;
+}
+
+#about-scheme-link {
+  text-decoration: underline;
+}
+
+#about-scheme-link:hover {
+  color: #000000;
 }
 
 @media screen and (min-width: 576px) {
