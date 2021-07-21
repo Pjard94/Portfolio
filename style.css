@@ -664,6 +664,14 @@ header {
   justify-content: center;
 }
 
+.about-first-line {
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+.about-paragraphs {
+  margin: 15px 0;
+}
+
 #about-scheme-link {
   text-decoration: underline;
 }
@@ -742,6 +750,10 @@ header {
   color: #000000;
 }
 
+.scs-left-align {
+  text-align: left;
+}
+
 .SCSscheme--card--filler {
   color: #000000;
 }
@@ -768,7 +780,7 @@ header {
 }
 @media screen and (min-width: 734px) {
   .SCSscheme--card {
-    width: 550px;
+    width: 500px;
   }
 }
 @media screen and (min-width: 751px) {

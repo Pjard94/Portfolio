@@ -41,6 +41,10 @@
     color: $alt-fill-color;
 }
 
+.scs-left-align{
+    text-align: left;
+}
+
 .SCSscheme--card--filler {
     color: $alt-fill-color;
 }
@@ -69,7 +73,7 @@
 
 @media  screen and (min-width:734px) {
     .SCSscheme--card {
-        width: 550px;
+        width: 500px;
     }   
 }
 
