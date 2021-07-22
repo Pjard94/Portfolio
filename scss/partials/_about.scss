@@ -37,7 +37,7 @@
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
   }
 }
-
+//The rules above are for IE only as the rules below work everywhere else
 
 .about-first-line{
   -webkit-text-stroke-width: 1px;
