@@ -1,5 +1,9 @@
 @use '../abstracts/index' as *;
 
+html{
+    scroll-behavior: smooth;
+}
+
 body {
     background: $primary-color;
     font-family: 'Roboto Slab', serif;

@@ -52,6 +52,10 @@ table {
 }
 
 /* /CSS reset */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: #455680;
   font-family: "Roboto Slab", serif;
@@ -661,8 +665,16 @@ header {
   justify-content: center;
 }
 
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .about-first-line {
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  }
+}
 .about-first-line {
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #000000;
+  font-size: 20px;
+  font-weight: 500;
 }
 
 .about-paragraphs {
