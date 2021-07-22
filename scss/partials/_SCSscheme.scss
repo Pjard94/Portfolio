@@ -50,11 +50,11 @@
 }
 
 .treehouse_profile {
-    color: $primary-color;
+    color: $fill-color;
 }
 
 .treehouse_profile:hover {
-    color: $secondary-color;
+    color: $alt-fill-color;
     text-decoration: underline;
 }
 

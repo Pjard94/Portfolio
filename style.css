@@ -247,6 +247,7 @@ header {
 
 #me {
   font-size: 35px;
+  width: 80%;
 }
 
 #role {
@@ -751,11 +752,11 @@ header {
 }
 
 .treehouse_profile {
-  color: #455680;
+  color: #ffffff;
 }
 
 .treehouse_profile:hover {
-  color: #ff7e22;
+  color: #000000;
   text-decoration: underline;
 }
 
