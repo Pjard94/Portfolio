@@ -45,13 +45,14 @@
 #contact-email-link,
 #contact-telephone-link {
     font-size: 16px;
-    color: $tertiary-color;
+    color: $fill-color;
     display: block;
 }
 
 #contact-email-link:hover,
 #contact-telephone-link:hover {
     text-decoration: underline;
+    color: $alt-fill-color;
 }
 
 #contact-email-link {
