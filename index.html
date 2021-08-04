@@ -4,10 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <!-- To show what the website is -->
     <title> Peter Jardine's Protfolio</title>
-    <link rel="stylesheet" href="style.css">
     <link rel="icon" href="assets/favicon.png">
+    <!-- allows the javascript stuff to run -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- the links to the stylesheets -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 </head>
@@ -146,11 +151,11 @@
                 </div>
                 <form id="contact-form">
                     <!-- A basic form to contact me -->
-                    <input class="contact-form-input" id="contact-form-first" type="text" placeholder="First Name*">
-                    <input class="contact-form-input" id="contact-form-last" type="text" placeholder="Last Name*">
-                    <input class="contact-form-input" type="email" placeholder="Email*">
-                    <input class="contact-form-input" type="text" placeholder="Subject*">
-                    <textarea class="contact-form-input" rows="40" cols="40" placeholder="Message"></textarea>
+                    <input class="contact-form-input" id="contact-form-first" type="text" placeholder="First Name*" required>
+                    <input class="contact-form-input" id="contact-form-last" type="text" placeholder="Last Name*" required>
+                    <input class="contact-form-input" type="email" placeholder="Email*" required>
+                    <input class="contact-form-input" type="text" placeholder="Subject*" required>
+                    <textarea class="contact-form-input" rows="40" cols="40" placeholder="Message*"></textarea>
                     <input id="contact-form-submit" type="submit" value="Submit">
                 </form>
             </div>
@@ -165,8 +170,6 @@
     </div>
 
     <!-- these allow for the typewriter to work -->
-    <script src="js/jquery-3.6.0.min.js"></script>
-    <script src="js/better-typewriter/typed.min.js.map"></script>
     <script src="js/better-typewriter/typed.js"></script>
     <script src="js/base-script.js"></script>
 

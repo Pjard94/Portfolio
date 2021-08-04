@@ -514,6 +514,13 @@ header {
   width: 100%;
   font-family: "Roboto", sans-serif;
   color: #ff7e22;
+  border-radius: 6px;
+  border: #ff7e22;
+  padding: 9px;
+}
+
+.contact-form-input:focus {
+  border: #ff7e22;
 }
 
 .contact-form-input::-moz-placeholder {

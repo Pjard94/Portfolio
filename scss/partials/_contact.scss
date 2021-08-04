@@ -65,6 +65,13 @@
     width: 100%;
     font-family: 'Roboto', sans-serif;
     color: $secondary-color;
+    border-radius: 6px;
+    border: $secondary-color;
+    padding: 9px;
+}
+
+.contact-form-input:focus {
+    border: $secondary-color;
 }
 
 .contact-form-input::placeholder {
