@@ -1,7 +1,7 @@
 const flyoutMenu = document.getElementById("big-nav");
+const burger = document.getElementById("burger-box")
 
-
-
-document.getElementById("burger-box").addEventListener("click", function showMenu() {
+burger.addEventListener('click', function showMenu() {
     flyoutMenu.classList.add("show")
+    this.classList.add("hide")
 });

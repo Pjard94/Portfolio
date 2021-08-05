@@ -100,6 +100,9 @@ h6 {
   position: fixed;
   margin: 20px 0 0 20px;
   cursor: pointer;
+  border: none;
+  left: 0;
+  top: 0;
 }
 
 .menu-line {
@@ -125,7 +128,7 @@ h6 {
   border-right: #ffffff 2px solid;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
-  transform: translate3d(-160px, 0, 0);
+  visibility: hidden;
 }
 
 .big-nav a:hover {
@@ -193,8 +196,12 @@ h6 {
   color: #000000;
 }
 
-#big-nav.show {
-  transform: translate3d(160px, 0, 0);
+.show {
+  visibility: visible;
+}
+
+.hide {
+  visibility: hidden;
 }
 
 @media screen and (min-width: 576px) {
