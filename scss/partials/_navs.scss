@@ -13,6 +13,7 @@
     padding: 5px 5px 5px 5px;
     position: fixed;
     margin: 20px 0 0 20px;
+    cursor: pointer;
 }
 
 .menu-line {
@@ -25,7 +26,6 @@
 }
 
 .big-nav {
-    display: none;
     height: 100%;
     width: 160px;
     position: fixed;
@@ -39,6 +39,7 @@
     border-right: $fill-color 2px solid;
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
+    transform: translate3d(-160px, 0, 0);
 }
 
 .big-nav a:hover {
@@ -105,6 +106,10 @@
 .currentPage {
     text-decoration: underline;
     color: $alt-fill-color;
+}
+
+#big-nav.show {
+    transform: translate3d(160px, 0, 0);
 }
 
 @media screen and (min-width:$breakpoint-small) {

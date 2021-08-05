@@ -71,9 +71,8 @@
 }
 
 .contact-form-input:focus {
-    border: $secondary-color;
+    outline: none;
 }
-
 .contact-form-input::placeholder {
     color: $secondary-color;
 }
@@ -112,6 +111,24 @@
     padding-bottom: 50px;
     font-size: 20px;
 }
+
+.Form-focused {
+    border: $secondary-color solid 2px;
+    border-radius: 6px;
+
+}
+
+.Form-valid {
+    border: #03AC13 solid 2px;
+    border-radius: 6px;
+}
+
+.Form-invalid {
+    border: #d21204 solid 2px;
+    border-radius: 6px;
+}
+
+
 
 @media screen and (min-width:430px) {
     #contact-form-last {

@@ -18,14 +18,14 @@
 </head>
 <body>
 
-    <div class="small-nav">
+    <div id="burger-box" class="small-nav">
         <span class="menu-line"></span>
         <span class="menu-line"></span>
         <span class="menu-line"></span>
         <div>Menu</div>
     </div>
 
-    <div class="big-nav">
+    <div id="big-nav" class="big-nav">
         <div class="block-letter"><a href="#">P</a></div>
         <ul class="big-nav-list">
             <li><a href="#projects" class="currentPage">My Portfolio</a></li>
@@ -153,9 +153,9 @@
                     <!-- A basic form to contact me -->
                     <input class="contact-form-input" id="contact-form-first" type="text" placeholder="First Name*" required>
                     <input class="contact-form-input" id="contact-form-last" type="text" placeholder="Last Name*" required>
-                    <input class="contact-form-input" type="email" placeholder="Email*" required>
-                    <input class="contact-form-input" type="text" placeholder="Subject*" required>
-                    <textarea class="contact-form-input" rows="40" cols="40" placeholder="Message*"></textarea>
+                    <input class="contact-form-input" id="client-email" type="email" placeholder="Email*" required>
+                    <input class="contact-form-input" id="email-subject" type="text" placeholder="Subject*" required>
+                    <textarea class="contact-form-input" id="message" rows="40" cols="40" placeholder="Message*" required></textarea>
                     <input id="contact-form-submit" type="submit" value="Submit">
                 </form>
             </div>
