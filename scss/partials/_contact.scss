@@ -38,7 +38,6 @@
 }
 
 #contact-form {
-    margin: 20px 0 0;
     width: 100%;
 }
 
@@ -75,14 +74,6 @@
 }
 .contact-form-input::placeholder {
     color: $secondary-color;
-}
-
-#contact-form-first {
-    width: 49%;
-}
-
-#contact-form-last {
-    width: 49%;
 }
 
 #contact-methods {
@@ -134,6 +125,13 @@
     #contact-form-last {
         margin-left: 1%;
     }
+    #contact-form-first {
+        width: 49%;
+    }
+    
+    #contact-form-last {
+        width: 49%;
+    }
 }
 
 @media screen and (min-width:$breakpoint-small) {
@@ -146,11 +144,6 @@
     .contact-area-container {
         padding-left: 30px;
         flex-grow: 1;
-    }
-
-    #scroll-up {
-        width: calc(100% - 163px);
-        margin-left: 160px;
     }
 
     #contact-form-last {

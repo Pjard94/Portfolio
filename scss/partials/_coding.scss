@@ -116,37 +116,41 @@
 
     #contact-area {
         width: calc(100% - 163px);
-        margin-left: 80px;
     }
 
     .projects {
         width: calc(100% - 163px);
-        margin-left: 80px;
     }
 
-    .menu-showing::before {
-        background: rgba(0,0,0,.3);
-        content: "";
-        position: absolute;
-        left: 0;
-        right: 0;
+    #scroll-up {
+        width: calc(100% - 163px);
+    }
+
+    #menu-overlay {
+        background: rgba(3, 2, 1, 0);
+        overflow: hidden;
+        position: fixed;
+        content: '';
         top: 0;
+        right: 0;
         bottom: 0;
+        left: 0;
+        z-index: 4;
+        opacity: .3;
+        width: 100%;
+        height: 100vh;
     }
 
     #about-page {
         width: calc(100% - 163px);
-        margin-left: 80px;
     }
 
     #SCSscheme-page {
-        width: calc(99% - 163px);
-        margin-left: 80px;
+        width: calc(100% - 163px);
     }
 
     #coding-container {
         width: calc(100% - 160px);
-        margin-left: 80px;
         padding: 0 20px 0 10px;
     }
 }
@@ -167,10 +171,39 @@
     .coding-examples-links{
         padding-bottom: 0;
     }
-    }
+}
 
-    @media screen and (min-width(1105px)) {
+@media screen and (min-width(760px)) {
+    .menu-showing {
+
+        #contact-area {
+            margin-left: 80px;
+        }
+    
+        .projects {
+            margin-left: 80px;
+        }
+    
+        #scroll-up {
+            margin-left: 80px;
+        }
+
+        #about-page {
+            margin-left: 80px;
+        }
+
+        #SCSscheme-page {
+            margin-left: 80px;
+        }
+
         #coding-container {
-            padding: 0 15px;
+            margin-left: 80px;
         }
     }
+}
+
+@media screen and (min-width(1105px)) {
+    #coding-container {
+        padding: 0 15px;
+    }
+}

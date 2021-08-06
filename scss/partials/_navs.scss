@@ -26,6 +26,17 @@
     text-align: center;
 }
 
+.small-nav:hover {
+
+    .menu{
+        color: $alt-fill-color;
+    }
+
+    .menu-line {
+        border-top: $alt-fill-color 3px solid;
+    }
+}
+
 .big-nav {
     height: 100%;
     width: 160px;
