@@ -104,13 +104,54 @@
     align-items: center;
 }
 
-@media screen and (min-width:$breakpoint-small) {
+.menu-showing {
+    width: calc(100% - 163px);
+    margin-left: 161px;
+    overflow-x: hidden;
+    
+
+    .hero-image {
+        width: calc(100% - 163px);
+    }
+
+    #contact-area {
+        width: calc(100% - 163px);
+        margin-left: 80px;
+    }
+
+    .projects {
+        width: calc(100% - 163px);
+        margin-left: 80px;
+    }
+
+    .menu-showing::before {
+        background: rgba(0,0,0,.3);
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+    }
+
+    #about-page {
+        width: calc(100% - 163px);
+        margin-left: 80px;
+    }
+
+    #SCSscheme-page {
+        width: calc(99% - 163px);
+        margin-left: 80px;
+    }
 
     #coding-container {
         width: calc(100% - 160px);
-        margin-left: 160px;
+        margin-left: 80px;
         padding: 0 20px 0 10px;
     }
+}
+
+@media screen and (min-width:$breakpoint-small) {
 
     #coding-title {
         padding: 50px 0;

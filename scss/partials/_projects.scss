@@ -138,13 +138,6 @@
     }
 }
 
-@media screen and (min-width:$breakpoint-small) {
-    .projects {
-        width: calc(99% - 163px);
-        margin-left: 160px;
-    }
-  }
-
 @media screen and (min-width:$breakpoint-xl) {
 
     #projects {

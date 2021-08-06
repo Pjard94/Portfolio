@@ -17,14 +17,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="small-nav">
+    <div id="burger-box" class="small-nav">
         <span class="menu-line"></span>
         <span class="menu-line"></span>
         <span class="menu-line"></span>
         <div>Menu</div>
     </div>
 
-    <div class="big-nav">
+    <div id="big-nav" class="big-nav">
         <div class="block-letter"><a href="index.html">P</a></div>
         <ul class="big-nav-list">
             <li><strong><a href="index.html#projects">My Portfolio</a></strong></li>
@@ -39,62 +39,67 @@
         </div>
     </div>
 
-    <div id="coding-container">
+    <div id="page">
 
-        <h1 id="coding-title">Coding Examples</h1>
+        <div id="coding-container">
 
-        <div id="coding-example">
-            <div id="coding-example-title">Randomised comparing functions</div>
-            
-            <div id="coding-example-code">
-                <!-- this window is to be used to show code, each of the spans are used to hold different elements -->
-                <pre id="coding-example-code-window" class="language-js">
+            <h1 id="coding-title">Coding Examples</h1>
 
-                    <code class="language-js">
+            <div id="coding-example">
+                <div id="coding-example-title">Randomised comparing functions</div>
+                
+                <div id="coding-example-code">
+                    <!-- this window is to be used to show code, each of the spans are used to hold different elements -->
+                    <pre id="coding-example-code-window" class="language-js">
 
-                        <span class="token-action">const</span><span class="token-character"> character</span><span> = </span><span class="token-variable-container">[</span><span class="token-string">"Loba"</span><span>, </span><span class="token-string">"Fuse"</span><span>, </span><span class="token-string">"Horizon"</span><span>, </span><span class="token-string">"Octane"</span><span>, </span><span class="token-string">"Wraith"</span><span>, </span><span class="token-string">"Wattson"</span><span>, </span><span class="token-string">"Revenant"</span><span>, </span><span class="token-string">"Rampart"</span><span>, </span><span class="token-string">"Pathfinder"</span><span>, </span><span class="token-string">"Mirage"</span><span>, </span><span class="token-string">"Lifeline"</span><span>, </span><span class="token-string">"Gibraltar"</span><span>, </span><span class="token-string">"Crypto"</span><span>, </span><span class="token-string">"Bloodhound"</span><span>, </span><span class="token-string">"Caustic"</span><span>, </span><span class="token-string">"Bangalore"</span><span>, </span><span class="token-string">"Valkyrie"</span><span class="token-variable-container">]</span><span>;</span>
-                        <span class="token-action">let</span><span class="token-variable-name"> character1</span><span>;</span>
-                        <span class="token-action">let</span><span class="token-variable-name"> character2</span><span>;</span>
-                        <span class="token-action">let</span><span class="token-variable-name"> character3</span><span>;</span>
+                        <code class="language-js">
 
-                        <span class="token-action">function </span><span class="token-selector">charac</span><span class="token-variable-container">() {</span>
-                            <span class="token-variable-name">character1</span><span> =</span><span class="token-character"> character</span><span  class="token-while">[</span><span class="token-variable-name">Math</span><span class="token-selector">.floor</span><span class="token-variable-name">(Math</span><span class="token-selector">.random</span><span class="token-variable-container">()</span><span> * </span><span class="token-character">character</span><span>.</span><span class="token-variable-name">length)</span><span class="token-while">]</span><span>;</span>
-                            <span class="token-variable-name">document</span><span class="token-selector">.getElementById</span><span class="token-while">(</span><span class="token-string">"character_output"</span><span class="token-while">)</span><span>.</span><span class="token-variable-name">innerHTML</span><span> = </span><span class="token-variable-name">character1</span><span>;</span>
-                            <span class="token-variable-container">}</span>
+                            <span class="token-action">const</span><span class="token-character"> character</span><span> = </span><span class="token-variable-container">[</span><span class="token-string">"Loba"</span><span>, </span><span class="token-string">"Fuse"</span><span>, </span><span class="token-string">"Horizon"</span><span>, </span><span class="token-string">"Octane"</span><span>, </span><span class="token-string">"Wraith"</span><span>, </span><span class="token-string">"Wattson"</span><span>, </span><span class="token-string">"Revenant"</span><span>, </span><span class="token-string">"Rampart"</span><span>, </span><span class="token-string">"Pathfinder"</span><span>, </span><span class="token-string">"Mirage"</span><span>, </span><span class="token-string">"Lifeline"</span><span>, </span><span class="token-string">"Gibraltar"</span><span>, </span><span class="token-string">"Crypto"</span><span>, </span><span class="token-string">"Bloodhound"</span><span>, </span><span class="token-string">"Caustic"</span><span>, </span><span class="token-string">"Bangalore"</span><span>, </span><span class="token-string">"Valkyrie"</span><span class="token-variable-container">]</span><span>;</span>
+                            <span class="token-action">let</span><span class="token-variable-name"> character1</span><span>;</span>
+                            <span class="token-action">let</span><span class="token-variable-name"> character2</span><span>;</span>
+                            <span class="token-action">let</span><span class="token-variable-name"> character3</span><span>;</span>
 
-                        <span class="token-action">function </span><span class="token-selector">charac2</span><span class="token-variable-container">() {</span>
-                            <span class="token-variable-name">character2</span><span> =</span><span class="token-character"> character</span><span class="token-while">[</span><span class="token-variable-name">Math</span><span class="token-selector">.floor</span><span class="token-variable-name">(Math</span><span>.</span><span class="token-selector"> random</span><span class="token-variable-container">()</span><span> * </span><span class="token-character">character</span><span>.</span><span class="token-variable-name">length)</span><span class="token-while">]</span><span>;</span>
-                            <span class="token-while">while</span><span class="token-while"> ( </span><span class="token-variable-name">character2</span><span> === </span><span class="token-variable-name">character1</span><span class="token-while">) </span><span class="token-while">{</span>
-                                <span class="token-variable-name">character2</span><span> =</span><span class="token-character"> character</span><span class="token-variable-name">[Math</span><span class="token-selector">.floor</span><span class="token-variable-container">(</span><span class="token-variable-name">Math</span><span class="token-selector">.random</span><span class="token-variable-container">()</span><span> * </span><span class="token-character">character</span><span>.</span><span class="token-variable-name">length</span><span class="token-variable-container">)</span><span class="token-variable-name">]</span><span>;</span>
-                                <span class="token-while">}</span>
-                            <span class="token-variable-name">document</span><span class="token-selector">.getElementById</span><span class="token-while">(</span><span class="token-string">"character_output2"</span><span class="token-while">)</span><span>.</span><span class="token-variable-name">innerHTML</span><span> = </span><span class="token-variable-name">character2</span><span>;</span>
-                            <span class="token-variable-container">}</span>
+                            <span class="token-action">function </span><span class="token-selector">charac</span><span class="token-variable-container">() {</span>
+                                <span class="token-variable-name">character1</span><span> =</span><span class="token-character"> character</span><span  class="token-while">[</span><span class="token-variable-name">Math</span><span class="token-selector">.floor</span><span class="token-variable-name">(Math</span><span class="token-selector">.random</span><span class="token-variable-container">()</span><span> * </span><span class="token-character">character</span><span>.</span><span class="token-variable-name">length)</span><span class="token-while">]</span><span>;</span>
+                                <span class="token-variable-name">document</span><span class="token-selector">.getElementById</span><span class="token-while">(</span><span class="token-string">"character_output"</span><span class="token-while">)</span><span>.</span><span class="token-variable-name">innerHTML</span><span> = </span><span class="token-variable-name">character1</span><span>;</span>
+                                <span class="token-variable-container">}</span>
 
-                        <span class="token-action">function </span><span class="token-selector">charac3</span><span class="token-variable-container">() {</span>
-                            <span class="token-variable-name">character3</span><span> =</span><span class="token-character"> character</span><span class="token-while">[</span><span class="token-variable-name">Math</span><span class="token-selector">.floor</span><span class="token-variable-name">(Math</span><span class="token-selector">.random</span><span class="token-variable-container">()</span><span> * </span><span class="token-character">character</span><span>.</span><span class="token-variable-name">length)</span><span class="token-while">]</span><span>;</span>
-                            <span class="token-while">while</span><span  class="token-while"> ( </span><span class="token-variable-name">character3</span><span> === </span><span class="token-variable-name">character1</span><span> | | </span><span class="token-variable-name">character3</span><span> === </span><span class="token-variable-name">character2</span><span class="token-while">) </span><span class="token-while">{</span>
-                                <span class="token-variable-name">character3</span><span> =</span><span class="token-character"> character</span><span class="token-variable-name">[Math</span><span class="token-selector">.floor</span><span class="token-variable-container">(</span><span class="token-variable-name">Math</span><span class="token-selector">.random</span><span class="token-while">()</span><span> * </span><span class="token-character">character</span><span>.</span><span class="token-variable-name">length</span><span class="token-variable-container">)</span><span class="token-variable-name">]</span><span>;</span>
-                                <span class="token-while">}</span>
-                            <span class="token-variable-name">document</span><span class="token-selector">.getElementById</span><span class="token-while">(</span><span class="token-string">"character_output3"</span><span class="token-while">)</span><span>.</span><span class="token-variable-name">innerHTML</span><span> = </span><span class="token-variable-name">character3</span><span>;</span>
-                            <span class="token-variable-container">}</span>
+                            <span class="token-action">function </span><span class="token-selector">charac2</span><span class="token-variable-container">() {</span>
+                                <span class="token-variable-name">character2</span><span> =</span><span class="token-character"> character</span><span class="token-while">[</span><span class="token-variable-name">Math</span><span class="token-selector">.floor</span><span class="token-variable-name">(Math</span><span>.</span><span class="token-selector"> random</span><span class="token-variable-container">()</span><span> * </span><span class="token-character">character</span><span>.</span><span class="token-variable-name">length)</span><span class="token-while">]</span><span>;</span>
+                                <span class="token-while">while</span><span class="token-while"> ( </span><span class="token-variable-name">character2</span><span> === </span><span class="token-variable-name">character1</span><span class="token-while">) </span><span class="token-while">{</span>
+                                    <span class="token-variable-name">character2</span><span> =</span><span class="token-character"> character</span><span class="token-variable-name">[Math</span><span class="token-selector">.floor</span><span class="token-variable-container">(</span><span class="token-variable-name">Math</span><span class="token-selector">.random</span><span class="token-variable-container">()</span><span> * </span><span class="token-character">character</span><span>.</span><span class="token-variable-name">length</span><span class="token-variable-container">)</span><span class="token-variable-name">]</span><span>;</span>
+                                    <span class="token-while">}</span>
+                                <span class="token-variable-name">document</span><span class="token-selector">.getElementById</span><span class="token-while">(</span><span class="token-string">"character_output2"</span><span class="token-while">)</span><span>.</span><span class="token-variable-name">innerHTML</span><span> = </span><span class="token-variable-name">character2</span><span>;</span>
+                                <span class="token-variable-container">}</span>
 
-                    </code>
+                            <span class="token-action">function </span><span class="token-selector">charac3</span><span class="token-variable-container">() {</span>
+                                <span class="token-variable-name">character3</span><span> =</span><span class="token-character"> character</span><span class="token-while">[</span><span class="token-variable-name">Math</span><span class="token-selector">.floor</span><span class="token-variable-name">(Math</span><span class="token-selector">.random</span><span class="token-variable-container">()</span><span> * </span><span class="token-character">character</span><span>.</span><span class="token-variable-name">length)</span><span class="token-while">]</span><span>;</span>
+                                <span class="token-while">while</span><span  class="token-while"> ( </span><span class="token-variable-name">character3</span><span> === </span><span class="token-variable-name">character1</span><span> | | </span><span class="token-variable-name">character3</span><span> === </span><span class="token-variable-name">character2</span><span class="token-while">) </span><span class="token-while">{</span>
+                                    <span class="token-variable-name">character3</span><span> =</span><span class="token-character"> character</span><span class="token-variable-name">[Math</span><span class="token-selector">.floor</span><span class="token-variable-container">(</span><span class="token-variable-name">Math</span><span class="token-selector">.random</span><span class="token-while">()</span><span> * </span><span class="token-character">character</span><span>.</span><span class="token-variable-name">length</span><span class="token-variable-container">)</span><span class="token-variable-name">]</span><span>;</span>
+                                    <span class="token-while">}</span>
+                                <span class="token-variable-name">document</span><span class="token-selector">.getElementById</span><span class="token-while">(</span><span class="token-string">"character_output3"</span><span class="token-while">)</span><span>.</span><span class="token-variable-name">innerHTML</span><span> = </span><span class="token-variable-name">character3</span><span>;</span>
+                                <span class="token-variable-container">}</span>
 
-                </pre>
+                        </code>
+
+                    </pre>
+                </div>
+                <div class="coding-example-description-container">
+                    <p class="coding-example-description">This code is from a personal project, in which I wanted three unique outputs, one for each person in the team using the site. A button press will return the first and after that each sucessive function checks against the previous outputs looping the randomiser until it produces a unique outcome. </p>
+                </div>
+
+                <!-- These buttons link to the project showed in the code window -->
+                <div class="coding-examples-links">
+                    <a href="https://pjard94.github.io/Apex-team-strat/" class="project-button coding-example-button" target="blank">Webpage</a>
+                    <a href="https://github.com/Pjard94/Apex-team-strat" class="project-button coding-example-button" target="blank">Github</a>
+                </div>
             </div>
-            <div class="coding-example-description-container">
-                <p class="coding-example-description">This code is from a personal project, in which I wanted three unique outputs, one for each person in the team using the site. A button press will return the first and after that each sucessive function checks against the previous outputs looping the randomiser until it produces a unique outcome. </p>
-            </div>
 
-            <!-- These buttons link to the project showed in the code window -->
-            <div class="coding-examples-links">
-                <a href="https://pjard94.github.io/Apex-team-strat/" class="project-button coding-example-button" target="blank">Webpage</a>
-                <a href="https://github.com/Pjard94/Apex-team-strat" class="project-button coding-example-button" target="blank">Github</a>
-            </div>
         </div>
 
     </div>
 
-   
+    <script src="js/nav-menu.js"></script>
+
 </body>
 </html>

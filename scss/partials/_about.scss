@@ -59,11 +59,6 @@
 }
 
 @media screen and (min-width:$breakpoint-small) {
-  #about-page {
-      width: calc(100% - 163px);
-      margin-left: 160px;
-  }
-
   #about-title {
     font-size: 45px;
     padding-top: 50px;

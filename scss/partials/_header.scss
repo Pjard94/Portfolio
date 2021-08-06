@@ -2,7 +2,12 @@
 
 header {
     height: 100vh;
+    width: 100%;
     text-align: center;
+}
+
+#page {
+    justify-content: center;
 }
 
 .hero-image {
@@ -25,7 +30,7 @@ header {
     right: 0;
     top: 0;
     bottom: 0;
-    background: rgba(0,0,0,.3);
+    background: rgba(0,0,0,.5);
 }
 
 #introduction {
@@ -78,19 +83,39 @@ header {
     }
 }
 
+.menu-showing {
+        width: calc(100% - 163px);
+        margin-left: 161px;
+        overflow-x: hidden;
+        
+
+        .hero-image {
+            width: calc(100% - 163px);
+        }
+
+        #contact-area {
+            width: calc(100% - 163px);
+            margin-left: 80px;
+        }
+
+        .projects {
+            width: calc(100% - 163px);
+            margin-left: 80px;
+        }
+
+        .menu-showing::before {
+            background: rgba(0,0,0,.3);
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+        }
+}
 
 @media screen and (min-width:$breakpoint-small) {
-    .hero-image {
-        width: calc(100% - 163px);
-        margin-left: 161px;
-    }
-
-    #introduction,
-    #scroll-area {
-        width: calc(100% - 163px);
-        margin-left: 161px;
-    }
-
+    
     #me {
         font-size: 45px;
     }

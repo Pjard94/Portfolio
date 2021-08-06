@@ -15,8 +15,6 @@
     margin: 20px 0 0 20px;
     cursor: pointer;
     border:none;
-    left: 0;
-    top: 0;
 }
 
 .menu-line {
@@ -33,7 +31,7 @@
     width: 160px;
     position: fixed;
     overflow-x: hidden;
-    z-index: 1;
+    z-index: 5;
     top: 0;
     left: 0;
     flex-direction: column;
@@ -69,12 +67,12 @@
     border-top: 3px $fill-color solid;
     border-bottom: 3px $fill-color solid;
     font-size: 18px;
-    padding: 10px;
+    padding: 10px 32px;
     margin: 0 0 15px;
 }
 
 .social-media {
-    margin: 0px 20px;
+    margin: 40px 20px;
     font-size: 24px;
 }
 
@@ -119,12 +117,12 @@
     visibility: hidden;
 }
 
-@media screen and (min-width:$breakpoint-small) {
-    .small-nav {
-        display: none;
-    }
+// @media screen and (min-width:$breakpoint-small) {
+//     .small-nav {
+//         display: none;
+//     }
 
-    .big-nav {
-        display: flex;
-    }
-}
+//     .big-nav {
+//         display: flex;
+//     }
+// }
