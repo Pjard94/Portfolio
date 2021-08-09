@@ -1,8 +1,9 @@
 @use '../abstracts/index' as *;
 
 #coding-container {
-    padding: 0 10px 0 3px;
     margin-bottom: 100px;
+    width: 100%;
+    padding: 0 25px;
 }
 
 #coding-title {
@@ -14,12 +15,11 @@
 #coding-example {
     background: $tertiary-color;
     max-height: 900px;
-    margin: 50px 5% 0;
-    flex-basis: 260px;
-    max-width: 900px;
+    margin: 50px auto 0;
+    max-width: 1400px;
     border-radius: 13px;
     box-shadow: 7px 7px rgba(0,0,0,0.5);
-    padding: 0 8px;
+    padding: 25px 8px;
 }
 
 #coding-example-title {
@@ -30,8 +30,8 @@
 }
 
 #coding-example-code {
-    content: "";
-    max-width: 880px;
+    // content: "";
+    max-width: 1400px;
     flex-basis: 240px;
     height: 250px;
     margin: 0 0 20px;
@@ -61,6 +61,7 @@
     color: $alt-fill-color; 
 }
 
+//There are the different syntax colours used for the coding window
 .token-action {
     color: rgb(71, 111, 241);
 }
@@ -104,6 +105,7 @@
     align-items: center;
 }
 
+//This is the styling for when the menu is shown
 .Nav-out {
     overflow-x: hidden;
 
@@ -129,8 +131,7 @@
     }
 
     #menu-showing {
-        overflow-x: hidden;
-        transform: translateX(80px);
+        transform: translateX(160px);
     
         #menu-overlay {
             background: rgba(3, 2, 1, 0);
@@ -171,7 +172,6 @@
 
     #coding-example {
         padding: 50px 30px;
-        margin: 50px auto 0;
         box-shadow: 10px 10px rgba(0,0,0,0.5);
     }
 

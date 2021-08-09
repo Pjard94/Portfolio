@@ -10,6 +10,7 @@
 #about-container {
   padding-bottom:50px;
   margin-bottom: 50px;
+  max-width: 1400px;
 }
 
 #about-me-paragraph {
@@ -64,26 +65,26 @@
     padding-top: 50px;
   }
 
-  #about-container{
-      width: 300px;
-    }
+  // #about-container{
+  //     width: 300px;
+  //   }
   }
 
-  @media screen and (min-width:$breakpoint-medium) {
-    #about-container{
-        width: 500px;
-      }
-  }
+  // @media screen and (min-width:$breakpoint-medium) {
+  //   #about-container{
+  //       width: 500px;
+  //     }
+  // }
 
-  @media screen and (min-width:$breakpoint-large) {
-    #about-container{
-        width: 700px;
-      }
-  }
+  // @media screen and (min-width:$breakpoint-large) {
+  //   #about-container{
+  //       width: 700px;
+  //     }
+  // }
 
-  @media screen and (min-width:$breakpoint-xl) {
-      #about-container{
-        width: 1000px;
-      }
+  // @media screen and (min-width:$breakpoint-xl) {
+  //     #about-container{
+  //       width: 1400px;
+  //     }
       
-  }
+  // }

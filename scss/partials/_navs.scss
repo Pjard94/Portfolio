@@ -1,5 +1,6 @@
 @use '../abstracts/index' as *;
 
+// burger box style rules
 .small-nav {
     width: 60px;
     height: 60px;
@@ -15,6 +16,7 @@
     margin: 20px 0 0 20px;
     cursor: pointer;
     border:none;
+    transition: transform ease-in 250ms;
 }
 
 .menu-line {
@@ -43,6 +45,7 @@
     }
 }
 
+// The side menu stlye rules
 .big-nav {
     height: 100%;
     width: 160px;
@@ -57,7 +60,7 @@
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
     transform: translateX(-100%);
-    transition: translate ease-in 1000ms;
+    transition: transform ease-in 250ms;
 }
 
 .big-nav a:hover {
@@ -88,6 +91,7 @@
     margin: 0 0 15px;
 }
 
+//github and linked in icon rules
 .social-media {
     margin: 40px 20px;
     font-size: 24px;
@@ -121,17 +125,8 @@
     background-color: $github-color;
 }
 
+// This shows the page the user is on on the large menu
 .currentPage {
     text-decoration: underline;
     color: $alt-fill-color;
 }
-
-// @media screen and (min-width:$breakpoint-small) {
-//     .small-nav {
-//         display: none;
-//     }
-
-//     .big-nav {
-//         display: flex;
-//     }
-// }

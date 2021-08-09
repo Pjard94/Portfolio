@@ -11,7 +11,7 @@
     width: 1400px;
     display: flex;
     flex-direction: column;
-    margin: 0 10px;
+    margin: 0 25px;
     justify-content: space-around;
 }
 
@@ -81,6 +81,10 @@
     position: relative;
     color: $fill-color;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+.project-title-filled {
+    margin-top: 140px;
 }
 
 .project-description{
