@@ -1,15 +1,18 @@
-const flyoutMenu = document.getElementById("big-nav");
 const burger = document.getElementById("burger-box");
-const page = document.getElementById("page");
+const page = document.getElementById("menu-showing");
+const body = document.body;
+let menuCheck = 0;
 
-burger.addEventListener('click', function showMenu() {
-    flyoutMenu.classList.add("show");
-    this.classList.add("hide");
-    page.classList.add("menu-showing");
+burger.addEventListener('click',function showMenu() {
+    if (menuCheck === 0) {
+        menuCheck = 1;
+        body.classList.add('Nav-out')  
+    } else {
+        menuCheck = 0;
+        body.classList.remove('Nav-out')  
+    }
 });
 
 page.addEventListener('click', function hideMenu() {
-    flyoutMenu.classList.remove("show");
-    burger.classList.remove("hide");
-    page.classList.remove("menu-showing");
+    document.body.classList.remove('Nav-out');
 })

@@ -112,7 +112,13 @@ h6 {
   text-align: center;
 }
 
-.small-nav:hover .menu {
+.close-menu {
+  font-size: 55px;
+  display: none;
+}
+
+.small-nav:hover .menu,
+.small-nav:hover .close-menu {
   color: #000000;
 }
 .small-nav:hover .menu-line {
@@ -123,7 +129,6 @@ h6 {
   height: 100%;
   width: 160px;
   position: fixed;
-  overflow-x: hidden;
   z-index: 5;
   top: 0;
   left: 0;
@@ -133,7 +138,8 @@ h6 {
   border-right: #ffffff 2px solid;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
-  visibility: hidden;
+  transform: translateX(-100%);
+  transition: translate ease-in 1000ms;
 }
 
 .big-nav a:hover {
@@ -199,14 +205,6 @@ h6 {
 .currentPage {
   text-decoration: underline;
   color: #000000;
-}
-
-.show {
-  visibility: visible;
-}
-
-.hide {
-  visibility: hidden;
 }
 
 header {
@@ -912,24 +910,30 @@ header {
   align-items: center;
 }
 
-.menu-showing {
-  width: calc(100% - 163px);
-  margin-left: 161px;
+.Nav-out {
   overflow-x: hidden;
 }
-.menu-showing .hero-image {
-  width: calc(100% - 163px);
+.Nav-out .big-nav {
+  transform: translateX(0);
 }
-.menu-showing #contact-area {
-  width: calc(100% - 163px);
+.Nav-out .small-nav {
+  transform: translateX(163px);
+  padding: 0 0 10px;
 }
-.menu-showing .projects {
-  width: calc(100% - 163px);
+.Nav-out .small-nav .menu-line {
+  display: none;
 }
-.menu-showing #scroll-up {
-  width: calc(100% - 163px);
+.Nav-out .small-nav .menu {
+  display: none;
 }
-.menu-showing #menu-overlay {
+.Nav-out .small-nav .close-menu {
+  display: block;
+}
+.Nav-out #menu-showing {
+  overflow-x: hidden;
+  transform: translateX(80px);
+}
+.Nav-out #menu-showing #menu-overlay {
   background: rgba(3, 2, 1, 0);
   overflow: hidden;
   position: fixed;
@@ -943,15 +947,14 @@ header {
   width: 100%;
   height: 100vh;
 }
-.menu-showing #about-page {
-  width: calc(100% - 163px);
+.Nav-out #menu-showing #about-page {
+  transform: translateX(163px);
 }
-.menu-showing #SCSscheme-page {
-  width: calc(100% - 163px);
+.Nav-out #menu-showing #SCSscheme-page {
+  transform: translateX(163px);
 }
-.menu-showing #coding-container {
-  width: calc(100% - 160px);
-  padding: 0 20px 0 10px;
+.Nav-out #menu-showing #coding-container {
+  transform: translateX(163px);
 }
 
 @media screen and (min-width: 576px) {

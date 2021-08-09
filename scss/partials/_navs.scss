@@ -26,9 +26,15 @@
     text-align: center;
 }
 
+.close-menu{
+    font-size: 55px;
+    display: none;
+}
+
 .small-nav:hover {
 
-    .menu{
+    .menu,
+    .close-menu{
         color: $alt-fill-color;
     }
 
@@ -41,7 +47,6 @@
     height: 100%;
     width: 160px;
     position: fixed;
-    overflow-x: hidden;
     z-index: 5;
     top: 0;
     left: 0;
@@ -51,7 +56,8 @@
     border-right: $fill-color 2px solid;
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
-    visibility: hidden;
+    transform: translateX(-100%);
+    transition: translate ease-in 1000ms;
 }
 
 .big-nav a:hover {
@@ -118,14 +124,6 @@
 .currentPage {
     text-decoration: underline;
     color: $alt-fill-color;
-}
-
-.show{
-    visibility: visible;
-}
-
-.hide{
-    visibility: hidden;
 }
 
 // @media screen and (min-width:$breakpoint-small) {
