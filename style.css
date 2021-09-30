@@ -798,9 +798,8 @@ header {
   font-size: 30px;
 }
 
-#coding-example {
+.coding-example {
   background: #11CCED;
-  max-height: 900px;
   margin: 50px auto 0;
   max-width: 1400px;
   border-radius: 13px;
@@ -808,31 +807,33 @@ header {
   padding: 25px 8px;
 }
 
-#coding-example-title {
+.coding-example-title {
   font-family: "Roboto", sans-serif;
   font-size: 25px;
   margin: 0 0 20px;
   color: #000000;
 }
 
-#coding-example-code {
+.coding-example-code {
   max-width: 1400px;
   flex-basis: 240px;
   height: 250px;
   margin: 0 0 20px;
 }
 
-#coding-example-code-window {
+.coding-example-code-window {
   height: 300px;
   width: 100%;
 }
 
-.language-js {
+.language-js,
+.SQL {
   background-color: #272822;
   overflow: scroll;
   text-align: left;
 }
-.language-js span {
+.language-js span,
+.SQL span {
   font-size: 16px;
   line-height: 22px;
 }

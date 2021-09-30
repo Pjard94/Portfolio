@@ -12,9 +12,8 @@
     }
 
 
-#coding-example {
+.coding-example {
     background: $tertiary-color;
-    max-height: 900px;
     margin: 50px auto 0;
     max-width: 1400px;
     border-radius: 13px;
@@ -22,14 +21,14 @@
     padding: 25px 8px;
 }
 
-#coding-example-title {
+.coding-example-title {
     font-family: 'Roboto', sans-serif;
     font-size: 25px;
     margin: 0 0 20px;
     color: $alt-fill-color; 
 }
 
-#coding-example-code {
+.coding-example-code {
     // content: "";
     max-width: 1400px;
     flex-basis: 240px;
@@ -37,12 +36,13 @@
     margin: 0 0 20px;
 }
 
-#coding-example-code-window {
+.coding-example-code-window {
     height: 300px;
     width: 100%;
 }
 
-.language-js {
+.language-js,
+.SQL {
     background-color: $coding-background;
     overflow: scroll;
     text-align: left;

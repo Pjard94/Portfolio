@@ -46,12 +46,12 @@
 
             <h1 id="coding-title">Coding Examples</h1>
 
-            <div id="coding-example">
-                <div id="coding-example-title">Randomised comparing functions</div>
+            <div class="coding-example">
+                <div class="coding-example-title">Randomised comparing functions</div>
                 
-                <div id="coding-example-code">
+                <div class="coding-example-code">
                     <!-- this window is to be used to show code, each of the spans are used to hold different elements -->
-                    <pre id="coding-example-code-window" class="language-js">
+                    <pre class="coding-example-code-window language-js">
 
                         <code class="language-js">
 
@@ -85,15 +85,85 @@
 
                     </pre>
                 </div>
-                <div class="coding-example-description-container">
-                    <p class="coding-example-description">This code is from a personal project, in which I wanted three unique outputs, one for each person in the team using the site. A button press will return the first and after that each sucessive function checks against the previous outputs looping the randomiser until it produces a unique outcome. </p>
-                </div>
-
+                
                 <!-- These buttons link to the project showed in the code window -->
                 <div class="coding-examples-links">
                     <a href="https://pjard94.github.io/Apex-team-strat/" class="project-button coding-example-button" target="blank">Webpage</a>
                     <a href="https://github.com/Pjard94/Apex-team-strat" class="project-button coding-example-button" target="blank">Github</a>
                 </div>
+            </div>
+
+            <div class="coding-example">
+                <div class="coding-example-title">SQL Query</div>
+
+                <h3>The database I used for formatting my SQL Query</h3>
+
+                <img src="assets\soccer-database.png">
+
+                <h3>Below are the extracts I am using.</h3>
+                
+                <div class="coding-example-code">
+                    <!-- this window is to be used to show code, each of the spans are used to hold different elements -->
+                    <pre class="coding-example-code-window SQL">
+
+                        <code class="SQL">
+                            <span>Player</span>
+                          
+
+                        </code>
+
+                    </pre>
+
+                    <pre class="coding-example-code-window SQL">
+
+                        <code class="SQL">
+                            <span>Penalty</span>
+                          
+
+                        </code>
+
+                    </pre>
+
+                    <pre class="coding-example-code-window SQL">
+
+                        <code class="SQL">
+                            <span>Country</span>
+                          
+
+                        </code>
+
+                    </pre>
+
+                    
+
+                </div>
+                <h3>Example Query</h3>
+                <p> If for instantance you wanted to find out which countries and players failed to score some of their penalty shots you could fill out a query like below.</p>
+
+                <pre class="coding-example-code-window SQL">
+
+                    <p><br>
+                        SELECT player_name AS "Player", country_name AS "Country", penalty_shootout.match_no AS "Match", penalty_shootout.score_goal AS "Failed shots" <br>
+                        FROM player_mast, penalty_shootout, soccer_country <br>
+                        WHERE player_mast.player_id = penalty_shootout.player_id <br>
+                        AND soccer_country.country_id = player_mast.team_id <br>
+                        AND penalty_shootout.score_goal = 'N' <br>
+                        ORDER BY penalty_shootout.match_no, player_mast.player_id; <br>
+                    </p>
+
+                </pre>
+
+                <p>The query above can be broken down like this.</p>
+
+                <ul>
+                    <li>The first line chooses the columns we want to show using the SELECT keyword, and how we want them named with the AS keyword. With one being chosen from a database.</li>
+                    <li>The second line shows which databases we are pulling our information from.</li>
+                    <li>The WHERE keyword show that the following are conditionals. The first conditional joins the players and the penalty tables.</li>
+                    <li>In this line the AND keyword at the start shows that the query has to also follow the conditional on this line. This one links the country and player tables together.</li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            
             </div>
 
         </div>
