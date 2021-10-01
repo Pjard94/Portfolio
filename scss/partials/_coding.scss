@@ -32,7 +32,6 @@
     // content: "";
     max-width: 1400px;
     flex-basis: 240px;
-    height: 250px;
     margin: 0 0 20px;
 }
 
@@ -46,6 +45,7 @@
     background-color: $coding-background;
     overflow: scroll;
     text-align: left;
+    margin: 30px 0;
 
     span {
         font-size: 16px;
@@ -59,6 +59,19 @@
 
 .coding-example-description {
     color: $alt-fill-color; 
+}
+
+#My_query {
+    padding: 0 20px;
+}
+
+#SQL-explanation {
+    text-align: left;
+    list-style: inside;
+}
+
+.SQL-explanation {
+    color: $alt-fill-color;
 }
 
 //There are the different syntax colours used for the coding window

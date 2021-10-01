@@ -88,7 +88,6 @@ h6 {
 
 #menu-showing {
   transition: transform ease-in 250ms;
-  overflow-x: hidden;
   justify-content: space-around;
 }
 
@@ -817,7 +816,6 @@ header {
 .coding-example-code {
   max-width: 1400px;
   flex-basis: 240px;
-  height: 250px;
   margin: 0 0 20px;
 }
 
@@ -831,6 +829,7 @@ header {
   background-color: #272822;
   overflow: scroll;
   text-align: left;
+  margin: 30px 0;
 }
 .language-js span,
 .SQL span {
@@ -844,6 +843,19 @@ header {
 }
 
 .coding-example-description {
+  color: #000000;
+}
+
+#My_query {
+  padding: 0 20px;
+}
+
+#SQL-explanation {
+  text-align: left;
+  list-style: inside;
+}
+
+.SQL-explanation {
   color: #000000;
 }
 
