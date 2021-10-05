@@ -62,8 +62,6 @@
     word-break: normal;
     word-wrap: normal;
     line-height: 1.5;
-    // tab-size: 4;
-    // hyphens: none;
 }
 
 .SQL{
@@ -71,7 +69,6 @@
     display: flex;
     width: 100%;
     height: 100%;
-    // overflow: hidden;
     justify-content: space-around;
 }
 
@@ -84,8 +81,21 @@
     color: $alt-fill-color; 
 }
 
+// SQL style rules
+
+#SQL-image {
+    width: 100%;
+    height: 100%;
+}
+
 #My_query {
-    padding: 0 20px;
+    padding: 0 20px 30px;
+    
+
+    p{
+        line-height: 1.5rem;
+        min-width: 180px;
+    }
 }
 
 .SQL_column {
@@ -100,10 +110,31 @@
 #SQL-explanation {
     text-align: left;
     list-style: inside;
+
+    li {
+        margin: 20px 5px;
+    }
 }
 
 .SQL-explanation {
     color: $alt-fill-color;
+    margin: 20px 5px;
+}
+
+#players_table {
+    padding: 0 0 0 800px;
+}
+
+#penalty_table {
+    padding: 0 0 0 310px;
+}
+
+#country_table {
+    padding: 0 0 0 280px;
+}
+
+#my_results {
+    padding: 0 0 0 280px;
 }
 
 //There are the different syntax colours used for the coding window
@@ -227,39 +258,58 @@
     .coding-examples-links{
         padding-bottom: 0;
     }
+
+    #players_table {
+        padding: 0 0 0 450px;
+    }
+    
+    #penalty_table {
+        padding: 0 0 0 50px;
+    }
+    
+    #country_table {
+        padding: 0 0 0 30px;
+    }
+
+    #my_results{
+        padding: 0 0 0 0;
+    }
 }
 
-// @media screen and (min-width(760px)) {
-//     .menu-showing {
-
-//         #contact-area {
-//             margin-left: 80px;
-//         }
-    
-//         .projects {
-//             margin-left: 80px;
-//         }
-    
-//         #scroll-up {
-//             margin-left: 80px;
-//         }
-
-//         #about-page {
-//             margin-left: 80px;
-//         }
-
-//         #SCSscheme-page {
-//             margin-left: 80px;
-//         }
-
-//         #coding-container {
-//             margin-left: 80px;
-//         }
-//     }
-// }
-
-@media screen and (min-width(1105px)) {
+@media screen and (min-width:1105px) {
     #coding-container {
         padding: 0 15px;
+    }
+
+    #players_table {
+        padding: 0 0 0px 0px;
+    }
+    
+    #penalty_table {
+        padding: 0 0 0px 0px;
+    }
+    
+    #country_table {
+        padding: 0 0 0px 30px;
+    }
+    
+}
+
+@media screen and (-ms-high-contrast: none) {
+
+    #players_table {
+        padding: 0 0 0px 0px;
+    }
+    
+    #penalty_table {
+        padding: 0 0 0px 0px;
+    }
+    
+    #country_table {
+        padding: 0 0 0px 0px;
+    }
+
+    #my_results{
+        padding: 0 0 0 0;
     }
 }
