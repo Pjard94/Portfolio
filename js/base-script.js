@@ -48,10 +48,11 @@ $(inputs).focus(function() {
   // console.log(this.value);
 });
 
-function validateForm() {
-  if(email.classList.contains("Form-invalid") == true){
+document.getElementById("contact-form-submit").addEventListener("click", function validateForm() {
+  if(email.classList != "Form-valid"){
 
-    document.getElementById("failedBar").classList.add("failedBar");
-    // console.log("this worked");
+    Window.scroll.preventDefault();
+    console.log("this worked");
   }
-}
+}) 
+
