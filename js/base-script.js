@@ -18,7 +18,9 @@ var typed = new Typed('.text-typewriter-output', {
 // This will be for the form submission
 const inputs = document.getElementsByClassName("contact-form-input");
 const email = document.getElementById("client-email");
-const message = document.getElementById("message")
+const message = document.getElementById("message");
+const firstName = document.getElementById("contact-form-first");
+const lastName = document.getElementById("contact-form-last");
 const emptyREGEX = /^[a-zA-Z0-9]+$/;
 const messageREGEX = /^[a-zA-Z0-9]+\\p{Punct}+\\s{Space}+$/;
 const emailREGEX = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+[.][a-zA-Z]{2,6}$/;
@@ -43,9 +45,13 @@ $(inputs).focus(function() {
   } else {
     this.classList.add("Form-valid")
   }
-  console.log(this.value);
+  // console.log(this.value);
 });
 
-document.getElementById("contact-form-submit").addEventListener("click", function validateForm() {
-  
-}) 
+function validateForm() {
+  if(email.classList.contains("Form-invalid") == true){
+
+    document.getElementById("failedBar").classList.add("failedBar");
+    // console.log("this worked");
+  }
+}

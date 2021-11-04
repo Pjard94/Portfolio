@@ -565,6 +565,22 @@ header {
   font-size: 20px;
 }
 
+.form-status-bar {
+  border-radius: 25px;
+  display: none;
+  z-index: 10;
+}
+
+.success_bar {
+  background-color: #03AC13;
+  display: block;
+}
+
+.failed-bar {
+  background-color: #d21204;
+  display: block;
+}
+
 .Form-focused {
   border: #ff7e22 solid 2px;
   border-radius: 6px;
@@ -681,14 +697,8 @@ header {
   justify-content: center;
 }
 
-@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-  .about-first-line {
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-  }
-}
 .about-first-line {
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: #000000;
+  color: #000000;
   font-size: 20px;
   font-weight: 500;
 }

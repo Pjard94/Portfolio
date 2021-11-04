@@ -103,10 +103,25 @@
     font-size: 20px;
 }
 
+.form-status-bar {
+    border-radius: 25px;
+    display: none;
+    z-index: 10;
+}
+
+.success_bar {
+    background-color: #03AC13;
+    display: block;
+}
+
+.failed-bar {
+    background-color: #d21204;
+    display: block;
+}
+
 .Form-focused {
     border: $secondary-color solid 2px;
     border-radius: 6px;
-
 }
 
 .Form-valid {

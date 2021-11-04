@@ -51,7 +51,7 @@
 
                 <!-- this area is targeted by my jQuery for the text typewriter effect -->
                 <div class="text-typewriter-container">
-                    <h3 id="role" class="text-typewriter-output"></h3>
+                    <div id="role" class="text-typewriter-output"></div>
                 </div>
             </div>
             <a href="#projects" id="scroll-area">
@@ -83,7 +83,7 @@
                     </div>
                     <div class="project-buttons">
                         <a href="https://ti09vc.axshare.com/" target="_blank" class="project-button">Project</a>
-                        <!-- <a href="#projects" class="project-button">Read More</a> -->
+                        <!-- <a href="#projects" target="_blank" class="project-button">Read More</a> -->
                     </div>
                 </div>
 
@@ -93,41 +93,41 @@
                         <p class="project-description">I was grouped with some other scions for a project and we made this site.</p>
                     </div>
                     <div class="project-buttons">
-                        <a href="http://bakers-dozen.peter-jardine.netmatters-scs.co.uk/" class="project-button">Project</a>
-                        <a href="https://github.com/donk3ylee/trifecta-perfecta" class="project-button">Github</a>
+                        <a href="http://bakers-dozen.peter-jardine.netmatters-scs.co.uk/" target="_blank" class="project-button">Project</a>
+                        <a href="https://github.com/donk3ylee/trifecta-perfecta" target="_blank" class="project-button">Github</a>
                     </div>
                 </div>
 
                 <div id="project-four" class="project project-4">
                     <div class="project-background"></div>
-                    <div class="project-title">Project title
+                    <div class="project-title">
                         <p class="project-description"></p>
                     </div>
                     <div class="project-buttons">
-                        <a href="#projects" class="project-button">Project</a>
-                        <a href="#projects" class="project-button">Read More</a>
+                        <a href="#projects" target="_blank" class="project-button">Project</a>
+                        <a href="#projects" target="_blank" class="project-button">Read More</a>
                     </div>
                 </div>
 
                 <div id="project-five" class="project project-5">
                     <div class="project-background"></div>
-                    <div class="project-title">Project title
+                    <div class="project-title">
                         <p class="project-description"></p>
                     </div>
                     <div class="project-buttons">
-                        <a href="#projects" class="project-button">Project</a>
-                        <a href="#projects" class="project-button">Read More</a>
+                        <a href="#projects" target="_blank" class="project-button">Project</a>
+                        <a href="#projects" target="_blank" class="project-button">Read More</a>
                     </div>
                 </div>
 
                 <div id="project-six" class="project project-6">
                     <div class="project-background"></div>
-                    <div class="project-title">Project title
+                    <div class="project-title">
                         <p class="project-description"></p>
                     </div>
                     <div class="project-buttons">
-                        <a href="#projects" class="project-button">Project</a>
-                        <a href="#projects" class="project-button">Read More</a>
+                        <a href="#projects" target="_blank" class="project-button">Project</a>
+                        <a href="#projects" target="_blank" class="project-button">Read More</a>
                     </div>
                 </div>
 
@@ -150,15 +150,21 @@
                         <p> Otherwise you can fill out the form to the right. I will get back to you within 2-3 days,<br> it may take longer if sent on the weekends or bank holidays.</p>
                     </div>
                 </div>
+
+                <!-- <div>
+                <p id="successBar" class="form-status-bar">Your message has been successfully sent.</p>
+                <p id="failedBar" class="form-status-bar">Your message has failed to send. Please fill out the fields correctly.</p>
+                </div> -->
                 <form id="contact-form">
                     <!-- A basic form to contact me -->
                     <input class="contact-form-input" id="contact-form-first" type="text" placeholder="First Name*" required>
                     <input class="contact-form-input" id="contact-form-last" type="text" placeholder="Last Name*" required>
-                    <input class="contact-form-input" id="client-email" type="email" placeholder="Email*" required>
+                    <input class="contact-form-input" id="client-email" type="email" placeholder="Email*" >
                     <input class="contact-form-input" id="email-subject" type="text" placeholder="Subject*" required>
                     <textarea class="contact-form-input" id="message" rows="40" cols="40" placeholder="Message*" required></textarea>
-                    <input id="contact-form-submit" type="submit" value="Submit">
+                    <button id="contact-form-submit" type="submit" onsubmit="validateForm()">Submit</button>
                 </form>
+                
             </div>
         </footer>
         <div id="scroll-up">
