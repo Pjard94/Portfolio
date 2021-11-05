@@ -1,5 +1,7 @@
 @use '../abstracts/index' as *;
 
+// Page and area styles
+
 .projects {
     width: 100%;
     display: flex;
@@ -10,10 +12,13 @@
 .projects-container {
     width: 1400px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     margin: 0 25px;
     justify-content: space-around;
 }
+
+// individual project cards
 
 .project {
     display: flex;
@@ -27,6 +32,7 @@
     overflow: hidden;
     height: 300px;
     position: relative;
+    width: 100%;
 }
 
 .project-background {
@@ -142,6 +148,12 @@
     }
 }
 
+@media screen and (min-width:$breakpoint-medium) {
+    .project {
+        width: 350px;
+    }
+}
+
 @media screen and (min-width:$breakpoint-xl) {
 
     #projects {
@@ -152,18 +164,6 @@
         }
 
     .project {
-        flex-basis: 450px;
-    }
-}
-
-@media screen and (min-width:1300px) {
-    .project {
-        flex-basis: 350px;
-    }
-}
-
-@media screen and (min-width:1560px) {
-    .project {
-        flex-basis: 450px;
+        width: 450px;
     }
 }

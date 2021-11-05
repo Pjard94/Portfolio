@@ -1,10 +1,11 @@
 @use '../abstracts/index' as *;
 
 #contact-area {
-    padding: 100px 25px 0;
+    padding: 0px 25px 0;
     justify-content: space-around;
     align-content: center;
     align-items: center;
+    margin-top: 50px;
 }
 
 #contact--area {
@@ -88,6 +89,7 @@
     margin-top: 15px;
     border-radius: 6px;
     border: $fill-color 2px solid;
+    text-align: center;
 }
 
 #contact-form-submit:hover {
@@ -103,13 +105,26 @@
     font-size: 20px;
 }
 
+//validation status message styles
+
+#message-status-area {
+    display: flex;
+    justify-content: center;
+    padding: 100px 0 0;
+}
+
 .form-status-bar {
     border-radius: 25px;
     display: none;
     z-index: 10;
+    width: 250px;
+    height: 50px;
+    padding: 8px;
+    font-size: 15px;
+    margin-top: 275px;
 }
 
-.success_bar {
+.success-bar {
     background-color: #03AC13;
     display: block;
 }
@@ -134,8 +149,6 @@
     border-radius: 6px;
 }
 
-
-
 @media screen and (min-width:430px) {
     #contact-form-last {
         margin-left: 1%;
@@ -146,6 +159,10 @@
     
     #contact-form-last {
         width: 49%;
+    }
+
+    .form-status-bar{
+        margin-top: 0;
     }
 }
 
@@ -163,6 +180,11 @@
 
     #contact-form-last {
         margin-left: 0;
+    }
+
+    .form-status-bar {
+        width: 550px;
+        padding: 20px;
     }
 }
 

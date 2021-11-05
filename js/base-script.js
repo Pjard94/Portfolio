@@ -21,13 +21,17 @@ const email = document.getElementById("client-email");
 const message = document.getElementById("message");
 const firstName = document.getElementById("contact-form-first");
 const lastName = document.getElementById("contact-form-last");
+const subject = document.getElementById("email-subject");
+const form = document.getElementById("contact-form");
+const failedBar = document.getElementById("failedBar");
+const successBar = document.getElementById("successBar");
 const emptyREGEX = /^[a-zA-Z0-9]+$/;
 const messageREGEX = /^[a-zA-Z0-9]+\\p{Punct}+\\s{Space}+$/;
 const emailREGEX = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+[.][a-zA-Z]{2,6}$/;
 
 $(inputs).focus(function() {
   this.classList.add("Form-focused");
-  console.log('in');
+  // console.log('in');
 }).blur(function() {
   this.classList.remove("Form-focused");
   this.classList.remove("Form-valid");
@@ -48,11 +52,30 @@ $(inputs).focus(function() {
   // console.log(this.value);
 });
 
-document.getElementById("contact-form-submit").addEventListener("click", function validateForm() {
-  if(email.classList != "Form-valid"){
+// function failState() {
+//   document.getElementById("failedBar").classList.add("failed-bar");
+//   console.log("this fired")
+// }
 
-    Window.scroll.preventDefault();
+form.onsubmit = function (e) {
+  if(email.classList != "contact-form-input Form-valid" || message.classList != "contact-form-input Form-valid" || firstName.classList != "contact-form-input Form-valid" || lastName.classList != "contact-form-input Form-valid" || subject.classList != "contact-form-input Form-valid"){
+    e.preventDefault();
+    failedBar.classList.add("failed-bar");
+    setTimeout(function () {failedBar.classList.remove("failed-bar")}, 5000);
     console.log("this worked");
+  } else {
+    e.preventDefault();
+    firstName.value = "";
+    firstName.classList.remove("Form-valid");
+    lastName.value = "";
+    lastName.classList.remove("Form-valid");
+    email.value = "";
+    email.classList.remove("Form-valid");
+    subject.value = "";
+    subject.classList.remove("Form-valid");
+    message.value = "";
+    message.classList.remove("Form-valid");
+    successBar.classList.add("success-bar");
+    setTimeout(function () {successBar.classList.remove("success-bar")}, 5000);
   }
-}) 
-
+}
