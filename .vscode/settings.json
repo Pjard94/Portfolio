@@ -1,0 +1,17 @@
+{
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "default"
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 3306,
+            "driver": "MySQL",
+            "name": "portfolio",
+            "username": "peterjar_admin",
+            "password": "Cc9e]s&e9M&4",
+            "database": "peterjar_portfolio"
+        }
+    ]
+}

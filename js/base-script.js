@@ -64,16 +64,16 @@ form.onsubmit = function (e) {
     setTimeout(function () {failedBar.classList.remove("failed-bar")}, 5000);
     console.log("this worked");
   } else {
-    e.preventDefault();
-    firstName.value = "";
+    // e.preventDefault();
+    // firstName.value = "";
     firstName.classList.remove("Form-valid");
-    lastName.value = "";
+    // lastName.value = "";
     lastName.classList.remove("Form-valid");
-    email.value = "";
+    // email.value = "";
     email.classList.remove("Form-valid");
-    subject.value = "";
+    // subject.value = "";
     subject.classList.remove("Form-valid");
-    message.value = "";
+    // message.value = "";
     message.classList.remove("Form-valid");
     successBar.classList.add("success-bar");
     setTimeout(function () {successBar.classList.remove("success-bar")}, 5000);
