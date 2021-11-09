@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<?php include_once("inc/contactSubmit.php"); ?>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -135,9 +134,20 @@
             </div>
 
         </div>
+        
         <div id="message-status-area">
-            <p id="successBar" class="form-status-bar">Your message has been successfully sent.</p>
-            <p id="failedBar" class="form-status-bar">Your message has failed to send. Please fill out the fields correctly.</p>
+            <!-- <p id="successBar" class="form-status-bar">Your message has been successfully sent.</p>
+            <p id="failedBar" class="form-status-bar">Your message has failed to send. Please fill out the fields correctly.</p> -->
+            <?php if($wasSent == true){
+                    echo '<p id="successBar" class="form-status-bar">';
+                    echo 'Thank you for your enquiry.';
+                    echo '</p>';
+                } elseif($failedSend == true){
+                    echo '<p id="failedBar" class="form-status-bar">';
+                    echo "We're sorry the form seems to have been incomplete.";
+                    echo '</p>';
+                }
+            ?>
         </div>
 
         <footer id="contact-area">
@@ -157,14 +167,14 @@
                 </div>
 
                 
-                <form id="contact-form" method="$_POST" action="contactSubmit.php">
+                <form id="contact-form" onsubmit="return false">
                     <!-- A basic form to contact me -->
                     <input class="contact-form-input" id="contact-form-first" type="text" name="first" placeholder="First Name*" required>
                     <input class="contact-form-input" id="contact-form-last" type="text" name="last" placeholder="Last Name*" required>
                     <input class="contact-form-input" id="client-email" type="email" name="email" placeholder="Email*" required>
                     <input class="contact-form-input" id="email-subject" type="text" name="subject"  placeholder="Subject*" required>
                     <textarea class="contact-form-input" id="message" name="message" placeholder="Message*" required></textarea>
-                    <button id="contact-form-submit" >Submit</button>
+                    <button id="contact-form-submit">Submit</button>
                 </form>
                 
             </div>

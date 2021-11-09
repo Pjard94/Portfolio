@@ -9,9 +9,9 @@
             "port": 3306,
             "driver": "MySQL",
             "name": "portfolio",
+            "database": "peterjar_portfolio",
             "username": "peterjar_admin",
-            "password": "Cc9e]s&e9M&4",
-            "database": "peterjar_portfolio"
+            "password": "jjDiFGPvKY0i"
         }
     ]
 }

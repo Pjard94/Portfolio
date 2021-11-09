@@ -64,7 +64,13 @@ form.onsubmit = function (e) {
     setTimeout(function () {failedBar.classList.remove("failed-bar")}, 5000);
     console.log("this worked");
   } else {
-    // e.preventDefault();
+    e.preventDefault();
+    $.ajax({
+      type: "POST",
+      url: "contactSubmit.php",
+      data: form.serialize(),
+      dataType: "json",
+    })
     // firstName.value = "";
     firstName.classList.remove("Form-valid");
     // lastName.value = "";
@@ -77,5 +83,6 @@ form.onsubmit = function (e) {
     message.classList.remove("Form-valid");
     successBar.classList.add("success-bar");
     setTimeout(function () {successBar.classList.remove("success-bar")}, 5000);
+    
   }
 }
