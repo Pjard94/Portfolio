@@ -22,6 +22,7 @@ const message = document.getElementById("message");
 const firstName = document.getElementById("contact-form-first");
 const lastName = document.getElementById("contact-form-last");
 const subject = document.getElementById("email-subject");
+const submit = document.getElementById("contact-form-submit");
 const form = document.getElementById("contact-form");
 const failedBar = document.getElementById("failedBar");
 const successBar = document.getElementById("successBar");
@@ -57,32 +58,36 @@ $(inputs).focus(function() {
 //   console.log("this fired")
 // }
 
-form.onsubmit = function (e) {
+submit.addEventListener("click", function (e) {
   if(email.classList != "contact-form-input Form-valid" || message.classList != "contact-form-input Form-valid" || firstName.classList != "contact-form-input Form-valid" || lastName.classList != "contact-form-input Form-valid" || subject.classList != "contact-form-input Form-valid"){
     e.preventDefault();
     failedBar.classList.add("failed-bar");
     setTimeout(function () {failedBar.classList.remove("failed-bar")}, 5000);
     console.log("this worked");
   } else {
-    e.preventDefault();
+    // e.preventDefault();
     $.ajax({
       type: "POST",
       url: "contactSubmit.php",
-      data: form.serialize(),
-      dataType: "json",
-    })
-    // firstName.value = "";
-    firstName.classList.remove("Form-valid");
-    // lastName.value = "";
-    lastName.classList.remove("Form-valid");
-    // email.value = "";
-    email.classList.remove("Form-valid");
-    // subject.value = "";
-    subject.classList.remove("Form-valid");
-    // message.value = "";
-    message.classList.remove("Form-valid");
-    successBar.classList.add("success-bar");
-    setTimeout(function () {successBar.classList.remove("success-bar")}, 5000);
-    
-  }
-}
+      data: $(form).serialize(),
+      });
+       function($result){
+        if(data.success){
+          firstName.value = "";
+        firstName.classList.remove("Form-valid");
+        lastName.value = "";
+        lastName.classList.remove("Form-valid");
+        email.value = "";
+        email.classList.remove("Form-valid");
+        subject.value = "";
+        subject.classList.remove("Form-valid");
+        message.value = "";
+        message.classList.remove("Form-valid");
+        successBar.classList.add("success-bar");
+        setTimeout(function () {successBar.classList.remove("success-bar")}, 5000);
+      } else{
+        failedBar.classList.add("failed-bar");
+        setTimeout(function () {failedBar.classList.remove("failed-bar")}, 5000);
+      }
+      }}
+})

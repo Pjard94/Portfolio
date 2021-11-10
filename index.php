@@ -138,15 +138,13 @@
         <div id="message-status-area">
             <!-- <p id="successBar" class="form-status-bar">Your message has been successfully sent.</p>
             <p id="failedBar" class="form-status-bar">Your message has failed to send. Please fill out the fields correctly.</p> -->
-            <?php if($wasSent == true){
-                    echo '<p id="successBar" class="form-status-bar">';
-                    echo 'Thank you for your enquiry.';
-                    echo '</p>';
-                } elseif($failedSend == true){
-                    echo '<p id="failedBar" class="form-status-bar">';
-                    echo "We're sorry the form seems to have been incomplete.";
-                    echo '</p>';
-                }
+            <?php 
+                echo '<p id="successBar" class="form-status-bar">';
+                echo 'Thank you for your enquiry.';
+                echo '</p>';
+                echo '<p id="failedBar" class="form-status-bar">';
+                echo "We're sorry the form seems to have been incomplete.";
+                echo '</p>';
             ?>
         </div>
 
