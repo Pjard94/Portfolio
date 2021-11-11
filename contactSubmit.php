@@ -9,7 +9,7 @@ try {
 }  
 
 
-if(isset($_POST['first']) && $_POST['first'] != ' ' && $_POST['first'] != ''){
+if(isset($_POST['first']) && $_POST['first'] != ' '){
     $first = $_POST['first'];
     $last = $_POST['last'];
     $email = $_POST['email'];
@@ -70,7 +70,7 @@ if(isset($_POST['first']) && $_POST['first'] != ' ' && $_POST['first'] != ''){
         );
 } 
 
-if ($_POST['first'] == null) {
+if (empty($_POST['first'])) {
     echo json_encode(
         array(
             'sent' => false
