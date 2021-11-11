@@ -165,7 +165,7 @@
                 </div>
 
                 
-                <form id="contact-form" onsubmit="return false">
+                <form id="contact-form">
                     <!-- A basic form to contact me -->
                     <input class="contact-form-input" id="contact-form-first" type="text" name="first" placeholder="First Name*" required>
                     <input class="contact-form-input" id="contact-form-last" type="text" name="last" placeholder="Last Name*" required>

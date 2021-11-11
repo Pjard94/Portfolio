@@ -26,7 +26,7 @@ const submit = document.getElementById("contact-form-submit");
 const form = document.getElementById("contact-form");
 const failedBar = document.getElementById("failedBar");
 const successBar = document.getElementById("successBar");
-const emptyREGEX = /^[a-zA-Z0-9]+$/;
+const emptyREGEX = /^[a-zA-Z0-9]+[a-zA-Z0-9]+[a-zA-Z0-9]+$/;
 const messageREGEX = /^[a-zA-Z0-9]+\\p{Punct}+\\s{Space}+$/;
 const emailREGEX = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+[.][a-zA-Z]{2,6}$/;
 
@@ -53,41 +53,59 @@ $(inputs).focus(function() {
   // console.log(this.value);
 });
 
-// function failState() {
-//   document.getElementById("failedBar").classList.add("failed-bar");
-//   console.log("this fired")
-// }
 
 submit.addEventListener("click", function (e) {
+  e.preventDefault();
   if(email.classList != "contact-form-input Form-valid" || message.classList != "contact-form-input Form-valid" || firstName.classList != "contact-form-input Form-valid" || lastName.classList != "contact-form-input Form-valid" || subject.classList != "contact-form-input Form-valid"){
-    e.preventDefault();
+      failedBar.classList.add("failed-bar");
+      setTimeout(function () {failedBar.classList.remove("failed-bar")}, 5000);
+      // console.log("this worked");
+    } else {
+      const XHR = new XMLHttpRequest();
+      const XHRData = `first=${firstName.value}&last=${lastName.value}&email=${email.value}&subject=${subject.value}&message=${message.value}`;
+
+      XHR.open('post', 'contactSubmit.php');
+      XHR.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+      XHR.send(XHRData);
+
+
+      XHR.onload = () => {
+        let responseObject= null;
+
+        try{
+          responseObject = JSON.parse(XHR.responseText);
+        }catch (e){
+          console.error("Could not parse JSON!");
+        }
+
+        if (responseObject){
+          handleresponse(responseObject);
+        }
+      }
+
+      
+    }
+})
+  
+
+function handleresponse (responseObject) {
+  if (responseObject.sent) {
+    console.log('this worked')
+    firstName.value = "";
+    firstName.classList.remove("Form-valid");
+    lastName.value = "";
+    lastName.classList.remove("Form-valid");
+    email.value = "";
+    email.classList.remove("Form-valid");
+    subject.value = "";
+    subject.classList.remove("Form-valid");
+    message.value = "";
+    message.classList.remove("Form-valid");
+    successBar.classList.add("success-bar");
+    setTimeout(function () {successBar.classList.remove("success-bar")}, 5000);
+  } else {
     failedBar.classList.add("failed-bar");
     setTimeout(function () {failedBar.classList.remove("failed-bar")}, 5000);
-    console.log("this worked");
-  } else {
-    // e.preventDefault();
-    $.ajax({
-      type: "POST",
-      url: "contactSubmit.php",
-      data: $(form).serialize(),
-      });
-       function($result){
-        if(data.success){
-          firstName.value = "";
-        firstName.classList.remove("Form-valid");
-        lastName.value = "";
-        lastName.classList.remove("Form-valid");
-        email.value = "";
-        email.classList.remove("Form-valid");
-        subject.value = "";
-        subject.classList.remove("Form-valid");
-        message.value = "";
-        message.classList.remove("Form-valid");
-        successBar.classList.add("success-bar");
-        setTimeout(function () {successBar.classList.remove("success-bar")}, 5000);
-      } else{
-        failedBar.classList.add("failed-bar");
-        setTimeout(function () {failedBar.classList.remove("failed-bar")}, 5000);
-      }
-      }}
-})
+  }
+
+}
