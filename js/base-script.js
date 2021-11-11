@@ -91,15 +91,11 @@ submit.addEventListener("click", function (e) {
 function handleresponse (responseObject) {
   if (responseObject.sent) {
     console.log('this worked')
-    firstName.value = "";
+    form.reset();
     firstName.classList.remove("Form-valid");
-    lastName.value = "";
     lastName.classList.remove("Form-valid");
-    email.value = "";
     email.classList.remove("Form-valid");
-    subject.value = "";
     subject.classList.remove("Form-valid");
-    message.value = "";
     message.classList.remove("Form-valid");
     successBar.classList.add("success-bar");
     setTimeout(function () {successBar.classList.remove("success-bar")}, 5000);
