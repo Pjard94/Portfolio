@@ -64,24 +64,32 @@ submit.addEventListener("click", function (e) {
       const XHR = new XMLHttpRequest();
       const XHRData = `first=${firstName.value}&last=${lastName.value}&email=${email.value}&subject=${subject.value}&message=${message.value}`;
 
-      XHR.open('POST', 'contactSubmit.php', true);
-      XHR.setRequestHeader('Content-type', 'access-control-allow-headers');
+      XHR.onload = () => {
+              let responseObject= null;
+
+              try{
+                responseObject = JSON.parse(XHR.responseText);
+              }catch (e){
+                console.error("Could not parse JSON!");
+              }
+
+              if (responseObject){
+                handleresponse(responseObject);
+              }
+            }
+
+            
+      XHR.onreadystatechange = function() {
+        if (this.readyState === this.DONE) {
+            console.log(this.status) 
+        }}
+
+      XHR.open('POST', 'https://peter-jardine.netmatters-scs.co.uk/contactSubmit.php', true);
+      XHR.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
       XHR.send(XHRData);
 
 
-      XHR.onload = () => {
-        let responseObject= null;
-
-        try{
-          responseObject = JSON.parse(XHR.responseText);
-        }catch (e){
-          console.error("Could not parse JSON!");
-        }
-
-        if (responseObject){
-          handleresponse(responseObject);
-        }
-      }
+      
 
       
     }
