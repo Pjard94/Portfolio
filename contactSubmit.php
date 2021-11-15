@@ -2,7 +2,7 @@
 
 try {
 
-    $PDO = new PDO(dsn:"mysql:host=localhost;dbname=peterjar_portfolio", username:"peterjar_admin", password:"jjDiFGPvKY0i");
+    $PDO = new PDO("mysql:host=localhost;dbname=peterjar_portfolio","peterjar_admin","jjDiFGPvKY0i");
     
 } catch(PDOException $e){
     echo $e->getMessage();
@@ -23,7 +23,7 @@ if(isset($_POST['first']) && $_POST['first'] != ' '){
                     
                     $date = date("Y/m/d");
 
-                    $sql = $PDO->prepare(query:"INSERT INTO contact(first_name,last_name,email,subject,message,date)
+                    $sql = $PDO->prepare("INSERT INTO contact(first_name,last_name,email,subject,message,date)
                                         VALUES('$first','$last','$email','$subject','$message','$date')");
                     $sql->execute();
 

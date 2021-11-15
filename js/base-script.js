@@ -64,6 +64,7 @@ submit.addEventListener("click", function (e) {
       const XHR = new XMLHttpRequest();
       const XHRData = `first=${firstName.value}&last=${lastName.value}&email=${email.value}&subject=${subject.value}&message=${message.value}`;
 
+      // this part handles the initial response from the page accessing the server
       XHR.onload = () => {
               let responseObject= null;
 
@@ -79,11 +80,8 @@ submit.addEventListener("click", function (e) {
             }
 
             
-      XHR.onreadystatechange = function() {
-        if (this.readyState === this.DONE) {
-            console.log(this.status) 
-        }}
-
+   
+      // this will send the contact info to the server
       XHR.open('POST', 'https://peter-jardine.netmatters-scs.co.uk/contactSubmit.php', true);
       XHR.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
       XHR.send(XHRData);
@@ -94,8 +92,13 @@ submit.addEventListener("click", function (e) {
       
     }
 })
-  
+     // XHR.onreadystatechange = function() {
+      //   if (this.readyState === this.DONE) {
+      //       console.log(this.status) 
+      //   }}
 
+
+      // this function takes the response and clears the form and removes the client side validation as well as sorting the message
 function handleresponse (responseObject) {
   if (responseObject.sent) {
     console.log('this worked')
