@@ -27,17 +27,17 @@
     </div>
 
     <div id="big-nav" class="big-nav">
-        <div class="block-letter"><a href="#">P</a></div>
+        <div class="block-letter"><a href="#" class="menu-link">P</a></div>
         <ul class="big-nav-list">
-            <li><a href="#projects" class="currentPage">My Portfolio</a></li>
-            <li><a href="about.html">About Me</a></li>
-            <li><a href="coding.html">Coding Examples</a></li>
-            <li><a href="SCSscheme.html">SCS Scheme</a></li>
+            <li><a href="#projects" class="currentPage menu-link">My Portfolio</a></li>
+            <li><a href="about.html" class="menu-link">About Me</a></li>
+            <li><a href="coding.html" class="menu-link">Coding Examples</a></li>
+            <li><a href="SCSscheme.html" class="menu-link">SCS Scheme</a></li>
         </ul>
-        <a href="#contact-area" class="contact-me-link">Contact Me</a>
+        <a href="#contact-area" class="contact-me-link menu-link">Contact Me</a>
         <div class="social-media">
-            <a href="https://www.linkedin.com/in/peter-jardine-1b2045215/" target="_blank" class="social-media-links"><i class="fab fa-linkedin-in"></i></a>
-            <a href="https://github.com/Pjard94" target="_blank" class="social-media-links"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/peter-jardine-1b2045215/" target="_blank" class="social-media-links menu-link"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://github.com/Pjard94" target="_blank" class="social-media-links menu-link"><i class="fab fa-github"></i></a>
         </div>
     </div>
 

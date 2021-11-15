@@ -458,7 +458,7 @@ header {
   justify-content: space-around;
   align-content: center;
   align-items: center;
-  margin-top: 50px;
+  margin-top: -100px;
 }
 
 #contact--area {
@@ -567,7 +567,9 @@ header {
 #message-status-area {
   display: flex;
   justify-content: center;
-  padding: 100px 0 0;
+  align-items: center;
+  height: 150px;
+  margin-top: 50px;
 }
 
 .form-status-bar {
@@ -578,7 +580,7 @@ header {
   height: 50px;
   padding: 8px;
   font-size: 15px;
-  margin-top: 275px;
+  margin-top: 550px;
 }
 
 .success-bar {
@@ -606,10 +608,6 @@ header {
   border-radius: 6px;
 }
 
-#hiddenHole {
-  display: none;
-}
-
 @media screen and (min-width: 430px) {
   #contact-form-last {
     margin-left: 1%;
@@ -624,13 +622,17 @@ header {
   }
 
   .form-status-bar {
-    margin-top: 0;
+    margin-top: 450px;
   }
 }
 @media screen and (min-width: 576px) {
   #contact-email-link,
 #contact-telephone-link {
     font-size: 20px;
+  }
+
+  #contact-area {
+    margin-top: 50px;
   }
 
   .contact-area-container {
@@ -642,9 +644,14 @@ header {
     margin-left: 0;
   }
 
+  #message-status-area {
+    padding: 100px 0 0;
+  }
+
   .form-status-bar {
     width: 550px;
     padding: 20px;
+    margin-top: 0px;
   }
 }
 @media screen and (min-width: 599px) {

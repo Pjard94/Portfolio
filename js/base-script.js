@@ -26,7 +26,7 @@ const submit = document.getElementById("contact-form-submit");
 const form = document.getElementById("contact-form");
 const failedBar = document.getElementById("failedBar");
 const successBar = document.getElementById("successBar");
-const emptyREGEX = /^[a-zA-Z0-9]+[a-zA-Z0-9]+[a-zA-Z0-9]+$/;
+const emptyREGEX = /^[a-zA-Z0-9]+[a-zA-Z0-9]+[a-zA-Z0-9]+\\p{Punct}+\\s{Space}+$/;
 const messageREGEX = /^[a-zA-Z0-9]+\\p{Punct}+\\s{Space}+$/;
 const emailREGEX = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+[.][a-zA-Z]{2,6}$/;
 
@@ -37,7 +37,11 @@ $(inputs).focus(function() {
   this.classList.remove("Form-focused");
   this.classList.remove("Form-valid");
   this.classList.remove("Form-invalid");
-  if (this == email) {
+  if (this.value.trim()){
+    if (this.value.length == 0){
+    this.classList.add("Form-invalid")
+  } else {
+    if (this == email) {
     if (emailREGEX.test(this.value) == false) {
       this.classList.add("Form-invalid")
     } else {
@@ -45,11 +49,21 @@ $(inputs).focus(function() {
     }
   } else if (this == message) {
     this.classList.add("Form-valid")
-  }else if (emptyREGEX.test(this.value) == false) {
-    this.classList.add("Form-invalid")
+  } else if (this == firstName) {
+    this.classList.add("Form-valid")
+  } else if (this == lastName) {
+    this.classList.add("Form-valid")
+  } else if (this == subject) {
+    this.classList.add("Form-valid")
   } else {
     this.classList.add("Form-valid")
   }
+  }
+  }else {
+    this.classList.add("Form-invalid")
+  }
+  
+  
   // console.log(this.value);
 });
 

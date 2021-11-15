@@ -1,6 +1,7 @@
 const burger = document.getElementById("burger-box");
 const page = document.getElementById("menu-showing");
 const body = document.body;
+const links = document.querySelectorAll(".menu-link");
 let menuCheck = 0; //Allows to have an easier switch with the the button thanks IE
 
 // This works in all the browsers some the more easily used functionality doesn't work in IE
@@ -20,3 +21,8 @@ page.addEventListener('click', function hideMenu() {
     body.classList.remove('Nav-out');
     menuCheck = 0;
 })
+
+links.forEach(aL => aL.addEventListener('click', function closeMenu(){
+    body.classList.remove('Nav-out');
+    menuCheck = 0;
+}))
