@@ -1035,6 +1035,35 @@ header {
   transform: translateX(163px);
 }
 
+.readMoreExtra,
+.showLess,
+.readMore {
+  cursor: pointer;
+  color: #ff7e22;
+}
+
+.showLess:hover,
+.readMore:hover {
+  text-decoration: underline;
+}
+
+.isMore {
+  display: none;
+}
+
+.showMore {
+  display: block;
+  margin-top: -70px;
+}
+
+.showLess {
+  display: none;
+}
+
+.showing {
+  display: block;
+}
+
 @media screen and (min-width: 576px) {
   #coding-title {
     padding: 50px 0;
