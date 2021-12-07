@@ -117,6 +117,12 @@
     
 }
 
+#project-three {
+    .project-background{
+        background-image: url(assets/group-project-cover.png);
+    }
+}
+
 #project-one,
 #project-two,
 #project-three,
@@ -141,6 +147,9 @@
 //     }
 // }
 
+.unconnected{
+    display: none;
+}
 
 @media screen and (min-width:350px) {
     .project-title {
@@ -150,7 +159,7 @@
 
 @media screen and (min-width:$breakpoint-medium) {
     .project {
-        width: 350px;
+        width: calc(50% - 20px);
     }
 }
 
@@ -164,6 +173,6 @@
         }
 
     .project {
-        width: 450px;
+        width: calc(33% - 20px);
     }
 }

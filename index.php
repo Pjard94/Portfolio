@@ -104,8 +104,8 @@
                         <p class="project-description"></p>
                     </div>
                     <div class="project-buttons">
-                        <a href="#projects" target="_blank" class="project-button">Project</a>
-                        <a href="#projects" target="_blank" class="project-button">Read More</a>
+                        <a href="#projects" target="_blank" class="project-button unconnected">Project</a>
+                        <a href="#projects" target="_blank" class="project-button unconnected">Read More</a>
                     </div>
                 </div>
 
@@ -115,8 +115,8 @@
                         <p class="project-description"></p>
                     </div>
                     <div class="project-buttons">
-                        <a href="#projects" target="_blank" class="project-button">Project</a>
-                        <a href="#projects" target="_blank" class="project-button">Read More</a>
+                        <a href="#projects" target="_blank" class="project-button unconnected">Project</a>
+                        <a href="#projects" target="_blank" class="project-button unconnected">Read More</a>
                     </div>
                 </div>
 
@@ -126,8 +126,8 @@
                         <p class="project-description"></p>
                     </div>
                     <div class="project-buttons">
-                        <a href="#projects" target="_blank" class="project-button">Project</a>
-                        <a href="#projects" target="_blank" class="project-button">Read More</a>
+                        <a href="#projects" target="_blank" class="project-button unconnected">Project</a>
+                        <a href="#projects" target="_blank" class="project-button unconnected">Read More</a>
                     </div>
                 </div>
 

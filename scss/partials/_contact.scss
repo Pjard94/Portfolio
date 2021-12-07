@@ -111,7 +111,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 150px;
+    height: 100px;
     margin-top: 50px;
 }
 
@@ -153,14 +153,11 @@
 
 @media screen and (min-width:430px) {
     #contact-form-last {
-        margin-left: 1%;
+        margin-left: 15px;
+        width: calc(50% - 10px);
     }
     #contact-form-first {
-        width: 49%;
-    }
-    
-    #contact-form-last {
-        width: 49%;
+        width: calc(50% - 10px);
     }
 
     .form-status-bar{
@@ -183,25 +180,15 @@
         padding-left: 30px;
         flex-grow: 1;
     }
-    
-    #contact-form-last {
-        margin-left: 0;
-    }
 
     #message-status-area {
-        padding: 100px 0 0;
+        height: 0;
     }
 
     .form-status-bar {
         width: 550px;
         padding: 20px;
         margin-top: 0px;
-    }
-}
-
-@media screen and (min-width:599px) {
-    #contact-form-last {
-        margin-left: 1%;
     }
 }
 
@@ -212,7 +199,6 @@
         }
     }
 }
-
 
 @media screen and (min-width:$breakpoint-large) {
 
@@ -233,15 +219,6 @@
         }
     }
     
-    #contact-form-last {
-        margin-left: 0;
-    }
-}
-
-@media screen and (min-width:1057px) {
-    #contact-form-last {
-        margin-left: 1%;
-    }
 }
 
 @media screen and (min-width:$breakpoint-xl) {

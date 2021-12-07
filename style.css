@@ -420,6 +420,10 @@ header {
   background-image: url(assets/Axureproject.png);
 }
 
+#project-three .project-background {
+  background-image: url(assets/group-project-cover.png);
+}
+
 #project-one,
 #project-two,
 #project-three,
@@ -430,6 +434,10 @@ header {
   background-repeat: no-repeat;
 }
 
+.unconnected {
+  display: none;
+}
+
 @media screen and (min-width: 350px) {
   .project-title {
     margin-top: 180px;
@@ -437,7 +445,7 @@ header {
 }
 @media screen and (min-width: 768px) {
   .project {
-    width: 350px;
+    width: calc(50% - 20px);
   }
 }
 @media screen and (min-width: 1200px) {
@@ -450,7 +458,7 @@ header {
   }
 
   .project {
-    width: 450px;
+    width: calc(33% - 20px);
   }
 }
 #contact-area {
@@ -568,7 +576,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 150px;
+  height: 100px;
   margin-top: 50px;
 }
 
@@ -610,15 +618,12 @@ header {
 
 @media screen and (min-width: 430px) {
   #contact-form-last {
-    margin-left: 1%;
+    margin-left: 15px;
+    width: calc(50% - 10px);
   }
 
   #contact-form-first {
-    width: 49%;
-  }
-
-  #contact-form-last {
-    width: 49%;
+    width: calc(50% - 10px);
   }
 
   .form-status-bar {
@@ -640,23 +645,14 @@ header {
     flex-grow: 1;
   }
 
-  #contact-form-last {
-    margin-left: 0;
-  }
-
   #message-status-area {
-    padding: 100px 0 0;
+    height: 0;
   }
 
   .form-status-bar {
     width: 550px;
     padding: 20px;
     margin-top: 0px;
-  }
-}
-@media screen and (min-width: 599px) {
-  #contact-form-last {
-    margin-left: 1%;
   }
 }
 @media screen and (min-width: 768px) {
@@ -678,15 +674,6 @@ header {
   #contact--area #contact-area-container,
 #contact--area #contact-form {
     width: 50%;
-  }
-
-  #contact-form-last {
-    margin-left: 0;
-  }
-}
-@media screen and (min-width: 1057px) {
-  #contact-form-last {
-    margin-left: 1%;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -731,7 +718,7 @@ header {
   color: #000000;
   font-size: 20px;
   font-weight: 500;
-  font-family: "Roboto Slab", serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .about-paragraphs {
