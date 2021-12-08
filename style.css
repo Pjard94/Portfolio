@@ -1035,7 +1035,6 @@ header {
   transform: translateX(163px);
 }
 
-.readMoreExtra,
 .showLess,
 .readMore {
   cursor: pointer;
@@ -1045,6 +1044,10 @@ header {
 .showLess:hover,
 .readMore:hover {
   text-decoration: underline;
+}
+
+.extraRead {
+  display: none;
 }
 
 .isMore {
@@ -1062,6 +1065,11 @@ header {
 
 .showing {
   display: block;
+}
+
+#player-table-readMore-Full,
+#player-table-readMore-one {
+  margin-top: -145px;
 }
 
 @media screen and (min-width: 576px) {

@@ -244,7 +244,6 @@
 }
 
 // Read more styles
-.readMoreExtra,
 .showLess,
 .readMore {
     cursor: pointer;
@@ -254,6 +253,10 @@
 .showLess:hover,
 .readMore:hover {
     text-decoration: underline;
+}
+
+.extraRead {
+    display: none;
 }
 
 .isMore {
@@ -272,6 +275,11 @@
 .showing{
     display: block;
 }
+
+#player-table-readMore-Full,
+#player-table-readMore-one{
+    margin-top: -145px;
+} 
 
 @media screen and (min-width:$breakpoint-small) {
 
