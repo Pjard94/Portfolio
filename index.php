@@ -68,7 +68,7 @@
                 <div id="project-one" class="project project-1">
                     <div class="project-background"></div>
                     <div class="project-title project-title-filled">Netmatters Site Fascimilie 
-                        <p class="project-description">My copy of the main Netmatters webpage. Primarily using HTML and CSS.</p>
+                        <p class="project-description">My copy of the main Netmatters webpage. Primarily using HTML and CSS, I have added Javascript and PHP later.</p>
                     </div>
                     <div class="project-buttons">
                         <a href="http://netmatters.peter-jardine.netmatters-scs.co.uk/" target="_blank" class="project-button">Project</a>
@@ -134,19 +134,6 @@
             </div>
 
         </div>
-        
-        <div id="message-status-area">
-            <!-- <p id="successBar" class="form-status-bar">Your message has been successfully sent.</p>
-            <p id="failedBar" class="form-status-bar">Your message has failed to send. Please fill out the fields correctly.</p> -->
-            <?php 
-                echo '<p id="successBar" class="form-status-bar">';
-                echo 'Thank you for your enquiry.';
-                echo '</p>';
-                echo '<p id="failedBar" class="form-status-bar">';
-                echo "We're sorry the form seems to have been incomplete.";
-                echo '</p>';
-            ?>
-        </div>
 
         <footer id="contact-area">
             <div id="contact--area">
@@ -175,8 +162,22 @@
                     <button id="contact-form-submit">Submit</button>
                 </form>
                 
+                
             </div>
+            
         </footer>
+        <div id="message-status-area">
+            <!-- <p id="successBar" class="form-status-bar">Your message has been successfully sent.</p>
+            <p id="failedBar" class="form-status-bar">Your message has failed to send. Please fill out the fields correctly.</p> -->
+            <?php 
+                echo '<p id="successBar" class="form-status-bar">';
+                echo 'Thank you for your enquiry.';
+                echo '</p>';
+                echo '<p id="failedBar" class="form-status-bar">';
+                echo "We're sorry the form seems to have been incomplete.";
+                echo '</p>';
+            ?>
+        </div>
         <div id="scroll-up">
             <a href="#introduction">
                 <div><i class="fas fa-chevron-up"></i></div>

@@ -153,8 +153,9 @@
 
 @media screen and (min-width:350px) {
     .project-title {
-        margin-top: 180px;
+        margin-top: 167px;
     }
+
 }
 
 @media screen and (min-width:$breakpoint-medium) {
@@ -166,11 +167,11 @@
 @media screen and (min-width:$breakpoint-xl) {
 
     #projects {
-            display: flex;
-            columns: 2;
-            flex-direction: row;
-            flex-wrap: wrap;
-        }
+        display: flex;
+        columns: 2;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
 
     .project {
         width: calc(33% - 20px);
