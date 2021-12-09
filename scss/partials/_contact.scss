@@ -99,7 +99,7 @@
 }
 
 #scroll-up {
-    margin-top: 40px;
+    margin-top: 20px;
     padding-top: 20px;
     padding-bottom: 50px;
     font-size: 20px;
@@ -111,8 +111,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100px;
-    margin-top: 50px;
+    height: 50px;
 }
 
 .form-status-bar {
@@ -123,7 +122,7 @@
     height: 50px;
     padding: 8px;
     font-size: 15px;
-    margin-top: 550px;
+    margin-top: 30px;
 }
 
 .success-bar {
@@ -159,10 +158,6 @@
     #contact-form-first {
         width: calc(50% - 10px);
     }
-
-    .form-status-bar{
-        margin-top: 450px;
-    }
 }
 
 @media screen and (min-width:$breakpoint-small) {
@@ -181,14 +176,9 @@
         flex-grow: 1;
     }
 
-    #message-status-area {
-        height: 0;
-    }
-
     .form-status-bar {
         width: 550px;
         padding: 20px;
-        margin-top: 0px;
     }
 }
 

@@ -566,7 +566,7 @@ header {
 }
 
 #scroll-up {
-  margin-top: 40px;
+  margin-top: 20px;
   padding-top: 20px;
   padding-bottom: 50px;
   font-size: 20px;
@@ -576,8 +576,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100px;
-  margin-top: 50px;
+  height: 50px;
 }
 
 .form-status-bar {
@@ -588,7 +587,7 @@ header {
   height: 50px;
   padding: 8px;
   font-size: 15px;
-  margin-top: 550px;
+  margin-top: 30px;
 }
 
 .success-bar {
@@ -625,10 +624,6 @@ header {
   #contact-form-first {
     width: calc(50% - 10px);
   }
-
-  .form-status-bar {
-    margin-top: 450px;
-  }
 }
 @media screen and (min-width: 576px) {
   #contact-email-link,
@@ -645,14 +640,9 @@ header {
     flex-grow: 1;
   }
 
-  #message-status-area {
-    height: 0;
-  }
-
   .form-status-bar {
     width: 550px;
     padding: 20px;
-    margin-top: 0px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -928,7 +918,7 @@ header {
 }
 
 #players_table {
-  padding: 0 0 0 800px;
+  padding: 0 0 0 742px;
 }
 
 #penalty_table {
@@ -936,7 +926,7 @@ header {
 }
 
 #country_table {
-  padding: 0 0 0 280px;
+  padding: 0 0 0 237px;
 }
 
 #my_results {
@@ -1072,6 +1062,33 @@ header {
   margin-top: -145px;
 }
 
+#playerLess,
+#playerLess-One,
+#playerLess-Full,
+#players-readMore-Full,
+#players-readMore-one,
+#players-readMore {
+  padding-left: 40px;
+}
+
+#penaltyLess,
+#penalty-readMore {
+  padding-left: 60px;
+}
+
+@media screen and (min-width: 400px) {
+  #players_table {
+    padding: 0 0 0 602px;
+  }
+
+  #penalty_table {
+    padding: 0 0px 0 195px;
+  }
+
+  #country_table {
+    padding: 0 0 0 96px;
+  }
+}
 @media screen and (min-width: 576px) {
   #coding-title {
     padding: 50px 0;
@@ -1088,22 +1105,27 @@ header {
   }
 
   #players_table {
-    padding: 0 0 0 450px;
+    padding: 0 0 0 309px;
   }
 
   #penalty_table {
-    padding: 0 0 0 50px;
+    padding: 0 80px 0 0px;
   }
 
   #country_table {
-    padding: 0 0 0 30px;
+    padding: 0 0 0 0px;
   }
 
   #my_results {
     padding: 0 0 0 0;
   }
 }
-@media screen and (min-width: 1105px) {
+@media screen and (min-width: 768px) {
+  #players_table {
+    padding: 0 0 0 243px;
+  }
+}
+@media screen and (min-width: 992px) {
   #coding-container {
     padding: 0 15px;
   }
@@ -1113,7 +1135,7 @@ header {
   }
 
   #penalty_table {
-    padding: 0 0 0px 0px;
+    padding: 0 40px 0px 0px;
   }
 
   #country_table {
