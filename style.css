@@ -405,7 +405,7 @@ header {
 .project-description {
   display: flex;
   font-size: 16px;
-  margin-top: 10px;
+  margin-top: 5px;
   flex-wrap: wrap;
   max-width: 400px;
   color: #ffffff;
@@ -434,13 +434,19 @@ header {
   background-repeat: no-repeat;
 }
 
+#project-four,
+#project-five,
+#project-six {
+  display: none;
+}
+
 .unconnected {
   display: none;
 }
 
 @media screen and (min-width: 350px) {
   .project-title {
-    margin-top: 167px;
+    margin-top: 178px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -466,7 +472,7 @@ header {
   justify-content: space-around;
   align-content: center;
   align-items: center;
-  margin-top: -100px;
+  margin-top: 50px;
 }
 
 #contact--area {
@@ -588,6 +594,14 @@ header {
   padding: 8px;
   font-size: 15px;
   margin-top: 30px;
+}
+
+.error-message {
+  display: none;
+}
+
+.messageDisplay {
+  display: flex;
 }
 
 .success-bar {

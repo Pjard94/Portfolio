@@ -25,6 +25,7 @@ const subject = document.getElementById("email-subject");
 const submit = document.getElementById("contact-form-submit");
 const form = document.getElementById("contact-form");
 const failedBar = document.getElementById("failedBar");
+const fNameError = document.getElementById("firstError");
 const successBar = document.getElementById("successBar");
 const emptyREGEX = /^[a-zA-Z0-9]+[a-zA-Z0-9]+[a-zA-Z0-9]+\\p{Punct}+\\s{Space}+$/;
 const messageREGEX = /^[a-zA-Z0-9]+\\p{Punct}+\\s{Space}+$/;
@@ -67,10 +68,11 @@ $(inputs).focus(function() {
   // console.log(this.value);
 });
 
+// || firstName.classList != "contact-form-input Form-valid"
 
 submit.addEventListener("click", function (e) {
   e.preventDefault();
-  if(email.classList != "contact-form-input Form-valid" || message.classList != "contact-form-input Form-valid" || firstName.classList != "contact-form-input Form-valid" || lastName.classList != "contact-form-input Form-valid" || subject.classList != "contact-form-input Form-valid"){
+  if(email.classList != "contact-form-input Form-valid" || message.classList != "contact-form-input Form-valid"  || lastName.classList != "contact-form-input Form-valid" || subject.classList != "contact-form-input Form-valid"){
       failedBar.classList.add("failed-bar");
       setTimeout(function () {failedBar.classList.remove("failed-bar")}, 5000);
       // console.log("this worked");
@@ -101,20 +103,18 @@ submit.addEventListener("click", function (e) {
       XHR.send(XHRData);
 
 
-      
-
-      
-    }
-})
-     // XHR.onreadystatechange = function() {
+      // XHR.onreadystatechange = function() {
       //   if (this.readyState === this.DONE) {
       //       console.log(this.status) 
-      //   }}
-
+      //   }
+      // }
+    }
+})
+     
 
       // this function takes the response and clears the form and removes the client side validation as well as sorting the message
 function handleresponse (responseObject) {
-  if (responseObject.sent) {
+  if (responseObject.value == 'submitted') {
     console.log('this worked')
     form.reset();
     firstName.classList.remove("Form-valid");
@@ -124,8 +124,15 @@ function handleresponse (responseObject) {
     message.classList.remove("Form-valid");
     successBar.classList.add("success-bar");
     setTimeout(function () {successBar.classList.remove("success-bar")}, 5000);
-  } else {
+  } 
+  // else {
+  //   failedBar.classList.add("failed-bar");
+  //   setTimeout(function () {failedBar.classList.remove("failed-bar")}, 5000);
+  // }
+
+  if(responseObject.value == 'errorFirst') {
     failedBar.classList.add("failed-bar");
+    fNameError.classList.add("messageDisplay");
     setTimeout(function () {failedBar.classList.remove("failed-bar")}, 5000);
   }
 

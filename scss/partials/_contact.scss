@@ -5,7 +5,7 @@
     justify-content: space-around;
     align-content: center;
     align-items: center;
-    margin-top: -100px;
+    margin-top: 50px;
 }
 
 #contact--area {
@@ -123,6 +123,14 @@
     padding: 8px;
     font-size: 15px;
     margin-top: 30px;
+}
+
+.error-message {
+    display: none;
+}
+
+.messageDisplay {
+    display: flex;
 }
 
 .success-bar {

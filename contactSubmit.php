@@ -29,54 +29,54 @@ if(isset($_POST['first']) && $_POST['first'] != ' '){
 
                    echo json_encode(
                        array(
-                           'sent' => true
+                           'submitted'
                        )
                        );
                 } else {
                     echo json_encode(
                         array(
-                            'sent' => false
+                            'messageError' => true
                         )
                         );
                     }
 
-                } else {
-                    echo json_encode(
-                        array(
-                            'sent' => false
-                        )
-                        );
-                }
             } else {
                 echo json_encode(
                     array(
-                        'sent' => false
+                        'subjectError' => true
                     )
                     );
             }
-
         } else {
             echo json_encode(
                 array(
-                    'sent' => false
+                    'emailError' => false
                 )
                 );
         }
+
+    } else {
+        echo json_encode(
+            array(
+                'lastError' => false
+            )
+            );
+    }
 } else {
     echo json_encode(
         array(
-            'sent' => false
+            'errorFirst'
         )
         );
 } 
 
-if (empty($_POST['first'])) {
-    echo json_encode(
-        array(
-            'sent' => false
-        )
-        );
-}
+// if (empty($_POST['first'])) {
+//     echo json_encode(
+//         array(
+//             'sent' => false
+//         )
+//         );
+// }
 
 
 ?>

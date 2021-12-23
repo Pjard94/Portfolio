@@ -174,7 +174,12 @@
                 echo 'Thank you for your enquiry.';
                 echo '</p>';
                 echo '<p id="failedBar" class="form-status-bar">';
-                echo "We're sorry the form seems to have been incomplete.";
+                echo "<span id='generalError' class='error-message'>We're sorry the form seems to have been incomplete.</span>";
+                echo "<span id='firstError' class='error-message'>Please enter your first name.</span>";
+                echo "<span id='lastError' class='error-message'>Please enter your last name.</span>";
+                echo "<span id='emailError' class='error-message'>Please enter an email address.</span>";
+                echo "<span id='subjectError' class='error-message'>Can you let me know what you are contacting me about?</span>";
+                echo "<span id='messageError' class='error-message'>Let me know what you need in the message.</span>";
                 echo '</p>';
             ?>
         </div>

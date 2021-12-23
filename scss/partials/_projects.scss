@@ -96,7 +96,7 @@
 .project-description{
     display: flex;
     font-size: 16px;
-    margin-top: 10px;
+    margin-top: 5px;
     flex-wrap: wrap;
     max-width: 400px;
     color: $fill-color;
@@ -133,6 +133,12 @@
     background-repeat: no-repeat;
 }
 
+#project-four,
+#project-five,
+#project-six {
+    display: none;
+}
+
 // .project:hover {
 //     .project-title {
 //       transform: translatey(-20px);
@@ -153,7 +159,7 @@
 
 @media screen and (min-width:350px) {
     .project-title {
-        margin-top: 167px;
+        margin-top: 178px;
     }
 
 }
