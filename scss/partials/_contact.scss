@@ -5,12 +5,12 @@
     justify-content: space-around;
     align-content: center;
     align-items: center;
-    margin-top: 50px;
+    margin-top: 25px;
 }
 
 #contact--area {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     justify-content: space-between;
     text-align: left;
     align-self: center;
@@ -130,7 +130,7 @@
 }
 
 .messageDisplay {
-    display: flex;
+    display: block;
 }
 
 .success-bar {

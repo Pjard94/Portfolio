@@ -24,9 +24,6 @@ const lastName = document.getElementById("contact-form-last");
 const subject = document.getElementById("email-subject");
 const submit = document.getElementById("contact-form-submit");
 const form = document.getElementById("contact-form");
-const failedBar = document.getElementById("failedBar");
-const fNameError = document.getElementById("firstError");
-const successBar = document.getElementById("successBar");
 const emptyREGEX = /^[a-zA-Z0-9]+[a-zA-Z0-9]+[a-zA-Z0-9]+\\p{Punct}+\\s{Space}+$/;
 const messageREGEX = /^[a-zA-Z0-9]+\\p{Punct}+\\s{Space}+$/;
 const emailREGEX = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+[.][a-zA-Z]{2,6}$/;
@@ -68,14 +65,46 @@ $(inputs).focus(function() {
   // console.log(this.value);
 });
 
-// || firstName.classList != "contact-form-input Form-valid"
+// Variables for the error messages.
+const failedBar = document.getElementById("failedBar");
+const generalError = document.getElementById("generalError");
+const fNameError = document.getElementById("firstError");
+const lNameError = document.getElementById("lastError");
+const emailError = document.getElementById("emailError");
+const subjectError = document.getElementById("subjectError");
+const messageError = document.getElementById("messageError");
+const successBar = document.getElementById("successBar");
+
+
 
 submit.addEventListener("click", function (e) {
   e.preventDefault();
-  if(email.classList != "contact-form-input Form-valid" || message.classList != "contact-form-input Form-valid"  || lastName.classList != "contact-form-input Form-valid" || subject.classList != "contact-form-input Form-valid"){
-      failedBar.classList.add("failed-bar");
-      setTimeout(function () {failedBar.classList.remove("failed-bar")}, 5000);
+  if(firstName.classList != "contact-form-input Form-valid"){
+    failedBar.classList.add("failed-bar");
+    fNameError.classList.add("messageDisplay");
+    setTimeout(function () {failedBar.classList.remove("failed-bar")}, 5000);
+    setTimeout(function () {fNameError.classList.remove("messageDisplay")}, 5000);
       // console.log("this worked");
+    } else if(email.classList != "contact-form-input Form-valid") {
+    failedBar.classList.add("failed-bar");
+    emailError.classList.add("messageDisplay");
+    setTimeout(function () {failedBar.classList.remove("failed-bar")}, 5000);
+    setTimeout(function () {emailError.classList.remove("messageDisplay")}, 5000);
+    } else if(lastName.classList != "contact-form-input Form-valid"){
+      failedBar.classList.add("failed-bar");
+      lNameError.classList.add("messageDisplay");
+      setTimeout(function () {failedBar.classList.remove("failed-bar")}, 5000);
+      setTimeout(function () {lNameError.classList.remove("messageDisplay")}, 5000);
+    } else if(subject.classList != "contact-form-input Form-valid"){
+      failedBar.classList.add("failed-bar");
+      subjectError.classList.add("messageDisplay");
+      setTimeout(function () {failedBar.classList.remove("failed-bar")}, 5000);
+      setTimeout(function () {subjectError.classList.remove("messageDisplay")}, 5000);
+    } else if(message.classList != "contact-form-input Form-valid") {
+      failedBar.classList.add("failed-bar");
+      messageError.classList.add("messageDisplay");
+      setTimeout(function () {failedBar.classList.remove("failed-bar")}, 5000);
+      setTimeout(function () {messageError.classList.remove("messageDisplay")}, 5000);
     } else {
       const XHR = new XMLHttpRequest();
       const XHRData = `first=${firstName.value}&last=${lastName.value}&email=${email.value}&subject=${subject.value}&message=${message.value}`;
@@ -114,8 +143,8 @@ submit.addEventListener("click", function (e) {
 
       // this function takes the response and clears the form and removes the client side validation as well as sorting the message
 function handleresponse (responseObject) {
-  if (responseObject.value == 'submitted') {
-    console.log('this worked')
+  if (responseObject == 'submitted') {
+    // console.log('this worked')
     form.reset();
     firstName.classList.remove("Form-valid");
     lastName.classList.remove("Form-valid");
@@ -124,16 +153,46 @@ function handleresponse (responseObject) {
     message.classList.remove("Form-valid");
     successBar.classList.add("success-bar");
     setTimeout(function () {successBar.classList.remove("success-bar")}, 5000);
-  } 
-  // else {
+  } else {
+    failedBar.classList.add("failed-bar");
+    generalError.classList.add("messageDisplay");
+    setTimeout(function () {failedBar.classList.remove("failed-bar")}, 5000);
+    setTimeout(function () {generalError.classList.remove("messageDisplay")}, 5000);
+  }
+
+  // if(responseObject == 'errorFirst') {
   //   failedBar.classList.add("failed-bar");
+  //   fNameError.classList.add("messageDisplay");
   //   setTimeout(function () {failedBar.classList.remove("failed-bar")}, 5000);
+  //   setTimeout(function () {fNameError.classList.remove("messageDisplay")}, 5000);
   // }
 
-  if(responseObject.value == 'errorFirst') {
-    failedBar.classList.add("failed-bar");
-    fNameError.classList.add("messageDisplay");
-    setTimeout(function () {failedBar.classList.remove("failed-bar")}, 5000);
-  }
+  // if(responseObject == 'errorLast') {
+  //   failedBar.classList.add("failed-bar");
+  //   lNameError.classList.add("messageDisplay");
+  //   setTimeout(function () {failedBar.classList.remove("failed-bar")}, 5000);
+  //   setTimeout(function () {lNameError.classList.remove("messageDisplay")}, 5000);
+  // }
+
+  // if(responseObject == 'errorEmail') {
+  //   failedBar.classList.add("failed-bar");
+  //   emailError.classList.add("messageDisplay");
+  //   setTimeout(function () {failedBar.classList.remove("failed-bar")}, 5000);
+  //   setTimeout(function () {emailError.classList.remove("messageDisplay")}, 5000);
+  // }
+
+  // if(responseObject == 'errorSubject') {
+  //   failedBar.classList.add("failed-bar");
+  //   subjectError.classList.add("messageDisplay");
+  //   setTimeout(function () {failedBar.classList.remove("failed-bar")}, 5000);
+  //   setTimeout(function () {subjectError.classList.remove("messageDisplay")}, 5000);
+  // }
+
+  // if(responseObject == 'errorMessage') {
+  //   failedBar.classList.add("failed-bar");
+  //   messageError.classList.add("messageDisplay");
+  //   setTimeout(function () {failedBar.classList.remove("failed-bar")}, 5000);
+  //   setTimeout(function () {messageError.classList.remove("messageDisplay")}, 5000);
+  // }
 
 }

@@ -9,17 +9,17 @@ try {
 }  
 
 
-if(isset($_POST['first']) && $_POST['first'] != ' '){
+if(isset($_POST['first']) && $_POST['first'] != ' ' && $_POST['first'] != ''){
     $first = $_POST['first'];
     $last = $_POST['last'];
     $email = $_POST['email'];
     $subject = $_POST['subject'];
     $message = $_POST['message'];
     $email = filter_var($email, FILTER_SANITIZE_EMAIL);
-    if(isset($last) && $last != ' '){
-        if(isset($email) && $email != ' ' && $email = filter_var($email, FILTER_VALIDATE_EMAIL)){
-            if(isset($subject) && $subject != ' '){
-                if(isset($message) &&  $message != ' ') {
+    if(isset($last) && $last != ' ' && $last != ''){
+        if(isset($email) && $email != ' ' && $email != '' && $email = filter_var($email, FILTER_VALIDATE_EMAIL)){
+            if(isset($subject) && $subject != ' ' && $subject != ''){
+                if(isset($message) && $message != ' ' && $message != '') {
                     
                     $date = date("Y/m/d");
 
@@ -28,45 +28,39 @@ if(isset($_POST['first']) && $_POST['first'] != ' '){
                     $sql->execute();
 
                    echo json_encode(
-                       array(
-                           'submitted'
-                       )
-                       );
+                        'submitted'
+                    );
                 } else {
                     echo json_encode(
-                        array(
-                            'messageError' => true
-                        )
-                        );
+                        'errorMessage'
+                    );
                     }
 
             } else {
                 echo json_encode(
-                    array(
-                        'subjectError' => true
-                    )
-                    );
+                    
+                    'errorSubject'
+                    
+                );
             }
         } else {
             echo json_encode(
-                array(
-                    'emailError' => false
-                )
-                );
+                
+                'errorEmail'
+                
+            );
         }
 
     } else {
         echo json_encode(
-            array(
-                'lastError' => false
-            )
-            );
+            
+            'errorLast'
+            
+        );
     }
 } else {
     echo json_encode(
-        array(
             'errorFirst'
-        )
         );
 } 
 

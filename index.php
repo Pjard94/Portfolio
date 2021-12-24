@@ -135,6 +135,24 @@
 
         </div>
 
+        <div id="message-status-area">
+            <!-- <p id="successBar" class="form-status-bar">Your message has been successfully sent.</p>
+            <p id="failedBar" class="form-status-bar">Your message has failed to send. Please fill out the fields correctly.</p> -->
+            <?php 
+                echo '<p id="successBar" class="form-status-bar">';
+                echo 'Thank you for your enquiry.';
+                echo '</p>';
+                echo '<p id="failedBar" class="form-status-bar">';
+                echo "<span id='generalError' class='error-message'>We're sorry there seems to be an error in the message.</span>";
+                echo "<span id='firstError' class='error-message'>Please enter your first name.</span>";
+                echo "<span id='lastError' class='error-message'>Please enter your last name.</span>";
+                echo "<span id='emailError' class='error-message'>Please enter an email address.</span>";
+                echo "<span id='subjectError' class='error-message'>Can you let me know what you are contacting me about?</span>";
+                echo "<span id='messageError' class='error-message'>Let me know what you need in the message.</span>";
+                echo '</p>';
+            ?>
+        </div>
+
         <footer id="contact-area">
             <div id="contact--area">
                 <div id="contact-area-container">
@@ -147,7 +165,7 @@
                         <a id="contact-email-link" href="mailto:jardine.peter.94@gmail.com">jardine.peter.94@gmail.com</a>
                     </div>
                     <div>
-                        <p> Otherwise you can fill out the form to the right. I will get back to you within 2-3 days,<br> it may take longer if sent on the weekends or bank holidays.</p>
+                        <p> Otherwise you can fill out the form. I will get back to you within 2-3 days,<br> it may take longer if sent on the weekends or bank holidays.</p>
                     </div>
                 </div>
 
@@ -166,23 +184,7 @@
             </div>
             
         </footer>
-        <div id="message-status-area">
-            <!-- <p id="successBar" class="form-status-bar">Your message has been successfully sent.</p>
-            <p id="failedBar" class="form-status-bar">Your message has failed to send. Please fill out the fields correctly.</p> -->
-            <?php 
-                echo '<p id="successBar" class="form-status-bar">';
-                echo 'Thank you for your enquiry.';
-                echo '</p>';
-                echo '<p id="failedBar" class="form-status-bar">';
-                echo "<span id='generalError' class='error-message'>We're sorry the form seems to have been incomplete.</span>";
-                echo "<span id='firstError' class='error-message'>Please enter your first name.</span>";
-                echo "<span id='lastError' class='error-message'>Please enter your last name.</span>";
-                echo "<span id='emailError' class='error-message'>Please enter an email address.</span>";
-                echo "<span id='subjectError' class='error-message'>Can you let me know what you are contacting me about?</span>";
-                echo "<span id='messageError' class='error-message'>Let me know what you need in the message.</span>";
-                echo '</p>';
-            ?>
-        </div>
+        
         <div id="scroll-up">
             <a href="#introduction">
                 <div><i class="fas fa-chevron-up"></i></div>
