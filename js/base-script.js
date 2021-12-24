@@ -160,39 +160,4 @@ function handleresponse (responseObject) {
     setTimeout(function () {generalError.classList.remove("messageDisplay")}, 5000);
   }
 
-  // if(responseObject == 'errorFirst') {
-  //   failedBar.classList.add("failed-bar");
-  //   fNameError.classList.add("messageDisplay");
-  //   setTimeout(function () {failedBar.classList.remove("failed-bar")}, 5000);
-  //   setTimeout(function () {fNameError.classList.remove("messageDisplay")}, 5000);
-  // }
-
-  // if(responseObject == 'errorLast') {
-  //   failedBar.classList.add("failed-bar");
-  //   lNameError.classList.add("messageDisplay");
-  //   setTimeout(function () {failedBar.classList.remove("failed-bar")}, 5000);
-  //   setTimeout(function () {lNameError.classList.remove("messageDisplay")}, 5000);
-  // }
-
-  // if(responseObject == 'errorEmail') {
-  //   failedBar.classList.add("failed-bar");
-  //   emailError.classList.add("messageDisplay");
-  //   setTimeout(function () {failedBar.classList.remove("failed-bar")}, 5000);
-  //   setTimeout(function () {emailError.classList.remove("messageDisplay")}, 5000);
-  // }
-
-  // if(responseObject == 'errorSubject') {
-  //   failedBar.classList.add("failed-bar");
-  //   subjectError.classList.add("messageDisplay");
-  //   setTimeout(function () {failedBar.classList.remove("failed-bar")}, 5000);
-  //   setTimeout(function () {subjectError.classList.remove("messageDisplay")}, 5000);
-  // }
-
-  // if(responseObject == 'errorMessage') {
-  //   failedBar.classList.add("failed-bar");
-  //   messageError.classList.add("messageDisplay");
-  //   setTimeout(function () {failedBar.classList.remove("failed-bar")}, 5000);
-  //   setTimeout(function () {messageError.classList.remove("messageDisplay")}, 5000);
-  // }
-
 }
