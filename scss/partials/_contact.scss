@@ -15,7 +15,6 @@
     text-align: left;
     align-self: center;
     max-width: 1400px;
-    margin: 0 10px;
     
     h2{
         font-size: 40px;
@@ -36,6 +35,7 @@
 
 #contact-area-container {
     width: 100%;
+    margin-top: 25px;
 }
 
 #contact-form {
@@ -63,7 +63,7 @@
 .contact-form-input {
     margin: 15px 0 0;
     width: 100%;
-    // font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif;
     color: $secondary-color;
     border-radius: 6px;
     border: $secondary-color;
@@ -114,33 +114,30 @@
     height: 50px;
 }
 
-.form-status-bar {
+#form-status {
     border-radius: 25px;
-    display: none;
     z-index: 10;
     width: 250px;
     height: 50px;
     padding: 8px;
     font-size: 15px;
     margin-top: 30px;
+    align-items: center;
+    justify-content: center;
 }
 
-.error-message {
+.messageHidden {
     display: none;
-}
-
-.messageDisplay {
-    display: block;
 }
 
 .success-bar {
     background-color: #03AC13;
-    display: block;
+    display: flex;
 }
 
 .failed-bar {
     background-color: #d21204;
-    display: block;
+    display: flex;
 }
 
 .Form-focused {
@@ -184,7 +181,7 @@
         flex-grow: 1;
     }
 
-    .form-status-bar {
+    #form-status {
         width: 550px;
         padding: 20px;
     }
@@ -214,6 +211,7 @@
         #contact-area-container,
         #contact-form {
             width: 50%;
+            margin-top: 0;
         }
     }
     

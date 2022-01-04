@@ -136,21 +136,7 @@
         </div>
 
         <div id="message-status-area">
-            <!-- <p id="successBar" class="form-status-bar">Your message has been successfully sent.</p>
-            <p id="failedBar" class="form-status-bar">Your message has failed to send. Please fill out the fields correctly.</p> -->
-            <?php 
-                echo '<p id="successBar" class="form-status-bar">';
-                echo 'Thank you for your enquiry.';
-                echo '</p>';
-                echo '<p id="failedBar" class="form-status-bar">';
-                echo "<span id='generalError' class='error-message'>We're sorry there seems to be an error in the message.</span>";
-                echo "<span id='firstError' class='error-message'>Please enter your first name.</span>";
-                echo "<span id='lastError' class='error-message'>Please enter your last name.</span>";
-                echo "<span id='emailError' class='error-message'>Please enter an email address.</span>";
-                echo "<span id='subjectError' class='error-message'>Can you let me know what you are contacting me about?</span>";
-                echo "<span id='messageError' class='error-message'>Let me know what you need in the message.</span>";
-                echo '</p>';
-            ?>
+            <p id="form-status" class="messageHidden"></p>
         </div>
 
         <footer id="contact-area">
@@ -198,7 +184,8 @@
     <!-- these allow for the typewriter to work -->
     <script src="js/better-typewriter/typed.js"></script>
     <script src="js/nav-menu.js"></script>
-    <script src="js/base-script.js"></script>
+    <script src="js/form-validation.js"></script>
+    <script src="js/typing.js"></script>
 
 </body>
 </html>

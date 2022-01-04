@@ -478,7 +478,6 @@ header {
   text-align: left;
   align-self: center;
   max-width: 1400px;
-  margin: 0 10px;
 }
 #contact--area h2 {
   font-size: 40px;
@@ -496,6 +495,7 @@ header {
 
 #contact-area-container {
   width: 100%;
+  margin-top: 25px;
 }
 
 #contact-form {
@@ -522,6 +522,7 @@ header {
 .contact-form-input {
   margin: 15px 0 0;
   width: 100%;
+  font-family: "Roboto", sans-serif;
   color: #ff7e22;
   border-radius: 6px;
   border: #ff7e22;
@@ -579,33 +580,30 @@ header {
   height: 50px;
 }
 
-.form-status-bar {
+#form-status {
   border-radius: 25px;
-  display: none;
   z-index: 10;
   width: 250px;
   height: 50px;
   padding: 8px;
   font-size: 15px;
   margin-top: 30px;
+  align-items: center;
+  justify-content: center;
 }
 
-.error-message {
+.messageHidden {
   display: none;
-}
-
-.messageDisplay {
-  display: block;
 }
 
 .success-bar {
   background-color: #03AC13;
-  display: block;
+  display: flex;
 }
 
 .failed-bar {
   background-color: #d21204;
-  display: block;
+  display: flex;
 }
 
 .Form-focused {
@@ -648,7 +646,7 @@ header {
     flex-grow: 1;
   }
 
-  .form-status-bar {
+  #form-status {
     width: 550px;
     padding: 20px;
   }
@@ -672,6 +670,7 @@ header {
   #contact--area #contact-area-container,
 #contact--area #contact-form {
     width: 50%;
+    margin-top: 0;
   }
 }
 @media screen and (min-width: 1200px) {

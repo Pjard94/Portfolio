@@ -1,20 +1,3 @@
-//This is the text typewriter code
-var typed = new Typed('.text-typewriter-output', {
-  strings: ["I'm a Web Developer", "I'm a Programmer", "I'm a Designer"],
-  // these are the sentences that get typed out
-  showCursor: false,
-  // this disabled the standard cursor
-  typeSpeed: 100,
-  smartBackspace: true,
-  backSpeed: 100,
-  backDelay: 1000,
-  // These set the speed and the amount of characters removed
-  loop: true,
-  loopCount: Infinity
-  // These rules set the looping aspect so that the typewriter never stops
-});
-
-
 // This will be for the form submission
 const inputs = document.getElementsByClassName("contact-form-input");
 const email = document.getElementById("client-email");
@@ -66,46 +49,45 @@ $(inputs).focus(function() {
 });
 
 // Variables for the error messages.
-const failedBar = document.getElementById("failedBar");
-const generalError = document.getElementById("generalError");
-const fNameError = document.getElementById("firstError");
-const lNameError = document.getElementById("lastError");
-const emailError = document.getElementById("emailError");
-const subjectError = document.getElementById("subjectError");
-const messageError = document.getElementById("messageError");
-const successBar = document.getElementById("successBar");
-
-
+const formStatus = document.getElementById("form-status");
+let responseMessage;
+let submissionError = 0;
 
 submit.addEventListener("click", function (e) {
   e.preventDefault();
   if(firstName.classList != "contact-form-input Form-valid"){
-    failedBar.classList.add("failed-bar");
-    fNameError.classList.add("messageDisplay");
-    setTimeout(function () {failedBar.classList.remove("failed-bar")}, 5000);
-    setTimeout(function () {fNameError.classList.remove("messageDisplay")}, 5000);
-      // console.log("this worked");
-    } else if(email.classList != "contact-form-input Form-valid") {
-    failedBar.classList.add("failed-bar");
-    emailError.classList.add("messageDisplay");
-    setTimeout(function () {failedBar.classList.remove("failed-bar")}, 5000);
-    setTimeout(function () {emailError.classList.remove("messageDisplay")}, 5000);
-    } else if(lastName.classList != "contact-form-input Form-valid"){
-      failedBar.classList.add("failed-bar");
-      lNameError.classList.add("messageDisplay");
-      setTimeout(function () {failedBar.classList.remove("failed-bar")}, 5000);
-      setTimeout(function () {lNameError.classList.remove("messageDisplay")}, 5000);
-    } else if(subject.classList != "contact-form-input Form-valid"){
-      failedBar.classList.add("failed-bar");
-      subjectError.classList.add("messageDisplay");
-      setTimeout(function () {failedBar.classList.remove("failed-bar")}, 5000);
-      setTimeout(function () {subjectError.classList.remove("messageDisplay")}, 5000);
-    } else if(message.classList != "contact-form-input Form-valid") {
-      failedBar.classList.add("failed-bar");
-      messageError.classList.add("messageDisplay");
-      setTimeout(function () {failedBar.classList.remove("failed-bar")}, 5000);
-      setTimeout(function () {messageError.classList.remove("messageDisplay")}, 5000);
-    } else {
+   responseMessage = "Please enter your first name.";
+   submissionError += 1;
+  }
+
+  if(lastName.classList != "contact-form-input Form-valid"){
+    responseMessage = "Please enter your last name.";
+    submissionError += 1;
+  }
+
+  if(email.classList != "contact-form-input Form-valid") {
+  responseMessage = "Please enter an email address.";
+  submissionError += 1;
+  } 
+
+  if(subject.classList != "contact-form-input Form-valid"){
+    responseMessage = "Can you let me know what you are contacting me about?";
+    submissionError += 1;
+  }
+
+  if(message.classList != "contact-form-input Form-valid") {
+    responseMessage = "Let me know what you need in the message.";
+    submissionError += 1;
+  }
+  
+  if(submissionError > 0){
+    if(submissionError > 1){
+      responseMessage = "The form is incomplete, please check your submission.";
+    } 
+    formStatus.classList.add("failed-bar");
+    formStatus.innerHTML = responseMessage;
+    setTimeout(function () {formStatus.classList.remove("failed-bar")}, 5000);
+  } else {
       const XHR = new XMLHttpRequest();
       const XHRData = `first=${firstName.value}&last=${lastName.value}&email=${email.value}&subject=${subject.value}&message=${message.value}`;
 
@@ -138,6 +120,8 @@ submit.addEventListener("click", function (e) {
       //   }
       // }
     }
+    responseMessage = "";
+    submissionError = 0;
 })
      
 
@@ -151,13 +135,15 @@ function handleresponse (responseObject) {
     email.classList.remove("Form-valid");
     subject.classList.remove("Form-valid");
     message.classList.remove("Form-valid");
-    successBar.classList.add("success-bar");
-    setTimeout(function () {successBar.classList.remove("success-bar")}, 5000);
+    formStatus.classList.add("success-bar");
+    responseMessage = "Thank you for your enquiry.";
+    formStatus.innerHTML = responseMessage;
+    setTimeout(function () {formStatus.classList.remove("success-bar")}, 5000);
   } else {
-    failedBar.classList.add("failed-bar");
-    generalError.classList.add("messageDisplay");
-    setTimeout(function () {failedBar.classList.remove("failed-bar")}, 5000);
-    setTimeout(function () {generalError.classList.remove("messageDisplay")}, 5000);
+    formStatus.classList.add("failed-bar");
+    responseMessage = "The form is incomplete, please check your submission.";
+    formStatus.innerHTML = responseMessage;
+    setTimeout(function () {formStatus.classList.remove("failed-bar")}, 5000);
   }
 
 }
