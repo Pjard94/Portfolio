@@ -72,7 +72,7 @@
                     </div>
                     <div class="project-buttons">
                         <a href="http://netmatters.peter-jardine.netmatters-scs.co.uk/" target="_blank" class="project-button">Project</a>
-                        <a href="https://github.com/Pjard94/Netmatters" target="_blank" class="project-button">Github Code</a>
+                        <a href="https://github.com/Pjard94/Netmatters" target="_blank" class="project-button">Github</a>
                     </div>
                 </div>
 

@@ -43,8 +43,6 @@ $(inputs).focus(function() {
   }else {
     this.classList.add("Form-invalid")
   }
-  
-  
   // console.log(this.value);
 });
 
