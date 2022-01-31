@@ -4,19 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Site identifiers -->    
-    <title>Coding Examples</title>
+    <!-- Site identifiers -->
+    <title> Peter Jardine's Protfolio</title>
     <link rel="icon" href="assets/favicon.png">
     <!-- allows the jQuery stuff to run -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- the links to the stylesheets -->
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
     <!-- font styles links -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
+
     <div id="burger-box" class="small-nav">
         <span class="menu-line"></span>
         <span class="menu-line"></span>
@@ -42,11 +43,11 @@
 
     <div id="menu-showing">
 
-        <div id="coding-container">
+        <div id="content-container">
 
-            <h1 id="coding-title">Coding Examples</h1>
+            <h1 id="internal-title">Coding Examples</h1>
 
-            <div class="coding-example">
+            <div class="content-card">
                 <div class="coding-example-title">Randomised comparing functions</div>
 
                 <div>
@@ -58,11 +59,13 @@
                 
                 <div class="coding-example-code">
                     <!-- this window is to be used to show code, each of the spans are used to hold different elements -->
-                    <pre class="coding-example-code-window language-js">
+                    <pre class="language-js">
 
                         <code class="language-js">
 
-                            <span class="token-action">const</span><span class="token-character"> character</span><span> = </span><span class="token-variable-container">[</span><span class="token-string">"Loba"</span><span>, </span><span class="token-string">"Fuse"</span><span>, </span><span class="token-string">"Horizon"</span><span>, </span><span class="token-string">"Octane"</span><span>, </span><span class="token-string">"Wraith"</span><span>, </span><span class="token-string">"Wattson"</span><span>, </span><span class="token-string">"Revenant"</span><span>, </span><span class="token-string">"Rampart"</span><span>, </span><span class="token-string">"Pathfinder"</span><span>, </span><span class="token-string">"Mirage"</span><span>, </span><span class="token-string">"Lifeline"</span><span>, </span><span class="token-string">"Gibraltar"</span><span>, </span><span class="token-string">"Crypto"</span><span>, </span><span class="token-string">"Bloodhound"</span><span>, </span><span class="token-string">"Caustic"</span><span>, </span><span class="token-string">"Bangalore"</span><span>, </span><span class="token-string">"Valkyrie"</span><span class="token-variable-container">]</span><span>;</span>
+                            <span class="token-action">const</span><span class="token-character"> character</span><span> = </span><span class="token-variable-container">[</span><span class="token-string">"Loba"</span><span>, </span><span class="token-string">"Fuse"</span><span>, </span><span class="token-string">"Horizon"</span><span>, </span><span class="token-string">"Octane"</span><span>, </span><span class="token-string">"Wraith"</span><span>, </span><span class="token-string">"Wattson"</span><span>, </span>
+                                                    <span class="token-string">"Revenant"</span><span>, </span><span class="token-string">"Rampart"</span><span>, </span><span class="token-string">"Pathfinder"</span><span>, </span><span class="token-string">"Mirage"</span><span>, </span><span class="token-string">"Lifeline"</span><span>, </span><span class="token-string">"Gibraltar"</span><span>, </span>
+                                                    <span class="token-string">"Crypto"</span><span>, </span><span class="token-string">"Bloodhound"</span><span>, </span><span class="token-string">"Caustic"</span><span>, </span><span class="token-string">"Bangalore"</span><span>, </span><span class="token-string">"Valkyrie"</span><span class="token-variable-container">]</span><span>;</span>
                             <span class="token-action">let</span><span class="token-variable-name"> character1</span><span>;</span>
                             <span class="token-action">let</span><span class="token-variable-name"> character2</span><span>;</span>
                             <span class="token-action">let</span><span class="token-variable-name"> character3</span><span>;</span>
@@ -100,7 +103,7 @@
                 </div>
             </div>
 
-            <div class="coding-example">
+            <div class="content-card">
                 <div class="coding-example-title">SQL Query</div>
 
                 <h3  class="SQL-explanation">The database I used for formatting my SQL Query</h3>
@@ -690,7 +693,7 @@
 
                     <h3  class="SQL-explanation">Below is the table shows the penalty shootout data</h3>
 
-                    <div class="coding-example-code-window SQL">
+                    <div class=" SQL">
 
                         <code id="penalty_table" class="language-html">
        kick_id |  match_no | team_id | player_id | score_goal |	kick_no
@@ -743,7 +746,7 @@
 
                     <h3  class="SQL-explanation">Finally this table shows the countries in the tournament.</h3>
 
-                    <div class="coding-example-code-window SQL">
+                    <div class=" SQL">
 
                         <code id="country_table" class="language-html">
     country_id | country_abbr | country_name
@@ -791,7 +794,7 @@
                 <h3 class="SQL-explanation">Example Query</h3>
                 <p class="SQL-explanation"> If for instantance you wanted to find out which countries and players failed to score any of their penalty shots you could fill out a query like below.</p>
 
-                <div id="My_query" class="coding-example-code-window SQL">
+                <div id="My_query" class="SQL">
 
                     <p><br>
                         SELECT player_name AS "Player", country_name AS "Country", penalty_shootout.match_no AS "Match", penalty_shootout.score_goal AS "Failed shots" <br>
@@ -817,7 +820,7 @@
 
                 <h3  class="SQL-explanation">The table below shows the results of my query.</h3>
 
-                <div class="coding-example-code-window SQL">
+                <div class="SQL">
 
                     
 
@@ -844,11 +847,13 @@
 
         </div>
 
+        </div>
+
     </div>
 
     <!-- Script for running the menu interaction -->
     <script src="js/nav-menu.js"></script>
     <script src="js/readMore.js"></script>
-
+    
 </body>
 </html>

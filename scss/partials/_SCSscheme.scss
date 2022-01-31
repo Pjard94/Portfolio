@@ -1,28 +1,5 @@
 @use '../abstracts/index' as *;
 
-#SCSscheme-page {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items:center;
-}
-
-#SCSscheme-title {
-    display: flex;
-    padding: 100px 0;
-    font-size: 30px;
-    text-align: center;
-}
-
-#SCSscheme {
-    flex-direction: column;
-    margin-bottom: 50px;
-    justify-content: space-around;
-    align-items: center;
-    max-width: 1400px;
-    padding: 0 25px;
-}
-
 .SCSscheme--card {
     margin: 30px 0 20px;
     background-color: $tertiary-color;
@@ -43,10 +20,6 @@
     color: $alt-fill-color;
 }
 
-// .scs-left-align{
-//     text-align: left;
-// }
-
 .SCSscheme--card--filler {
     color: $alt-fill-color;
 }
@@ -60,46 +33,10 @@
     text-decoration: underline;
 }
 
-@media screen and (min-width:$breakpoint-small) {
-
-   
-
-    #SCSscheme-title {
-        padding: 50px 0;
-        font-size: 45px;
-    }
-}
-
-@media  screen and (min-width:734px) {
-    // .SCSscheme--card {
-    //     width: 500px;
-    // }   
-}
-
-@media screen and (min-width:751px) {
-    
-    #SCSscheme {
-        display: flex;
-    }
-
-    // .SCSscheme--card {
-    //         width: 90%;
-    //     }
-}
-
-// @media screen and (min-width:$breakpoint-medium) {
-//     .SCSscheme--card {
-//         width: 80%;
-//     }
-// }
-  
 @media screen and (min-width:1400px) {
 
     .SCSscheme--card {
         margin: 20px 0 20px;
     }
 
-    .SCSscheme-title {
-        width: 900px;
-    }
 }
