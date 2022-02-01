@@ -200,10 +200,12 @@
             width: 100%;
             height: 100%;
             opacity: .7;
+            touch-action: none;
         }
 
     #menu-showing {
         transform: translateX(160px);
+        
     
         #about-page {
             transform: translateX(163px);
