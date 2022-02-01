@@ -86,7 +86,6 @@ h6 {
 #menu-showing {
   transition: transform ease-in 250ms;
   justify-content: space-around;
-  display: flex;
 }
 
 #content-container {
