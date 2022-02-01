@@ -163,7 +163,7 @@
                     <input class="contact-form-input" id="client-email" type="email" name="email" placeholder="Email*" required>
                     <input class="contact-form-input" id="email-subject" type="text" name="subject"  placeholder="Subject*" required>
                     <textarea class="contact-form-input" id="message" name="message" placeholder="Message*" required></textarea>
-                    <button id="contact-form-submit">Submit</button>
+                    <button id="contact-form-submit" class="clickable" >Submit</button>
                 </form>
                 
                 
@@ -171,8 +171,8 @@
             
         </footer>
         
-        <div id="scroll-up">
-            <a href="#introduction">
+        <div id="up-div">
+            <a id="scroll-up" href="#introduction">
                 <div><i class="fas fa-chevron-up"></i></div>
                 <div>Back to Top</div>
             </a>

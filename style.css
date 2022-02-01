@@ -63,6 +63,7 @@ body {
   text-align: center;
   background-size: contain;
   margin: 0 auto;
+  overflow-x: hidden;
 }
 
 * {
@@ -83,13 +84,18 @@ h6 {
   font-weight: 500;
 }
 
+.clickable {
+  cursor: pointer;
+}
+
 #menu-showing {
   transition: transform ease-in 250ms;
-  justify-content: space-around;
+  justify-content: center;
 }
 
 .internalPage {
   display: flex;
+  height: 100%;
 }
 
 #content-container {
@@ -99,7 +105,6 @@ h6 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   max-width: 1400px;
 }
 
@@ -170,7 +175,7 @@ h6 {
 
 .big-nav {
   height: 100%;
-  width: 160px;
+  width: 168px;
   position: fixed;
   z-index: 5;
   top: 0;
@@ -605,7 +610,7 @@ header {
   border: #000000 2px solid;
 }
 
-#scroll-up {
+#up-div {
   margin-top: 20px;
   padding-top: 20px;
   padding-bottom: 50px;
@@ -797,6 +802,10 @@ header {
   line-height: 22px;
 }
 
+#apex {
+  margin: 0 0 0 -120px;
+}
+
 .language-html {
   font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
   font-size: 1em;
@@ -918,6 +927,18 @@ header {
   align-items: center;
 }
 
+#menu-overlay::after {
+  top: 0;
+  right: 0;
+  position: absolute;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  z-index: 10;
+  content: "";
+  background: rgba(0, 0, 0, 0.4);
+}
+
 .Nav-out {
   overflow-x: hidden;
 }
@@ -938,24 +959,12 @@ header {
   display: block;
 }
 .Nav-out #menu-overlay::after {
-  top: 0;
-  right: 0;
-  position: absolute;
-  width: 0;
-  height: 0;
-  opacity: 0;
-  z-index: 10;
-  content: "";
-  background: rgba(0, 0, 0, 0.4);
-  transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s;
-}
-.Nav-out #menu-showing {
-  transform: translateX(160px);
-}
-.Nav-out #menu-showing #menu-overlay::after {
   width: 100%;
   height: 100%;
   opacity: 0.7;
+}
+.Nav-out #menu-showing {
+  transform: translateX(160px);
 }
 .Nav-out #menu-showing #about-page {
   transform: translateX(163px);
